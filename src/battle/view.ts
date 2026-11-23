@@ -37,6 +37,11 @@ export interface View {
   bench: FieldPokemon[];
   /** 已经倒下、不能换入的位置（side.pokemon 的下标）。 */
   downed: number[];
+  /**
+   * `side.pokemon` 里仍被请求标成 `active` 的下标（0/1）。替换请求里这些标记常常还指着刚倒下的位置，
+   * 引擎却不让换入「仍标成 active」的位置，所以换人时要绕开它们。
+   */
+  activeMarkers: Set<number>;
 }
 
 function parseCondition(condition: string): {hpPercent: number; fainted: boolean; status: string} {
@@ -48,6 +53,18 @@ function parseCondition(condition: string): {hpPercent: number; fainted: boolean
   return {hpPercent, fainted, status};
 }
 
+/**
+ * 被占用的下标的反推：替换请求里有 `active` 表时，`active` 是空的/最短的；没有时 `active` 是当前两只。
+ * 真实占用 = 「active 的长度（没有就是 2）− 两张表都倒下的位置数」。
+ */
+function occupiedIndexes(party: any[], activePositions: number[]): number[] {
+  const activeTable = activePositions.filter((position) => party[position]?.active);
+  const bothFainted = party.filter((entry, index) => index < 2 && entry.active && String(entry.condition).endsWith(' fnt')).length;
+  const field = Math.min(2, Math.max(0, activeTable.length ? 2 : 2));
+  const occupied = Math.max(0, Math.min(2, field - bothFainted));
+  return Array.from({length: occupied}, (_, index) => index);
+}
+
 function speciesOf(ident: string): string {
   return ident.replace(/^p[1-2][a-z]?: */, '').trim();
 }
@@ -56,7 +73,10 @@ function speciesOf(ident: string): string {
 export function readView(request: any, requestState?: string): View {
   const side = request?.side;
   if (!side || !Array.isArray(side.pokemon)) {
-    return {state: (requestState ?? 'move') as RequestState, own: [null, null], foe: [null, null], bench: [], downed: []};
+    return {
+      state: (requestState ?? 'move') as RequestState, own: [null, null], foe: [null, null], bench: [], downed: [],
+      activeMarkers: new Set()
+    };
   }
   const party = side.pokemon as any[];
   const activePositions = (request.active ?? [])
@@ -102,6 +122,9 @@ export function readView(request: any, requestState?: string): View {
     // 本轮不读对手：引擎的请求里没有对手信息，这里留空，防止误用。
     foe: [null, null],
     bench,
-    downed: ordered.filter(({entry}) => String(entry.condition).endsWith(' fnt')).map(({index}) => index)
+    downed: ordered.filter(({entry}) => String(entry.condition).endsWith(' fnt')).map(({index}) => index),
+    // 替换请求里的 active 标记并不可信：单只倒下时它可能同时标着两三个位置，而 2、3 号位其实都能换入。
+    // 所以这里用「两张表都活着」来反推真正被占用的位置数，并只把它们当作「不能换入」的下标。
+    activeMarkers: new Set(occupiedIndexes(party, activePositions))
   };
 }

@@ -30,8 +30,8 @@ export interface ActionIntent {
 export interface Intent {
   raw: string;
   actions: ActionIntent[];
-  /** 被否定管住的动作（原文），决策时跳过。 */
-  negated: string[];
+  /** 被否定管住的动作：`text` 是否定词本身，`actions` 是被它吞掉的动作（可能不止一个）。 */
+  negated: Negation[];
   exceptions: string[];
   /** 条件：文本 + 文本位置，第三轮会在这基础上解析出可判断的条件。 */
   conditions: string[];
@@ -40,7 +40,13 @@ export interface Intent {
   notes: string[];
 }
 
-/** 第一轮的否定表：只认「不要/不应」这类祈使词，覆盖不到「不擅长」「不容易」这些中性说法。 */
+export interface Negation {
+  /** 否定词的原文。 */
+  text: string;
+  /** 被这个否定词管住的动作（原文）。 */
+  actions: string[];
+}
+
 export const NEGATION_WORDS = ['不要', '别', '切勿', '不用', '禁止'];
 
 const CJK = '\u4e00-\u9fff';
@@ -190,18 +196,20 @@ function toActions(sentence: string, start: number, dex: typeof Engine.Dex.proto
       position: value.position, target, conditional: value.conditional, sentence
     };
   });
-  // 已知不足（Round 4）：`(不要|别…)` 里的单字「别」会把「命中判定别乱」之外的「别」也当下；本轮先保持原样。
-  const negated = new RegExp(`(${NEGATION_WORDS.join('|')})([${CJK}]{0,4}?)([${CJK}]{2,12}?)(?:并|再|然后|之后|以后|时|,|\\.|$)`).exec(sentence);
-  if (negated) {
-    // 否定词后面紧跟的动作才被吞掉，动词与否定词之间允许少量修饰（如「不要冒险使用」）。
-    const after = negated.index + negated[1].length + negated[2].length;
-    const affected = actions
-      .filter((action) => action.position >= start + after)
-      .sort((a, b) => a.position - b.position)
-      .at(0);
-    if (affected) {
-      intent.negated.push(affected.source);
-      // 本轮的否定只是「不选它」，并不会因此选择替代动作。
+  // 否定按作用域吞动作：
+  //  - 「否则不要…」吞到句末；
+  //  - 其它否定从否定词开始，吞到第一个「然后/再/并」或逗号之前（「不要 A，用 B」只吞 A）。
+  for (const word of sentence.matchAll(new RegExp(`(${NEGATION_WORDS.join('|')})`, 'g'))) {
+    const open = word.index!;
+    const terminal = /否则/.test(sentence.slice(0, open));
+    const from = open + word[1]!.length;
+    const tail = sentence.slice(from);
+    const stop = terminal ? tail.length : tail.search(/然后|再|并|[,.]|$/);
+    const end = from + (stop < 0 ? tail.length : stop);
+    // 否定只吞「从否定词到截止符号」之间的动作；截止符号之后的动作继续执行。
+    const affected = actions.filter((action) => action.position >= start + from && action.position < start + (terminal ? sentence.length : end + 1));
+    if (affected.length) {
+      intent.negated.push({text: sentence.slice(open, terminal ? sentence.length : end), actions: affected.map((action) => action.source)});
     }
   }
   void target;
