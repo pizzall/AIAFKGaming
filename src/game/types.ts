@@ -112,6 +112,29 @@ export interface WorldState {
   season: number;
   gyms: Gym[];
 }
+/** 一轮决策记录：两种模式的对照结果落在这里，避免两种比较各存一份。 */
+export interface DecisionRecord {
+  revision: string;
+  tactic: string;
+  seed: number[];
+  outcomes: Array<{
+    mode: 'direct' | 'refined';
+    turns: number;
+    winnerSide: 'p1' | 'p2' | null;
+    error: string | null;
+    decisions: Array<{sequence: number; choice: string; used: string[]; ignored: string[]; targets: string[]}>;
+  }>;
+  mistakes: Array<{mode: 'direct' | 'refined'; sequence: number; kind: string; text: string; detail: string}>;
+  winnerAgreement: boolean;
+}
+export interface ComparisonBattle {
+  id: string;
+  ownerId: string;
+  createdAt: string;
+  tactic: string;
+  seed: number[];
+  record: DecisionRecord;
+}
 /** 战术文本上限：按 Unicode 字符数计算，换行与全角标点各算一个字符。 */
 export const TACTIC_LIMIT = 500;
 export function tacticLength(tactic: string): number {

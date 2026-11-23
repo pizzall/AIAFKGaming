@@ -53,8 +53,11 @@ export function defaultMove(
   partner: FieldPokemon,
   view: View,
   claimed: Set<number>,
-  unavailable: Set<number>
+  unavailable: Set<number>,
+  requestState?: string
 ): string {
+  // 替换请求里不能出招：这时返回空串，交给替换逻辑。
+  if (requestState === 'switch') return '';
   const moves = request.active?.[partner.slot - 1]?.moves ?? [];
   const usableSlot = moves.findIndex((move: any) => !move.disabled && move.pp !== 0);
   // 所有招式都被禁用（如被封锁）时，出帧请求里的 1 号招式会让引擎报错，这里改出「挣扎」以外的默认。

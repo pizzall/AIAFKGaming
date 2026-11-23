@@ -97,14 +97,19 @@ export function createTacticsAgent(dex: typeof Engine.Dex.prototype, tactic: str
     const used: string[] = [];
     const slots = forceSwitch.length ? forceSwitch : [true];
     const choice = slots
-      .map(() => {
+      .map((forced, seat) => {
+        if (!forced) return 'pass';
         const wanted = wantedList.find((name) => !taken.has(benchSlot(view, name, taken)));
-        const slot = benchSlot(view, wanted ?? null, taken);
-        if (slot < 0) return 'pass';
-        taken.add(slot);
-        used.push(wanted ? `换入${wanted}（按战术）` : `换入${slot}号替补（按顺序）`);
-        return `switch ${slot}`;
+        const chosen = benchSlot(view, wanted ?? null, taken);
+        if (chosen < 0) return 'pass';
+        taken.add(chosen);
+        // 引擎的替换命令按「引擎下标」解释；双倒时两个位置要各给一个。已知不足（Round 8）：
+        // 单只倒下时这里的下标（如 2）会被引擎当成「1 号位」而拒绝。最多补两个位置。
+        if (seat > 1) return '';
+        used.push(wanted ? `换入${wanted}（按战术）` : `换入${chosen}号替补（按顺序）`);
+        return `switch ${chosen}`;
       })
+      .filter((value) => value !== '')
       .join(', ');
     return {choice, used};
   };
@@ -148,7 +153,7 @@ export function createTacticsAgent(dex: typeof Engine.Dex.prototype, tactic: str
           if (!actions.length) {
             const reason = !tactic.trim() ? 'empty' : intent.actions.length ? 'unavailable' : 'unresolved';
             policy[reason]++;
-            return defaultMove(request, partner, view, claimed, unavailableFoes);
+            return defaultMove(request, partner, view, claimed, unavailableFoes, requestState);
           }
           const cursor = cursors.get(partner.slot) ?? (partner.slot === 1 ? 0 : 1);
           let guardedMisses = 0;
@@ -173,7 +178,7 @@ export function createTacticsAgent(dex: typeof Engine.Dex.prototype, tactic: str
           }
           if (guardedMisses) policy.guarded++;
           else policy.unavailable++;
-          return defaultMove(request, partner, view, claimed, unavailableFoes);
+          return defaultMove(request, partner, view, claimed, unavailableFoes, requestState);
         })
         .join(', ');
       decisions.push({
