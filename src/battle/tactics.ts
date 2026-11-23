@@ -1,12 +1,18 @@
 // 战术文本 → 意图拆解（第一遍）。
 //
-// 第二轮修掉第一轮暴露的问题：例外条件参与排序、否定只吞掉它管住的动作、目标词落到具体动作上、
-// 同一句里换人排在出招之后、中文招式名/宝可梦名能被消解。
-// 但拆解仍然只读文本本身：不读战局、不读阵型、不读行动队列——这些是下一轮要列出的不足。
+// 前五轮修掉了：例外/否定作用域、中文名称消解、站位、队列推进、条件与不可验证标记。
+// 第六轮把拆句、条件和否定都换成本文件之上的 `splits.ts`：
+// - 「否则不要 B」整句剩下的 B 都归这条否定；
+// - 同一句里「除非 A，否则不要 B，除非 C，否则不要 D」按「条件 → 它的否定」配对；
+// - 同一句两个条件时用「离动作最近的片段」，不把第一个条件借给第二个动作。
+// 但拆解仍然只读文本本身：目标比较、预算裁剪、显式默认策略分别在 targets.ts / splits.ts / defaults.ts。
 
 import type {Engine} from './engine.ts';
+import {negationScopes, splitSentences} from './splits.ts';
 
-export type TargetWord = 'lowestHp' | 'highestHp' | 'fastest' | 'slowest' | 'highestAttack' | 'threat' | 'foe' | 'ally';
+export type TargetWord =
+  | 'lowestHp' | 'highestHp' | 'fastest' | 'slowest' | 'highestAttack' | 'threat'
+  | 'foe' | 'ally' | 'foeSecond' | 'foeBoth';
 
 export interface ActionIntent {
   /** 文本里写下的原文（消解前），便于日志回放。 */
@@ -15,7 +21,7 @@ export interface ActionIntent {
   move: string | null;
   /** 换人目标物种（显示名）；招式动作为 null。 */
   switchTo: string | null;
-  /** 数字优先级：越小越优先；例外条件改写成 0 或 1 时排在最前/最后。 */
+  /** 数字优先级：越小越优先。 */
   priority: number;
   /** 文本位置，同优先级时保持书写顺序。 */
   position: number;
@@ -27,51 +33,50 @@ export interface ActionIntent {
   sentence: string;
 }
 
+export interface Negation {
+  /** 否定词的原文。 */
+  text: string;
+  /** 被这个否定词管住的动作（原文）。 */
+  actions: string[];
+  /** 这条否定所属的「除非」条件原文（没有则为 null）。 */
+  condition: string | null;
+}
+
 export interface Intent {
   raw: string;
   actions: ActionIntent[];
-  /** 被否定管住的动作：`text` 是否定词本身，`actions` 是被它吞掉的动作（可能不止一个）。 */
   negated: Negation[];
   exceptions: string[];
-  /** 条件：文本 + 文本位置，第三轮会在这基础上解析出可判断的条件。 */
   conditions: string[];
   conditionPositions: number[];
   unknown: string[];
   notes: string[];
 }
 
-export interface Negation {
-  /** 否定词的原文。 */
-  text: string;
-  /** 被这个否定词管住的动作（原文）。 */
-  actions: string[];
-}
-
 export const NEGATION_WORDS = ['不要', '别', '切勿', '不用', '禁止'];
 
 const CJK = '\u4e00-\u9fff';
 const TARGETS: Array<[RegExp, TargetWord]> = [
+  [/(?:另一个|另一只|第二只|后一只)/, 'foeSecond'],
+  [/(?:前两个|两只对手|两个对手|两口)/, 'foeBoth'],
   [/(?:体力|血量|hp)(?:最低|最少)/, 'lowestHp'],
   [/(?:体力|血量|hp)(?:最高|最多)/, 'highestHp'],
   [/威胁最大/, 'threat'],
   [/攻击最高|攻击最强/, 'highestAttack'],
   [/(?:速度)?最快|先手/, 'fastest'],
   [/最慢/, 'slowest'],
-  [/另一只|另一个/, 'foe'],
   [/队友|同伴/, 'ally'],
   [/对手|对面|对方|敌人/, 'foe']
 ];
 /**
  * 名字后面紧跟的元词：遇到就停止取名字。
- * 注意「打」「换」「最」这类字本身可能是招式名的一部分（「打草结」「交换场地」），不能放进停止表。
+ * 「打」「换」「最」这些字可能是招式名本身（「打草结」「交换场地」），不能放进停止表。
  */
-const END = '的|了|然后|并|再|且|时|之后|以后|出场|集中|切换|换上|派出|上场|优先|敌人|对手|对方|对面|队友|体力|血量';
+const END = '的|了|然后|并|再|且|时|之后|以后|出场|集中|切换|换上|派出|上场|优先|敌人|对手|对方|对面|队友|体力|血量|另一|第二|前两';
 const STOP = new RegExp(END, 'g');
 const SWAP = new RegExp(`(换上|换|派出|上场)([${CJK}]{1,10}?)(?:上场|登场|出战|接战|并|再|然后|,|\\.|$|时|后)`, 'g');
 const VERBS = '优先使用|优先打出|优先开|优先放|优先用|优先派|优先|先手|使用|打出|开|放|用|打';
-// 动词与名字之间允许「喷火龙的地震」「我的莎莉亚用」这类修饰。
 const MOVE = new RegExp(`(${VERBS})([${CJK}的]{0,6}?)([${CJK}]{2,12}?)(?:并|再|然后|之后|以后|时|,|\\.|$)`, 'g');
-const NEGATED = new RegExp(`(不要|别|切勿|不用|禁止)([${CJK}]{0,4}?)([${CJK}]{2,12}?)(?:并|再|然后|之后|以后|时|,|\\.|$)`);
 
 /** 全角 ASCII 转半角，中文标点保留，换行统一成 \n。 */
 export function normalizeText(raw: string): string {
@@ -85,15 +90,6 @@ export function normalizeText(raw: string): string {
     .replace(/\u3000/g, ' ');
 }
 
-function sentences(text: string): Array<{text: string; start: number}> {
-  const result: Array<{text: string; start: number}> = [];
-  for (const match of text.matchAll(/[^.!?;\n]+/g)) {
-    const trimmed = match[0].trim();
-    if (trimmed) result.push({text: trimmed, start: match.index! + match[0].indexOf(trimmed)});
-  }
-  return result;
-}
-
 export function numberPriority(sentence: string): number | null {
   if (/([0-9]+)\s*是\s*(?:最高优先级|最优先|优先级最高)/.test(sentence)) return 0;
   const numbered = sentence.match(/([0-9]+)\s*是/);
@@ -102,20 +98,8 @@ export function numberPriority(sentence: string): number | null {
 
 function trimName(value: string): string {
   STOP.lastIndex = 0;
-  const match = STOP.exec(value);
-  return (match ? value.slice(0, match.index) : value).trim();
-}
-
-/** 在 2–6 个字的滑动窗口里找出真正能消解的名字（中文招式名/宝可梦名），没有就返回 null。 */
-function longestName(value: string, dex: typeof Engine.Dex.prototype, index?: MoveIndex): string | null {
-  const chars = Array.from(value);
-  for (let length = Math.min(6, chars.length); length >= 2; length--) {
-    for (let start = 0; start + length <= chars.length; start++) {
-      const candidate = chars.slice(start, start + length).join('');
-      if (resolveName(dex, candidate, index).move || resolveName(dex, candidate, index).species) return candidate;
-    }
-  }
-  return null;
+  const matched = STOP.exec(value);
+  return (matched ? value.slice(0, matched.index) : value).trim();
 }
 
 interface RawAction {source: string; position: number; swap: boolean; conditional: boolean; sentence: string}
@@ -123,17 +107,17 @@ interface RawAction {source: string; position: number; swap: boolean; conditiona
 function actionsIn(sentence: string, start: number): RawAction[] {
   const found: RawAction[] = [];
   const masks = Array.from({length: sentence.length}, () => false);
-  for (const match of sentence.matchAll(SWAP)) {
-    const source = match[2].trim();
-    const offset = match.index! + match[0].indexOf(match[2]);
+  for (const matched of sentence.matchAll(SWAP)) {
+    const source = matched[2]!.trim();
+    const offset = matched.index! + matched[0].indexOf(matched[2]!);
     if (source.length < 2 || masks.slice(offset, offset + source.length).some(Boolean)) continue;
     for (let i = offset; i < offset + source.length; i++) masks[i] = true;
     found.push({source, position: start + offset, swap: true, conditional: false, sentence});
   }
-  for (const match of sentence.matchAll(MOVE)) {
-    const offset = match.index! + match[0].indexOf(match[3]);
-    const verbEnd = match.index! + match[1].length + match[2].length;
-    const source = trimName(match[3]);
+  for (const matched of sentence.matchAll(MOVE)) {
+    const offset = matched.index! + matched[0].indexOf(matched[3]!);
+    const verbEnd = matched.index! + matched[1]!.length + matched[2]!.length;
+    const source = trimName(matched[3]!);
     if (offset < verbEnd || source.length < 2 || masks.slice(offset, offset + source.length).some(Boolean)) continue;
     for (let i = offset; i < offset + source.length; i++) masks[i] = true;
     const after = sentence.slice(offset + source.length);
@@ -145,14 +129,12 @@ function actionsIn(sentence: string, start: number): RawAction[] {
 import type {MoveIndex} from './names.ts';
 export type {MoveIndex};
 
-/** 消解：先引擎原名（英文/ID），再 zh-hans 名字表；本轮不做拼写模糊与昵称。 */
+/** 消解：先引擎原名（英文/ID），再 zh-hans 名字表；不做拼写模糊与昵称（留给后面的轮次）。 */
 export function resolveName(dex: typeof Engine.Dex.prototype, word: string, index?: MoveIndex): {move: string | null; species: string | null} {
-  // 第三轮要修：优先按「招式」解析，而不是先按物种——「换上加鲁克」里的「加鲁克」能查到物种，
-  // 「保护主力」也可能先撞上某个物种。本轮保持「先招式、再物种」的顺序，但只查显示名，不查内部 ID。
+  if (!word) return {move: null, species: null};
+  // 中文招式名（如「守住」）在引擎里可能被当成某只宝可梦，所以名字表先于引擎的「物种」解析。
   const move = dex.moves.get(word);
   if (move.exists) return {move: move.name, species: null};
-  // 名字表优先于引擎的「物种」解析：中文招式名（如「守住」）在引擎里可能被当成某只宝可梦。
-  // 表里的值已经是引擎显示名（英文原名），直接使用，不再交给引擎二次解析中文。
   const key = word.toLowerCase();
   const byMove = index?.moves.get(key);
   if (byMove) return {move: byMove, species: null};
@@ -163,9 +145,22 @@ export function resolveName(dex: typeof Engine.Dex.prototype, word: string, inde
   return {move: null, species: null};
 }
 
+/** 名字里夹了物种/修饰（「保护主力」「喷火龙的地震」）时，取 2–6 字滑动窗口里最长的能消解片段。 */
+function longestName(value: string, dex: typeof Engine.Dex.prototype, index?: MoveIndex): string | null {
+  const chars = Array.from(value);
+  for (let length = Math.min(6, chars.length); length >= 2; length--) {
+    for (let start = 0; start + length <= chars.length; start++) {
+      const candidate = chars.slice(start, start + length).join('');
+      const resolved = resolveName(dex, candidate, index);
+      if (resolved.move || resolved.species) return candidate;
+    }
+  }
+  return null;
+}
+
 /** 把整句动作按位置排序后解析成 ActionIntent，并保证：
  *  - 同句没有数字时，换人排在出招之后；
- *  - 否定只吞掉它紧挨着的那一个动作。 */
+ *  - 否定按作用域吞动作（见 splits.ts）。 */
 function toActions(sentence: string, start: number, dex: typeof Engine.Dex.prototype, index: MoveIndex | undefined, intent: Intent) {
   const numbered = numberPriority(sentence);
   const target = TARGETS.find(([pattern]) => pattern.test(sentence))?.[1] ?? null;
@@ -174,7 +169,6 @@ function toActions(sentence: string, start: number, dex: typeof Engine.Dex.proto
   const swapCount = values.filter((value) => value.swap).length;
   const actions: Array<ActionIntent & {priority: number}> = values.map((value) => {
     let resolved = resolveName(dex, value.source, index);
-    // 名字里夹了物种/修饰（「保护主力」「喷火龙的地震」）时，退回到 2–6 字滑动窗口里最长的能消解片段。
     if (!resolved.move && !resolved.species) {
       const inner = longestName(value.source, dex, index);
       if (inner) {
@@ -182,57 +176,49 @@ function toActions(sentence: string, start: number, dex: typeof Engine.Dex.proto
         // 换人动词后面必须是宝可梦名；其它动词后面优先招式，招式不同名时才退回宝可梦。
         resolved = value.swap ? {move: null, species: found.species} : {move: found.move, species: found.move ? null : found.species};
       }
-      // 「用X攻击」里 X 若只解析成宝可梦（如「用喷火龙的一击」），仍是换人/点名，不是招式。
-      if (!value.swap && resolved.move === null && resolved.species && !SWAP.test(sentence)) {
-        resolved = {move: null, species: resolved.species};
-      }
     }
     if (!resolved.move && !resolved.species) intent.unknown.push(value.source);
     const order = values.filter((other) => other.position < value.position).length;
     return {
       source: value.source, move: resolved.move, switchTo: resolved.species,
       // 同一句里：出招按书写顺序，换人整体后移 swapCount 位，保证「先出招、后换人」。
-      priority: numbered === null ? base + order + (value.swap ? swapCount : 0) : numbered + order + (value.swap ? swapCount : 0),
+      priority: (numbered ?? base) + order + (value.swap ? swapCount : 0),
       position: value.position, target, conditional: value.conditional, sentence
     };
   });
-  // 否定按作用域吞动作：
-  //  - 「否则不要…」吞到句末；
-  //  - 其它否定从否定词开始，吞到第一个「然后/再/并」或逗号之前（「不要 A，用 B」只吞 A）。
-  for (const word of sentence.matchAll(new RegExp(`(${NEGATION_WORDS.join('|')})`, 'g'))) {
-    const open = word.index!;
-    const terminal = /否则/.test(sentence.slice(0, open));
-    const from = open + word[1]!.length;
-    const tail = sentence.slice(from);
-    const stop = terminal ? tail.length : tail.search(/然后|再|并|[,.]|$/);
-    const end = from + (stop < 0 ? tail.length : stop);
-    // 否定只吞「从否定词到截止符号」之间的动作；截止符号之后的动作继续执行。
-    const affected = actions.filter((action) => action.position >= start + from && action.position < start + (terminal ? sentence.length : end + 1));
-    if (affected.length) {
-      intent.negated.push({text: sentence.slice(open, terminal ? sentence.length : end), actions: affected.map((action) => action.source)});
-    }
+  // 否定按作用域吞动作，并把「否则不要…」挂到前面最近的那个「除非」条件上。
+  // 已知不足（Round 7）：「否则不要冒险」里的「冒险」不是动作，真正的动作「保护主力」在逗号后面，
+  // 所以这一句的否定是空的——要用「例外语义」重写，留给下一轮。
+  for (const scope of negationScopes(sentence, NEGATION_WORDS, start)) {
+    const affected = actions.filter((action) => action.position >= scope.start && action.position <= scope.end);
+    intent.negated.push({
+      text: scope.text,
+      actions: affected.map((action) => action.source),
+      condition: nearestCondition(sentence, scope.start) ?? null
+    });
   }
-  void target;
   return actions;
 }
 
-export function parseIntent(raw: string, dex: typeof Engine.Dex.prototype, index?: MoveIndex): Intent {
-  // 第二轮命名消解依赖 catalog 的 zh-hans 表；没给表时退回到只认引擎原名。
+/** 找否定词前面最近的「除非 A」片段，用来把「除非…否则不要…」配成一对。 */
+function nearestCondition(sentence: string, index: number): string | null {
+  const prefixes = [...sentence.slice(0, index).matchAll(/除非([^,，。]*)/g)].map((value) => value[0]);
+  return prefixes.at(-1) ?? null;
+}
 
+export function parseIntent(raw: string, dex: typeof Engine.Dex.prototype, index?: MoveIndex): Intent {
   const text = normalizeText(raw);
   const intent: Intent = {raw, actions: [], negated: [], exceptions: [], conditions: [], conditionPositions: [], unknown: [], notes: []};
   const listed: Array<ActionIntent & {priority: number}> = [];
-  for (const sentence of sentences(text)) {
-    const exception = /(?:除非|除[^,]*?外|如果|若|一旦|否则)/.exec(sentence.text);
-    if (exception) intent.exceptions.push(sentence.text.slice(exception.index));
-    for (const word of sentence.text.matchAll(/hp|HP|体力|血量|剩|还有|首次|第一次|已经|状态|异常|睡眠|中毒|麻痹|烧伤|替身|强化|能力等级|天气|雨|晴|沙暴|雪|场地|濒死|倒下/g)) {
-      intent.conditions.push(sentence.text.slice(word.index));
+  for (const sentence of splitSentences(text)) {
+    if (/除非/.test(sentence.text)) intent.exceptions.push(sentence.text.slice(sentence.text.indexOf('除非')));
+    for (const matched of sentence.text.matchAll(/hp|HP|体力|血量|剩|还有|首次|第一次|已经|状态|异常|睡眠|中毒|麻痹|烧伤|替身|强化|能力等级|天气|雨|晴|沙暴|雪|场地|濒死|倒下|不会|没带/g)) {
+      intent.conditions.push(sentence.text.slice(matched.index));
+      intent.conditionPositions.push(sentence.start + matched.index!);
     }
-    // 注意：toActions 的第三个参数是 dex，第四个才是名字表；这里写成 dex/nameIndex 的顺序。
     for (const action of toActions(sentence.text, sentence.start, dex, index, intent)) listed.push(action);
   }
-  // 例外：「优先保护主力，除非能够结束战斗，否则不要冒险」——例外只记录，不改排序；
-  // 「结束战斗」不是招式，会进入 unknown 并在决策里跳过。
+  // 例外：「优先保护主力，除非能够结束战斗，否则不要冒险」——例外只记录；「结束战斗」不是招式，会进入 unknown。
   listed.sort((a, b) => a.priority - b.priority || a.position - b.position);
   intent.actions = listed;
   return intent;

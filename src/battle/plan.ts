@@ -10,7 +10,7 @@ import type {ActionIntent, MoveIndex} from './tactics.ts';
 import {resolveName} from './tactics.ts';
 import type {Engine} from './engine.ts';
 import type {View} from './view.ts';
-import type {FoeInfo} from './opponent.ts';
+import type {FoeKnown} from './opponent.ts';
 
 export interface Condition {
   /** 原句片段，便于日志回放。 */
@@ -96,7 +96,7 @@ export function readCondition(text: string, index?: MoveIndex, dex?: typeof Engi
 }
 
 /** 用「本方可见」的战局判断条件；看不到的信息返回 false，而不是当成成立。 */
-export function evaluate(condition: Condition, view: View, turn: number, foes: FoeInfo): boolean {
+export function evaluate(condition: Condition, view: View, turn: number, foes: FoeKnown): boolean {
   if (condition.unverifiable) return false;
   const compare = (actual: number): boolean => {
     switch (condition.operator) {
@@ -181,9 +181,15 @@ export function rebuildPlan(input: PlanInput): {plan: Plan; unavailable: Array<{
     }
   }
   // 负向判断可以从「条件片段」或动作句子里出现，所以两处都要扫一遍。
-  for (const text of [...input.conditions, ...input.actions.map((action) => action.sentence)]) {
+  for (const text of input.conditions) {
     const claim = readClaim(text, input.index, input.dex);
     if (claim && !plan.claims.some((value) => value.text === claim.text)) plan.claims.push(claim);
+  }
+  if (input.actions.length) {
+    for (const sentence of input.actions.map((action) => action.sentence)) {
+      const claim = readClaim(sentence, input.index, input.dex);
+      if (claim && !plan.claims.some((value) => value.text === claim.text)) plan.claims.push(claim);
+    }
   }
   for (const action of input.actions) {
     // 句子里带条件的动作挂上这个条件，条件不成立就不出这个动作。
@@ -204,7 +210,7 @@ export function rebuildPlan(input: PlanInput): {plan: Plan; unavailable: Array<{
 }
 
 /** 决策层用：这个动作挂的条件是否成立。 */
-export function allows(plan: Plan, action: ActionIntent, view: View, turn: number, foes: FoeInfo): boolean {
+export function allows(plan: Plan, action: ActionIntent, view: View, turn: number, foes: FoeKnown): boolean {
   const guarded = plan.guarded.find((entry) => entry.action === action);
   return guarded ? evaluate(guarded.condition, view, turn, foes) : true;
 }
