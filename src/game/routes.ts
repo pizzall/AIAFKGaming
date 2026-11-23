@@ -68,6 +68,12 @@ export function gameRoutes(context: RouteContext) {
           decisions: battle.ownerId === owner ? (battle.result?.playerDecisions ?? []) : [],
           error: battle.status === 'error' ? '执行异常，未判为玩家失败。' : undefined
         });
+      } else if (request.method === 'POST' && path === '/api/game/compare') {
+        // 同条件对照：tactic 可覆盖当前战术；seed 可复现。只跑玩家自己的队伍与固定 NPC 模板。
+        const input = (await readBody(request)) as any;
+        json(response, 200, game.compare({id: owner, tactic: input?.tactic, seed: input?.seed}));
+      } else if (request.method === 'GET' && path === '/api/game/compare') {
+        json(response, 200, {comparisons: game.comparisons(owner)});
       } else throw new GameError('接口不存在。', 404);
     } catch (error) {
       json(response, error instanceof GameError ? error.status : 400, {error: error instanceof Error ? error.message : '操作失败。'});

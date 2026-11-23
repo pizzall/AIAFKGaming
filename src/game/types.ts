@@ -126,6 +126,12 @@ export interface DecisionRecord {
   }>;
   mistakes: Array<{mode: 'direct' | 'refined'; sequence: number; kind: string; text: string; detail: string}>;
   winnerAgreement: boolean;
+  /** 第八轮：误解定位与二次定位的纠正统计。 */
+  fidelity?: {
+    corrected: number;
+    remaining: number;
+    fixes: Array<{idea: string; stage: string; fix: string}>;
+  };
 }
 export interface ComparisonBattle {
   id: string;

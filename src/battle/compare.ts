@@ -15,6 +15,7 @@ import type {TeamMember} from './fixtures.ts';
 import type {DecisionRecord} from '../game/types.ts';
 import {readView} from './view.ts';
 import {benchSlot} from './layout.ts';
+import {compareFidelity, type Fidelity} from './locator.ts';
 
 export type Mode = 'direct' | 'refined';
 
@@ -48,6 +49,8 @@ export interface ComparisonReport {
   mistakes: Mistake[];
   /** 胜负只在辅助栏：同一配置下两种方式的胜负是否一致。 */
   winnerAgreement: boolean;
+  /** 第八轮：把每条误解定位到流水线阶段，并统计二次定位纠正了多少条。 */
+  fidelity: Fidelity;
 }
 
 const BUDGET = 1;
@@ -108,7 +111,9 @@ export function runComparison(tactic: string, dex: typeof Engine.Dex.prototype, 
     right: options.right.map((member) => member.species),
     outcomes,
     mistakes,
-    winnerAgreement: first.winnerSide === second.winnerSide
+    winnerAgreement: first.winnerSide === second.winnerSide,
+    // 误会定位：拿两种模式的决策记录逐条对照，回答「二次定位纠正了哪几条、还剩下哪几条」。
+    fidelity: compareFidelity(first.decisions, second.decisions, first.error, second.error)
   };
 }
 
@@ -235,7 +240,8 @@ export function toRecord(report: ComparisonReport): DecisionRecord {
       decisions: outcome.decisions.map(( decision) => ({sequence: decision.sequence, choice: decision.choice, used: decision.used, ignored: decision.ignored, targets: decision.targets}))
     })),
     mistakes: report.mistakes,
-    winnerAgreement: report.winnerAgreement
+    winnerAgreement: report.winnerAgreement,
+    fidelity: report.fidelity
   };
 }
 

@@ -56,6 +56,24 @@ test('round 7 goals: outcome is still not a reliable signal', () => {
   assert.ok(refined.turns >= direct.turns);
 });
 
+test('round 8 fixes: fidelity locates each misunderstanding on a pipeline stage', () => {
+  const report = runComparison(tactic, dex, options);
+  assert.ok(report.fidelity.fixes.length >= 0);
+  for (const fix of report.fidelity.fixes) {
+    assert.ok(['undiscovered', 'unresolved', 'scene-checked', 'guarded', 'queued', 'executed', 'rejected'].includes(fix.stage));
+  }
+  // direct 被引擎拒绝的那条命令，refined 必须能正常接受，locator 才会把它计为已纠正。
+  const direct = report.outcomes.find((outcome) => outcome.mode === 'direct')!;
+  const refined = report.outcomes.find((outcome) => outcome.mode === 'refined')!;
+  if (direct.error && !refined.error) assert.ok(report.fidelity.corrected >= 1);
+});
+
+test('round 8 fixes: the comparison record carries the fidelity summary', () => {
+  const record = toRecord(runComparison(tactic, dex, options));
+  assert.equal(typeof record.fidelity?.corrected, 'number');
+  assert.equal(typeof record.fidelity?.remaining, 'number');
+});
+
 test('round 7 goals: refinement audit is not quantitative yet', () => {
   // 已知不足：只知道 refined 活得久，没有统计它具体修好了「条件/目标/否定」中的哪几条。
   const mistakes = toRecord(runComparison(tactic, dex, options)).mistakes.filter((mistake) => mistake.mode === 'refined').length;

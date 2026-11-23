@@ -8,6 +8,9 @@ import {actionNames, chineseName, chineseNames, readableLog} from './localizatio
 import {contentFingerprint} from '../battle/publication.ts';
 import {validateTeam, type BattleResult} from '../battle/runner.ts';
 import {npcTemplates} from '../battle/fixtures.ts';
+import {runComparison, toRecord} from '../battle/compare.ts';
+import {dex as strategyDex} from './catalog.ts';
+import {nameIndex as strategyNames} from '../battle/names.ts';
 import {createDefenseSnapshot} from '../domain/gym.ts';
 import {GameClock} from './clock.ts';
 import {itemCatalog, machineCatalog, moveCatalog} from './catalog.ts';
@@ -754,6 +757,27 @@ export class GameService {
     return {message: '挑战已受理。', battleId: id};
   }
 
+  /** 同条件对照：用当前备战的队伍与战术，对同一对手、同一份种子跑 direct 与 refined 两种模式。 */
+  compare(request: {id: string; tactic?: string; seed?: number[]}): any {
+    if (typeof request?.id !== 'string' || !request.id) throw new GameError('对照实验需要账号。');
+    const player = this.store.player(request.id);
+    const tactic = String(request.tactic ?? player.tactic ?? '').replace(/\r\n?/g, '\n');
+    if (tacticLength(tactic) > TACTIC_LIMIT) throw new GameError('战术最多500字。');
+    const ids = teamIds(player, player.team, 6, 6);
+    const left = ids.map((id) => battleMember(member(player, id)));
+    const template = npcTemplates[0];
+    const seed = request.seed ?? [3, 5, 7, 11];
+    const report = runComparison(tactic, strategyDex, {seed, left, right: template.team, index: strategyNames(strategyDex)});
+    const record = toRecord(report);
+    const id = randomUUID();
+    this.store.saveComparison(id, player.id, new Date(this.clock.realNow()).toISOString(), tactic, record);
+    return {id, record};
+  }
+  /** 本人最近的对照结果；别的账号查不到。 */
+  comparisons(id: string): any[] {
+    if (typeof id !== 'string' || !id) throw new GameError('对照实验需要账号。');
+    return this.store.comparisons(id, 10);
+  }
   private saveBattle(battle: any): void {
     this.store.db.prepare('INSERT OR REPLACE INTO gym_battles VALUES(?,?,?)').run(battle.id, battle.ownerId, JSON.stringify(battle));
   }

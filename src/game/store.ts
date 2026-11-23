@@ -18,7 +18,8 @@ export class GameStore {
       CREATE TABLE IF NOT EXISTS world(id INTEGER PRIMARY KEY CHECK(id=1), state TEXT NOT NULL);
       CREATE TABLE IF NOT EXISTS receipts(player_id TEXT, id TEXT, hash TEXT, response TEXT, PRIMARY KEY(player_id,id));
       CREATE TABLE IF NOT EXISTS ledger(id INTEGER PRIMARY KEY, player_id TEXT, at INTEGER, reason TEXT, deltas TEXT);
-      CREATE TABLE IF NOT EXISTS gym_battles(id TEXT PRIMARY KEY, owner_id TEXT, state TEXT NOT NULL);`);
+      CREATE TABLE IF NOT EXISTS gym_battles(id TEXT PRIMARY KEY, owner_id TEXT, state TEXT NOT NULL);
+      CREATE TABLE IF NOT EXISTS comparisons(id TEXT PRIMARY KEY, owner_id TEXT, created_at TEXT NOT NULL, tactic TEXT NOT NULL, state TEXT NOT NULL);`);
     this.db.prepare('INSERT OR IGNORE INTO world VALUES(1,?)').run(JSON.stringify(initialWorld));
   }
 
@@ -99,6 +100,17 @@ export class GameStore {
     if (Object.keys(deltas).length) {
       this.db.prepare('INSERT INTO ledger(player_id,at,reason,deltas) VALUES(?,?,?,?)').run(player.id, at, reason, JSON.stringify(deltas));
     }
+  }
+  /** 保存一条同条件对照结果；只保留本人可见的两种模式记录。 */
+  saveComparison(id: string, ownerId: string, at: string, tactic: string, record: unknown): void {
+    this.db.prepare('INSERT OR REPLACE INTO comparisons VALUES(?,?,?,?,?)').run(id, ownerId, at, tactic, JSON.stringify(record));
+  }
+  /** 按本人查询对照结果（最近的在前），别的账号看不到。 */
+  comparisons(ownerId: string, limit = 10): Array<{id: string; createdAt: string; tactic: string; record: unknown}> {
+    return (this.db
+      .prepare('SELECT id, created_at, tactic, state FROM comparisons WHERE owner_id=? ORDER BY created_at DESC LIMIT ?')
+      .all(ownerId, limit) as Array<{id: string; created_at: string; tactic: string; state: string}>)
+      .map((row) => ({id: row.id, createdAt: row.created_at, tactic: row.tactic, record: JSON.parse(row.state)}));
   }
   close(): void {
     if (this.db.isOpen) this.db.close();
