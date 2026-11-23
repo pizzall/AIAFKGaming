@@ -537,7 +537,7 @@ function team() {
           })
           .join('') || '<p>从下方伙伴收藏中加入成员。</p>'
       }</div>
-      <label>战斗风格（最多500字）<textarea id="tactic" maxlength="500" ${locked ? 'disabled' : ''} placeholder="例如：优先集中攻击，对方强化时尝试打断。当前策略分析尚未接入。">${escape(draftTactic ?? preset.tactic)}</textarea></label></div>
+      <label>战斗风格（最多500字）<textarea id="tactic" maxlength="500" ${locked ? 'disabled' : ''} placeholder="例如：优先保护主力，除非能够结束战斗，否则不要冒险。">${escape(draftTactic ?? preset.tactic)}</textarea></label></div>
     <div class="panel"><div class="row"><h2>伙伴收藏</h2><div>${button('上一页', 'roster-prev', '', 'small secondary')} ${button('下一页', 'roster-next', '', 'small secondary')}</div></div>
     <div class="roster">${state.pokemon
       .slice(rosterPage * 30, rosterPage * 30 + 30)

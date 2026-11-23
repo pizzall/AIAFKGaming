@@ -4,6 +4,7 @@ import {Engine, engineRevision} from './engine.ts';
 import {createBattleDex, deserializeEffects} from './effects.ts';
 import {contentFingerprint} from './publication.ts';
 import {createTacticsAgent, type DecisionTrace} from './agent.ts';
+import {nameIndex} from './names.ts';
 import {playerTeam, npcTemplates, selectNpcTemplate, type TeamMember} from './fixtures.ts';
 import {dex as strategyDex} from '../game/catalog.ts';
 
@@ -126,15 +127,16 @@ export function runBattle(input: BattleInput = {}): BattleResult {
     : selectNpcTemplate(input.npcIndex ?? randomInt(npcTemplates.length));
   const left = input.left ?? playerTeam;
   const agentKind = input.agent ?? 'scripted';
-  const agent = agentKind === 'tactics' ? createTacticsAgent(strategyDex, input.playerTactic ?? '') : null;
+  const agent = agentKind === 'tactics' ? createTacticsAgent(strategyDex, input.playerTactic ?? '', nameIndex(strategyDex)) : null;
   const battle = makeBattle(left, npc.team, seed);
   const decisions: BattleResult['decisions'] = [];
   for (let sequence = 0; !battle.ended && sequence < 2000; sequence++) {
     if (battle.turn > 250) throw new Error('Battle exceeded verification turn bound');
     // Freeze both requests before submitting either side, even though the agents are deterministic.
     const requests = battle.sides.map((side: any) => structuredClone(side.activeRequest));
+    const state = battle.requestState as string | undefined;
     const choices = requests.map((request: any, index: number) =>
-      request ? (index === 0 && agent ? agent.decide(request) : chooseFromRequest(request)) : ''
+      request ? (index === 0 && agent ? agent.decide(request, state) : chooseFromRequest(request)) : ''
     );
     if (!choices.some(Boolean)) throw new Error('No actionable battle request');
     for (let i = 0; i < 2; i++) {
