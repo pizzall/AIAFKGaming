@@ -8,7 +8,7 @@
 // 胜负只作辅助指标，审计要回答的是「误解发生在哪一步」。
 
 import {Engine, engineRevision} from './engine.ts';
-import type {MoveIndex} from './tactics.ts';
+import {clampTactic, type MoveIndex} from './tactics.ts';
 import {createTacticsAgent, type DecisionTrace} from './agent.ts';
 import {chooseFromRequest, makeBattle} from './runner.ts';
 import type {TeamMember} from './fixtures.ts';
@@ -100,6 +100,9 @@ function refine(
 
 /** 跑一场：两个模式共享种子、队伍、对手、日志累积和请求预算。 */
 export function runComparison(tactic: string, dex: typeof Engine.Dex.prototype, options: {seed: number[]; left: TeamMember[]; right: TeamMember[]; index?: MoveIndex}): ComparisonReport {
+  // 第九轮：同条件对照也在「同一份 500 字预算」下跑，两个模式拿到完全相同的截断结果。
+  const clamped = clampTactic(tactic);
+  tactic = clamped.text;
   const outcomes = ['direct', 'refined'].map((mode) => play(mode as Mode, tactic, dex, options));
   const mistakes = outcomes.flatMap((outcome) => audit(outcome, tactic));
   const first = outcomes[0]!;

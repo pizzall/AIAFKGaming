@@ -1,6 +1,8 @@
 import {randomBytes, randomUUID} from 'node:crypto';
 import {GameStore} from './store.ts';
-import {GameError, TACTIC_LIMIT, tacticLength, type Gym, type Partner, type PlayerState, type WorldState} from './types.ts';
+import {
+  GameError, TACTIC_LIMIT, tacticCharacters, tacticLength, type Gym, type Partner, type PlayerState, type WorldState
+} from './types.ts';
 import {battleMember, dex, experienceAt, gameConfig as cfg, heal, learnedAt, makePartner, speciesCatalog} from './catalog.ts';
 import {random, refreshPartner, statKeys} from './catalog.ts';
 import {advancePlayer, log, occupation, occupied, recoveryDuration} from './idle.ts';
@@ -28,6 +30,14 @@ function newGyms(version = 1): Gym[] {
     version,
     activeBattleId: null
   }));
+}
+/** 战术文本入库前的统一处理：只接受字符串，拒绝控制字符/零宽字符/未配对代理，换行统一成 \n。 */
+function tacticInput(input: unknown): string {
+  if (input === undefined || input === null) return '';
+  if (typeof input !== 'string') throw new GameError('战术需要是文字。');
+  const rejected = tacticCharacters(input);
+  if (rejected) throw new GameError(rejected);
+  return input.replace(/\r\n?/g, '\n');
 }
 function quantity(input: unknown, maximum = 1000000): number {
   if (!Number.isSafeInteger(input) || Number(input) < 1 || Number(input) > maximum) throw new GameError('数量超出范围。');
@@ -283,7 +293,7 @@ export class GameService {
       case 'team': {
         if (player.readyPresetId) throw new GameError('请先取消备战，再修改当前队伍。');
         player.team = teamIds(player, input.team);
-        const tactic = String(input.tactic ?? '').replace(/\r\n?/g, '\n');
+        const tactic = tacticInput(input.tactic);
         if (tacticLength(tactic) > TACTIC_LIMIT) throw new GameError('战术最多500字。');
         player.tactic = tactic;
         Object.assign(player.presets![0], {team: [...player.team], tactic});
@@ -295,7 +305,7 @@ export class GameService {
         if (preset && player.readyPresetId === preset.id) throw new GameError('该预设正在备战，请先取消备战再编辑。');
         if (!preset && player.presets!.length >= (cfg.teamPresetLimit ?? 10)) throw new GameError('编队预设数量已达上限。');
         const name = String(input.name ?? '').trim();
-        const tactic = String(input.tactic ?? '').replace(/\r\n?/g, '\n');
+        const tactic = tacticInput(input.tactic);
         if (!name || Array.from(name).length > 20 || tacticLength(tactic) > TACTIC_LIMIT)
           throw new GameError('预设名称需1–20字，战术最多500字。');
         const value = {id: preset?.id ?? randomUUID(), name, team: teamIds(player, input.team), tactic};
@@ -761,7 +771,7 @@ export class GameService {
   compare(request: {id: string; tactic?: string; seed?: number[]}): any {
     if (typeof request?.id !== 'string' || !request.id) throw new GameError('对照实验需要账号。');
     const player = this.store.player(request.id);
-    const tactic = String(request.tactic ?? player.tactic ?? '').replace(/\r\n?/g, '\n');
+    const tactic = tacticInput(request.tactic ?? player.tactic ?? '');
     if (tacticLength(tactic) > TACTIC_LIMIT) throw new GameError('战术最多500字。');
     const ids = teamIds(player, player.team, 6, 6);
     const left = ids.map((id) => battleMember(member(player, id)));

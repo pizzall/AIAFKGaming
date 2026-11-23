@@ -143,8 +143,17 @@ export interface ComparisonBattle {
 }
 /** 战术文本上限：按 Unicode 字符数计算，换行与全角标点各算一个字符。 */
 export const TACTIC_LIMIT = 500;
+/** 与 `src/battle/tactics.ts` 的计数保持一致：按 Unicode 码点，换行与全角标点各算 1 个。 */
 export function tacticLength(tactic: string): number {
   return Array.from(tactic).length;
+}
+/** 只允许可见字符与换行：控制字符、零宽字符和未配对代理会被拒绝而不是静默丢掉。 */
+export function tacticCharacters(raw: string): string | null {
+  // 换行与制表是排版字符，允许保存；其它控制字符（含 \r）一律拒绝。
+  if (/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F-\u009F]/.test(raw)) return '战术里不能有控制字符。';
+  if (/[\u200B-\u200F\u202A-\u202E\uFEFF]/.test(raw)) return '战术里不能有零宽或方向控制字符。';
+  if (/[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?:[^\uD800-\uDBFF]|^)[\uDC00-\uDFFF]/.test(raw)) return '战术里有不成对的字符。';
+  return null;
 }
 export class GameError extends Error {
   status: number;

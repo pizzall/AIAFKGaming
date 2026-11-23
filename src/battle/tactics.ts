@@ -79,9 +79,36 @@ const VERBS = '优先使用|优先打出|优先开|优先放|优先用|优先派
 const MOVE = new RegExp(`(${VERBS})([${CJK}的]{0,6}?)([${CJK}]{2,12}?)(?:并|再|然后|之后|以后|时|,|\\.|$)`, 'g');
 
 /** 全角 ASCII 转半角，中文标点保留，换行统一成 \n。 */
+/**
+ * 第九轮：500 字上限里换行、全角标点、emoji（代理对）各算一个字符；
+ * 解析文本统一换行、统一标点，但**先按原文的长度和内容做预算判断**，解析后再压缩空白。
+ * 截断按「句子 / 逗号」边界切，不会把招式名或条件劈成半句。
+ */
+export const TACTIC_LIMIT = 500;
+
+/** 按 Unicode 字符（码点）计数：换行 1 个、全角标点 1 个、代理对 1 个。 */
+export function tacticLength(raw: string): number {
+  return Array.from(raw).length;
+}
+
+/** 超出上限时按句子或逗号边界截断，并在末尾补省略号（省略号不计入上限之外的部分）。 */
+export function clampTactic(raw: string, limit = TACTIC_LIMIT): {text: string; truncated: boolean} {
+  // 换行与制表是排版字符：直接换成 \n 与空格，其它控制字符仍由上游拒绝。
+  raw = raw.replace(/\r\n?/g, '\n').replace(/\t/g, ' ');
+  if (tacticLength(raw) <= limit) return {text: raw, truncated: false};
+  const head = Array.from(raw).slice(0, limit).join('');
+  // 先按码点切，再退到最近的分句符；只有在很少边界句式时才硬切（保证不会超过上限）。
+  const boundary = Math.max(head.lastIndexOf('。'), head.lastIndexOf('\n'), head.lastIndexOf('，'), head.lastIndexOf(','));
+  const text = boundary >= 1 ? head.slice(0, boundary + 1) : head;
+  const sanitized = text.replace(/[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?:[^\uD800-\uDBFF]|^)[\uDC00-\uDFFF]/g, '');
+  return {text: sanitized.trimEnd(), truncated: true};
+}
+
 export function normalizeText(raw: string): string {
   return raw
     .replace(/\r\n?/g, '\n')
+    // 连续空白压缩成一个空格：解析不依赖空白宽度，但保留至少一个空格作为分界。
+    .replace(/[ \t]{2,}/g, ' ')
     .replace(/[\uFF01-\uFF5E]/g, (char) => {
       const known: Record<string, string> = {'\u3001': ',', '\u3002': '.', '\uFF0C': ',', '\uFF1A': ':', '\uFF1B': ';', '\uFF1F': '?', '\uFF01': '!'};
       if (char >= '\uFF01' && char <= '\uFF5E') return known[char] ?? String.fromCharCode(char.charCodeAt(0) - 0xFEE0);
@@ -207,8 +234,18 @@ function nearestCondition(sentence: string, index: number): string | null {
 }
 
 export function parseIntent(raw: string, dex: typeof Engine.Dex.prototype, index?: MoveIndex): Intent {
+  // 先按原文截断到 500 字，再把截断后的文本统一成解析用的写法；超长时在 notes 里明确记录。
+  const clamped = clampTactic(raw);
+  if (clamped.truncated) {
+    const notes = ['战术超过500字，已按句子边界截断'];
+    return {...parseIntentAll(clamped.text, dex, index, notes), raw};
+  }
+  return parseIntentAll(clamped.text, dex, index, []);
+}
+
+function parseIntentAll(raw: string, dex: typeof Engine.Dex.prototype, index: MoveIndex | undefined, notes: string[]): Intent {
   const text = normalizeText(raw);
-  const intent: Intent = {raw, actions: [], negated: [], exceptions: [], conditions: [], conditionPositions: [], unknown: [], notes: []};
+  const intent: Intent = {raw, actions: [], negated: [], exceptions: [], conditions: [], conditionPositions: [], unknown: [], notes: [...notes]};
   const listed: Array<ActionIntent & {priority: number}> = [];
   for (const sentence of splitSentences(text)) {
     if (/除非/.test(sentence.text)) intent.exceptions.push(sentence.text.slice(sentence.text.indexOf('除非')));
