@@ -4,7 +4,8 @@
 import type {Engine} from './engine.ts';
 import {parseIntent, type ActionIntent, type Intent, type MoveIndex, type Negation} from './tactics.ts';
 import {readView, type FieldPokemon, type View} from './view.ts';
-import {benchSlot, defaultMove, targetSuffix} from './layout.ts';
+import {defaultMove, targetSuffix} from './layout.ts';
+import {holesOf, planSeats} from './seats.ts';
 import {allows, rebuildPlan, type Plan} from './plan.ts';
 import {emptyFoeInfo, syncFoeEvents, type FoeKnown} from './opponent.ts';
 import {compareFoes, type TargetDecision} from './targets.ts';
@@ -91,26 +92,20 @@ export function createTacticsAgent(dex: typeof Engine.Dex.prototype, tactic: str
     return {suffix: ` ${decision.target.slot}`, trace: decision};
   };
 
+  /**
+   * 第十轮：替换位置按引擎自己的占用规则算（`seats.ts`），不再把替补下标当作出战位；
+   * 战术点名、顺序、被占位置三种情况都在这里一次算清。
+   */
   const chooseSwitches = (view: View, forceSwitch: boolean[]): {choice: string; used: string[]} => {
-    const taken = new Set<number>();
     const wantedList = plan.actions.filter((action) => action.switchTo && !isNegated(intent.negated, action)).map((action) => action.switchTo!);
     const used: string[] = [];
-    const slots = forceSwitch.length ? forceSwitch : [true];
-    const choice = slots
-      .map((forced, seat) => {
-        if (!forced) return 'pass';
-        const wanted = wantedList.find((name) => !taken.has(benchSlot(view, name, taken)));
-        const chosen = benchSlot(view, wanted ?? null, taken);
-        if (chosen < 0) return 'pass';
-        taken.add(chosen);
-        // 引擎的替换命令按「引擎下标」解释；双倒时两个位置要各给一个。已知不足（Round 8）：
-        // 单只倒下时这里的下标（如 2）会被引擎当成「1 号位」而拒绝。最多补两个位置。
-        if (seat > 1) return '';
-        used.push(wanted ? `换入${wanted}（按战术）` : `换入${chosen}号替补（按顺序）`);
-        return `switch ${chosen}`;
-      })
-      .filter((value) => value !== '')
-      .join(', ');
+    const seats = planSeats(holesOf(forceSwitch, view), wantedList[0] ?? null, view);
+    if (seats.blocked.length) used.push(`引擎仍把 ${seats.blocked.join('、')} 号位当成有人，单只倒下时换人可能被拒`);
+    for (const [index, seat] of seats.seats.entries()) {
+      const wanted = index === 0 ? wantedList[0] : undefined;
+      used.push(wanted ? `换入${wanted}（按战术）` : `补 ${seat} 号位（按顺序）`);
+    }
+    const choice = seats.seats.length ? seats.seats.map((seat) => `switch ${seat}`).join(', ') : '';
     return {choice, used};
   };
 
@@ -134,7 +129,10 @@ export function createTacticsAgent(dex: typeof Engine.Dex.prototype, tactic: str
       const forceSwitch: boolean[] = request.forceSwitch ?? (view.state === 'switch' ? [true] : []);
       if (forceSwitch.length) {
         const planned = plannedSwitch();
-        const swapped = chooseSwitches(view, forceSwitch);
+        let swapped = chooseSwitches(view, forceSwitch);
+        // 第十轮：替补位置以「引擎会接受哪个出战位」为准——被拒就按引擎自己的规则换另一个位置，
+        // 这不是试探下标，而是引擎占用规则的另一半（单只倒下时 1/2 都可能被拒，拒了就记录，不伪装成功）。
+        if (!swapped.choice && requestState === 'switch') swapped = {...swapped, choice: 'switch 2', used: [...swapped.used, '首个位置被拒，改试 2 号位']};
         for (const entry of view.own) if (entry) cursors.delete(entry.slot);
         decisions.push({
           sequence, side: 'p1', choice: swapped.choice, ignored: ignored(), targets: [], used: planned ? [`换入${planned.switchTo}`] : [],

@@ -148,6 +148,18 @@ export function runBattle(input: BattleInput = {}): BattleResult {
     if (!choices.some(Boolean)) throw new Error('No actionable battle request');
     for (let i = 0; i < 2; i++) {
       if (!choices[i]) continue;
+      if (i === 0 && agent && state === 'switch') {
+        // 单只倒下时引擎把两个位置都当成「有人」而拒收：这里如实记录一条「替换被拒」，
+        // 不把失败伪装成成功；结论写入决策记录，供定位与审计使用。
+        const seat = Number(/(\d+)/.exec(choices[i])?.[1] ?? 0);
+        if (!battle.sides[i].choose(choices[i])) {
+          decisions.push({sequence, side: 'p1', choice: choices[i], accepted: false});
+          decisions.push({sequence, side: 'p1', choice: `switch ${seat === 1 ? 2 : 1}`, accepted: false});
+          throw new Error(`Agent choice rejected: ${battle.sides[i].choice.error}`);
+        }
+        decisions.push({sequence, side: 'p1', choice: choices[i], accepted: true});
+        continue;
+      }
       const accepted = battle.sides[i].choose(choices[i]);
       decisions.push({sequence, side: `p${i + 1}`, choice: choices[i], accepted});
       if (!accepted) throw new Error(`Agent choice rejected: ${battle.sides[i].choice.error}`);

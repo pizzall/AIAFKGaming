@@ -54,15 +54,17 @@ function parseCondition(condition: string): {hpPercent: number; fainted: boolean
 }
 
 /**
- * 被占用的下标的反推：替换请求里有 `active` 表时，`active` 是空的/最短的；没有时 `active` 是当前两只。
- * 真实占用 = 「active 的长度（没有就是 2）− 两张表都倒下的位置数」。
+ * 引擎自己是怎么算「被占用的位置」的：`getRequestData()` 里就是
+ * `pokemon.slice(0, active.length).map(p => Boolean(p.active))`——
+ * 出战位置数 = 前两只里 active 为真的个数，占用下标 = 0..该数-1。
  */
 function occupiedIndexes(party: any[], activePositions: number[]): number[] {
-  const activeTable = activePositions.filter((position) => party[position]?.active);
-  const bothFainted = party.filter((entry, index) => index < 2 && entry.active && String(entry.condition).endsWith(' fnt')).length;
-  const field = Math.min(2, Math.max(0, activeTable.length ? 2 : 2));
-  const occupied = Math.max(0, Math.min(2, field - bothFainted));
-  return Array.from({length: occupied}, (_, index) => index);
+  // 单只倒下：`active` 表里还活着一只，此时只占 0 号位；双倒：`active` 表为空（或两只都是 0 fnt），只占 1 号位。
+  // 替换请求是「先判倒下的位置腾出来，再让替补站进去」，所以「被占用的位置」就是**还活着的上场位置**。
+  const alive = party.slice(0, 2).filter((entry) => entry?.active && !String(entry.condition).endsWith(' fnt')).length;
+  const occupied = [0, 1].filter((index) => index < alive);
+  void activePositions;
+  return occupied;
 }
 
 function speciesOf(ident: string): string {
