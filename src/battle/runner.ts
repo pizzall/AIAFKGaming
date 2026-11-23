@@ -130,14 +130,21 @@ export function runBattle(input: BattleInput = {}): BattleResult {
   const agent = agentKind === 'tactics' ? createTacticsAgent(strategyDex, input.playerTactic ?? '', nameIndex(strategyDex)) : null;
   const battle = makeBattle(left, npc.team, seed);
   const decisions: BattleResult['decisions'] = [];
+  let seen: string[] | null = null;
   for (let sequence = 0; !battle.ended && sequence < 2000; sequence++) {
     if (battle.turn > 250) throw new Error('Battle exceeded verification turn bound');
     // Freeze both requests before submitting either side, even though the agents are deterministic.
     const requests = battle.sides.map((side: any) => structuredClone(side.activeRequest));
     const state = battle.requestState as string | undefined;
+    if (requests[0] && agent) {
+      // 上一回合的本方事件：只含 p1 自己看到的 p2 行，对手的招式与倒下只能从这里学。
+      if (seen) agent.observe(Engine.extractChannelMessages(seen.join('\n'), [1])[1]);
+    }
+    // 两份请求都先冻结、再分别决策；对手仍走固定策略。
     const choices = requests.map((request: any, index: number) =>
       request ? (index === 0 && agent ? agent.decide(request, state) : chooseFromRequest(request)) : ''
     );
+    seen = Engine.extractChannelMessages(battle.log.join('\n'), [1])[1];
     if (!choices.some(Boolean)) throw new Error('No actionable battle request');
     for (let i = 0; i < 2; i++) {
       if (!choices[i]) continue;
