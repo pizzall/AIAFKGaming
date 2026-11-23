@@ -33,10 +33,15 @@ export interface Intent {
   /** 被否定管住的动作（原文），决策时跳过。 */
   negated: string[];
   exceptions: string[];
+  /** 条件：文本 + 文本位置，第三轮会在这基础上解析出可判断的条件。 */
   conditions: string[];
+  conditionPositions: number[];
   unknown: string[];
   notes: string[];
 }
+
+/** 第一轮的否定表：只认「不要/不应」这类祈使词，覆盖不到「不擅长」「不容易」这些中性说法。 */
+export const NEGATION_WORDS = ['不要', '别', '切勿', '不用', '禁止'];
 
 const CJK = '\u4e00-\u9fff';
 const TARGETS: Array<[RegExp, TargetWord]> = [
@@ -185,7 +190,8 @@ function toActions(sentence: string, start: number, dex: typeof Engine.Dex.proto
       position: value.position, target, conditional: value.conditional, sentence
     };
   });
-  const negated = NEGATED.exec(sentence);
+  // 已知不足（Round 4）：`(不要|别…)` 里的单字「别」会把「命中判定别乱」之外的「别」也当下；本轮先保持原样。
+  const negated = new RegExp(`(${NEGATION_WORDS.join('|')})([${CJK}]{0,4}?)([${CJK}]{2,12}?)(?:并|再|然后|之后|以后|时|,|\\.|$)`).exec(sentence);
   if (negated) {
     // 否定词后面紧跟的动作才被吞掉，动词与否定词之间允许少量修饰（如「不要冒险使用」）。
     const after = negated.index + negated[1].length + negated[2].length;
@@ -206,7 +212,7 @@ export function parseIntent(raw: string, dex: typeof Engine.Dex.prototype, index
   // 第二轮命名消解依赖 catalog 的 zh-hans 表；没给表时退回到只认引擎原名。
 
   const text = normalizeText(raw);
-  const intent: Intent = {raw, actions: [], negated: [], exceptions: [], conditions: [], unknown: [], notes: []};
+  const intent: Intent = {raw, actions: [], negated: [], exceptions: [], conditions: [], conditionPositions: [], unknown: [], notes: []};
   const listed: Array<ActionIntent & {priority: number}> = [];
   for (const sentence of sentences(text)) {
     const exception = /(?:除非|除[^,]*?外|如果|若|一旦|否则)/.exec(sentence.text);
