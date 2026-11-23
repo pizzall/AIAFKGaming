@@ -1,0 +1,16 @@
+{
+  "revision": "gen9-mega-001",
+  "mechanicsMod": "gen9",
+  "effects": [
+    {"kind": "item", "engineId": "leftovers", "handler": "residual-heal", "parameters": {"numerator": 1, "denominator": 16}},
+    {"kind": "item", "engineId": "lifeorb"},
+    {"kind": "item", "engineId": "focussash"},
+    {"kind": "item", "engineId": "sitrusberry"},
+    {"kind": "ability", "engineId": "hugepower", "handler": "attack-multiplier", "parameters": {"numerator": 2, "denominator": 1}},
+    {"kind": "ability", "engineId": "intimidate"},
+    {"kind": "ability", "engineId": "unseenfist"},
+    {"kind": "condition", "engineId": "raindance"},
+    {"kind": "condition", "engineId": "electricterrain"},
+    {"kind": "condition", "engineId": "tailwind"}
+  ]
+}

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#c83e4d">
+  <title>宝可梦挂机 · 像素视觉 Demo</title>
+  <link rel="icon" type="image/png" href="assets/icons/ball.png">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="pokemon-data.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="viewer-toolbar" aria-label="视觉演示控制栏">
+    <div><strong>AFK POKÉMON</strong><span class="viewer-divider">/</span>视觉走查</div>
+    <div class="viewer-controls">
+      <label>页面 <select id="page-picker" aria-label="演示页面"></select></label>
+      <label>状态 <select id="state-picker" aria-label="静态展示状态">
+        <option value="normal">常规样例</option>
+        <option value="complete">完成待查看</option>
+        <option value="shortage">资源不足</option>
+        <option value="empty">初次空状态</option>
+      </select></label>
+      <span class="viewer-note">1920 × 1080 · 固定示例 · 无游戏运算</span>
+    </div>
+  </div>
+  <main class="viewport" aria-label="游戏视觉演示">
+    <div id="stage-wrap"><div id="screen">
+      <header class="game-header">
+        <div class="brand"><img src="assets/icons/ball.png" alt="精灵球"><div>POKÉMON <b>AFK</b><small>把冒险，交给下一次相见</small></div></div>
+        <div class="header-center"><span class="signal-dot"></span>冒险继续中 <span class="header-separator">/</span> 常青森林</div>
+        <div class="header-wallet"><span class="currency-mark">P</span><strong>128,640</strong><span class="header-separator">|</span><img src="assets/icons/badge.png" alt="联盟点数"><strong>2,480</strong></div>
+        <button class="profile-button" data-page="growth" aria-label="查看训练家成长"><img src="assets/pokemon/front/25.png" alt="训练家伙伴皮卡丘"><span>小叶<small>研究员 Lv. 12</small></span></button>
+      </header>
+      <aside class="sidebar" aria-label="游戏导航">
+        <div class="nav-heading">TRAINER TERMINAL</div>
+        <nav id="navigation"></nav>
+        <div class="sidebar-note"><span class="tiny-label">冒险手记 NO. 014</span><strong>每一只，都有自己的位置。</strong><img src="assets/pokemon/front/133.png" alt="伊布"><span>今天也要好好相处。</span></div>
+      </aside>
+      <section id="page-content" aria-live="polite"></section>
+      <footer class="game-footer"><span><i class="signal-dot"></i> 宝可梦们正在继续冒险</span><span id="footer-hint">选择一个目的地，看看旅途的新收获。</span><span>秋叶赛季 · DAY 12</span></footer>
+      <div id="modal-layer" class="modal-layer" hidden></div>
+      <div id="toast" class="toast" role="status" hidden></div>
+    </div></div>
+  </main>
+</body>
+</html>

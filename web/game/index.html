@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#d34e50">
+  <title>宝可梦挂机冒险 · 冒险终端</title>
+  <link rel="icon" href="/assets/pokemon/front/25.png">
+  <link rel="stylesheet" href="/styles.css?v=7">
+  <script type="module" src="/app.js?v=7"></script>
+</head>
+<body>
+  <header class="game-header"><div class="brand"><span class="pixel-icon brand-icon" style="--x:66.6667%;--y:100%" aria-hidden="true"></span>
+    <strong>宝可梦 <b>挂机冒险</b><small>每一次相见，都有新收获</small></strong></div><div class="header-divider"></div>
+    <span class="header-caption">训练家的冒险手记</span><span id="account-label">冒险终端</span><button id="refresh" class="secondary" hidden>刷新结算</button>
+    <button id="logout" class="quiet" hidden>退出账号</button></header>
+  <section id="auth" class="auth panel">
+    <span class="pixel-icon auth-icon" style="--x:0%;--y:0%" aria-hidden="true"></span>
+    <small>新的冒险，从此启程</small><h1>下一段冒险，<br>从这里开始。</h1>
+    <p>使用本地测试账号保存伙伴、资源和挂机进度。</p>
+    <form id="auth-form"><label>用户名<input name="username" required minlength="2" maxlength="24" autocomplete="username"></label>
+      <label>密码<input name="password" type="password" required minlength="6" maxlength="128" autocomplete="current-password"></label>
+      <div class="row"><button type="submit" name="mode" value="login">登录</button><button type="submit" name="mode" value="register" class="secondary">注册测试账号</button></div>
+    </form><p id="auth-error" role="alert"></p><div class="auth-footnote">收集 · 培育 · 探索 · 挑战</div>
+  </section>
+  <div id="game" class="shell" hidden>
+    <aside class="sidebar"><div class="nav-heading">训练家终端 <span>导航</span></div><nav id="navigation" aria-label="游戏模块"></nav>
+      <div class="sidebar-note"><img src="/assets/pokemon/front/133.png" alt="伊布"><small>冒险手记</small><strong>每一只，都有自己的位置。</strong><p>把今天的期待，<br>交给下一次相见。</p></div>
+      <div class="save-indicator"><i></i> 本地冒险存档</div></aside>
+    <main><div class="topline"><div class="page-heading"><div id="page-symbol"></div><div><small id="page-english">训练家终端</small><h1 id="page-title"></h1></div></div>
+      <div id="wallet"></div></div><p id="page-subtitle" class="page-subtitle"></p><div id="banner" role="status"></div><div id="content"></div>
+      <footer>宝可梦 · 挂机冒险 <span>每一步探索，都值得期待。</span><span id="season-label"></span></footer></main>
+  </div>
+  <div id="toast" role="status" hidden></div>
+</body>
+</html>

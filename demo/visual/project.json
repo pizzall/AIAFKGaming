@@ -1,0 +1,856 @@
+{
+  "id": "afk-pokemon-visual-gbads",
+  "kind": "visual-only",
+  "design": {
+    "width": 1920,
+    "height": 1080
+  },
+  "style": "GBA/DS-inspired pixel interface, red and white palette",
+  "gameLogic": false,
+  "offlineEntry": "index.html",
+  "pages": [
+    "overview",
+    "dex",
+    "team",
+    "explore",
+    "nursery",
+    "industry",
+    "trade",
+    "league",
+    "shop",
+    "growth",
+    "logs"
+  ],
+  "assets": {
+    "assets/icons/badge.png": {
+      "path": "assets/icons/badge.png",
+      "replaceable": true,
+      "source": "imagegen"
+    },
+    "assets/icons/bag.png": {
+      "path": "assets/icons/bag.png",
+      "replaceable": true,
+      "source": "imagegen"
+    },
+    "assets/icons/ball.png": {
+      "path": "assets/icons/ball.png",
+      "replaceable": true,
+      "source": "imagegen"
+    },
+    "assets/icons/egg.png": {
+      "path": "assets/icons/egg.png",
+      "replaceable": true,
+      "source": "imagegen"
+    },
+    "assets/pokemon/back/1.png": {
+      "path": "assets/pokemon/back/1.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/112.png": {
+      "path": "assets/pokemon/back/112.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/121.png": {
+      "path": "assets/pokemon/back/121.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/129.png": {
+      "path": "assets/pokemon/back/129.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/131.png": {
+      "path": "assets/pokemon/back/131.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/132.png": {
+      "path": "assets/pokemon/back/132.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/133.png": {
+      "path": "assets/pokemon/back/133.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/134.png": {
+      "path": "assets/pokemon/back/134.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/135.png": {
+      "path": "assets/pokemon/back/135.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/136.png": {
+      "path": "assets/pokemon/back/136.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/143.png": {
+      "path": "assets/pokemon/back/143.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/147.png": {
+      "path": "assets/pokemon/back/147.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/148.png": {
+      "path": "assets/pokemon/back/148.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/149.png": {
+      "path": "assets/pokemon/back/149.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/152.png": {
+      "path": "assets/pokemon/back/152.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/155.png": {
+      "path": "assets/pokemon/back/155.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/158.png": {
+      "path": "assets/pokemon/back/158.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/161.png": {
+      "path": "assets/pokemon/back/161.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/169.png": {
+      "path": "assets/pokemon/back/169.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/172.png": {
+      "path": "assets/pokemon/back/172.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/175.png": {
+      "path": "assets/pokemon/back/175.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/18.png": {
+      "path": "assets/pokemon/back/18.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/183.png": {
+      "path": "assets/pokemon/back/183.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/194.png": {
+      "path": "assets/pokemon/back/194.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/196.png": {
+      "path": "assets/pokemon/back/196.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/197.png": {
+      "path": "assets/pokemon/back/197.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/2.png": {
+      "path": "assets/pokemon/back/2.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/201.png": {
+      "path": "assets/pokemon/back/201.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/206.png": {
+      "path": "assets/pokemon/back/206.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/218.png": {
+      "path": "assets/pokemon/back/218.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/219.png": {
+      "path": "assets/pokemon/back/219.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/248.png": {
+      "path": "assets/pokemon/back/248.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/25.png": {
+      "path": "assets/pokemon/back/25.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/251.png": {
+      "path": "assets/pokemon/back/251.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/252.png": {
+      "path": "assets/pokemon/back/252.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/255.png": {
+      "path": "assets/pokemon/back/255.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/258.png": {
+      "path": "assets/pokemon/back/258.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/26.png": {
+      "path": "assets/pokemon/back/26.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/263.png": {
+      "path": "assets/pokemon/back/263.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/280.png": {
+      "path": "assets/pokemon/back/280.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/282.png": {
+      "path": "assets/pokemon/back/282.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/298.png": {
+      "path": "assets/pokemon/back/298.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/3.png": {
+      "path": "assets/pokemon/back/3.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/303.png": {
+      "path": "assets/pokemon/back/303.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/333.png": {
+      "path": "assets/pokemon/back/333.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/334.png": {
+      "path": "assets/pokemon/back/334.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/35.png": {
+      "path": "assets/pokemon/back/35.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/359.png": {
+      "path": "assets/pokemon/back/359.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/37.png": {
+      "path": "assets/pokemon/back/37.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/393.png": {
+      "path": "assets/pokemon/back/393.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/4.png": {
+      "path": "assets/pokemon/back/4.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/417.png": {
+      "path": "assets/pokemon/back/417.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/43.png": {
+      "path": "assets/pokemon/back/43.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/445.png": {
+      "path": "assets/pokemon/back/445.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/447.png": {
+      "path": "assets/pokemon/back/447.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/448.png": {
+      "path": "assets/pokemon/back/448.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/45.png": {
+      "path": "assets/pokemon/back/45.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/470.png": {
+      "path": "assets/pokemon/back/470.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/471.png": {
+      "path": "assets/pokemon/back/471.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/475.png": {
+      "path": "assets/pokemon/back/475.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/5.png": {
+      "path": "assets/pokemon/back/5.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/52.png": {
+      "path": "assets/pokemon/back/52.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/54.png": {
+      "path": "assets/pokemon/back/54.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/59.png": {
+      "path": "assets/pokemon/back/59.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/6.png": {
+      "path": "assets/pokemon/back/6.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/65.png": {
+      "path": "assets/pokemon/back/65.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/68.png": {
+      "path": "assets/pokemon/back/68.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/7.png": {
+      "path": "assets/pokemon/back/7.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/700.png": {
+      "path": "assets/pokemon/back/700.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/74.png": {
+      "path": "assets/pokemon/back/74.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/8.png": {
+      "path": "assets/pokemon/back/8.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/9.png": {
+      "path": "assets/pokemon/back/9.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/94.png": {
+      "path": "assets/pokemon/back/94.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/back/95.png": {
+      "path": "assets/pokemon/back/95.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/1.png": {
+      "path": "assets/pokemon/front/1.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/112.png": {
+      "path": "assets/pokemon/front/112.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/121.png": {
+      "path": "assets/pokemon/front/121.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/129.png": {
+      "path": "assets/pokemon/front/129.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/131.png": {
+      "path": "assets/pokemon/front/131.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/132.png": {
+      "path": "assets/pokemon/front/132.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/133.png": {
+      "path": "assets/pokemon/front/133.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/134.png": {
+      "path": "assets/pokemon/front/134.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/135.png": {
+      "path": "assets/pokemon/front/135.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/136.png": {
+      "path": "assets/pokemon/front/136.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/143.png": {
+      "path": "assets/pokemon/front/143.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/147.png": {
+      "path": "assets/pokemon/front/147.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/148.png": {
+      "path": "assets/pokemon/front/148.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/149.png": {
+      "path": "assets/pokemon/front/149.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/152.png": {
+      "path": "assets/pokemon/front/152.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/155.png": {
+      "path": "assets/pokemon/front/155.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/158.png": {
+      "path": "assets/pokemon/front/158.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/161.png": {
+      "path": "assets/pokemon/front/161.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/169.png": {
+      "path": "assets/pokemon/front/169.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/172.png": {
+      "path": "assets/pokemon/front/172.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/175.png": {
+      "path": "assets/pokemon/front/175.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/18.png": {
+      "path": "assets/pokemon/front/18.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/183.png": {
+      "path": "assets/pokemon/front/183.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/194.png": {
+      "path": "assets/pokemon/front/194.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/196.png": {
+      "path": "assets/pokemon/front/196.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/197.png": {
+      "path": "assets/pokemon/front/197.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/2.png": {
+      "path": "assets/pokemon/front/2.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/201.png": {
+      "path": "assets/pokemon/front/201.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/206.png": {
+      "path": "assets/pokemon/front/206.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/218.png": {
+      "path": "assets/pokemon/front/218.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/219.png": {
+      "path": "assets/pokemon/front/219.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/248.png": {
+      "path": "assets/pokemon/front/248.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/25.png": {
+      "path": "assets/pokemon/front/25.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/251.png": {
+      "path": "assets/pokemon/front/251.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/252.png": {
+      "path": "assets/pokemon/front/252.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/255.png": {
+      "path": "assets/pokemon/front/255.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/258.png": {
+      "path": "assets/pokemon/front/258.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/26.png": {
+      "path": "assets/pokemon/front/26.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/263.png": {
+      "path": "assets/pokemon/front/263.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/280.png": {
+      "path": "assets/pokemon/front/280.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/282.png": {
+      "path": "assets/pokemon/front/282.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/298.png": {
+      "path": "assets/pokemon/front/298.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/3.png": {
+      "path": "assets/pokemon/front/3.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/303.png": {
+      "path": "assets/pokemon/front/303.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/333.png": {
+      "path": "assets/pokemon/front/333.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/334.png": {
+      "path": "assets/pokemon/front/334.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/35.png": {
+      "path": "assets/pokemon/front/35.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/359.png": {
+      "path": "assets/pokemon/front/359.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/37.png": {
+      "path": "assets/pokemon/front/37.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/393.png": {
+      "path": "assets/pokemon/front/393.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/4.png": {
+      "path": "assets/pokemon/front/4.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/417.png": {
+      "path": "assets/pokemon/front/417.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/43.png": {
+      "path": "assets/pokemon/front/43.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/445.png": {
+      "path": "assets/pokemon/front/445.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/447.png": {
+      "path": "assets/pokemon/front/447.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/448.png": {
+      "path": "assets/pokemon/front/448.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/45.png": {
+      "path": "assets/pokemon/front/45.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/470.png": {
+      "path": "assets/pokemon/front/470.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/471.png": {
+      "path": "assets/pokemon/front/471.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/475.png": {
+      "path": "assets/pokemon/front/475.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/5.png": {
+      "path": "assets/pokemon/front/5.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/52.png": {
+      "path": "assets/pokemon/front/52.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/54.png": {
+      "path": "assets/pokemon/front/54.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/59.png": {
+      "path": "assets/pokemon/front/59.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/6.png": {
+      "path": "assets/pokemon/front/6.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/65.png": {
+      "path": "assets/pokemon/front/65.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/68.png": {
+      "path": "assets/pokemon/front/68.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/7.png": {
+      "path": "assets/pokemon/front/7.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/700.png": {
+      "path": "assets/pokemon/front/700.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/74.png": {
+      "path": "assets/pokemon/front/74.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/8.png": {
+      "path": "assets/pokemon/front/8.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/9.png": {
+      "path": "assets/pokemon/front/9.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/94.png": {
+      "path": "assets/pokemon/front/94.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/pokemon/front/95.png": {
+      "path": "assets/pokemon/front/95.png",
+      "replaceable": true,
+      "source": "local-pokemon-snapshot"
+    },
+    "assets/scenes/route.png": {
+      "path": "assets/scenes/route.png",
+      "replaceable": true,
+      "source": "imagegen"
+    },
+    "assets/ui/coral.png": {
+      "path": "assets/ui/coral.png",
+      "replaceable": true,
+      "source": "solid-raster-surface"
+    },
+    "assets/ui/gold.png": {
+      "path": "assets/ui/gold.png",
+      "replaceable": true,
+      "source": "solid-raster-surface"
+    },
+    "assets/ui/ink.png": {
+      "path": "assets/ui/ink.png",
+      "replaceable": true,
+      "source": "solid-raster-surface"
+    },
+    "assets/ui/mint.png": {
+      "path": "assets/ui/mint.png",
+      "replaceable": true,
+      "source": "solid-raster-surface"
+    },
+    "assets/ui/nav.png": {
+      "path": "assets/ui/nav.png",
+      "replaceable": true,
+      "source": "solid-raster-surface"
+    },
+    "assets/ui/paper.png": {
+      "path": "assets/ui/paper.png",
+      "replaceable": true,
+      "source": "solid-raster-surface"
+    },
+    "assets/ui/sky.png": {
+      "path": "assets/ui/sky.png",
+      "replaceable": true,
+      "source": "solid-raster-surface"
+    },
+    "assets/ui/soft.png": {
+      "path": "assets/ui/soft.png",
+      "replaceable": true,
+      "source": "solid-raster-surface"
+    },
+    "assets/ui/white.png": {
+      "path": "assets/ui/white.png",
+      "replaceable": true,
+      "source": "solid-raster-surface"
+    },
+    "assets/icons/mine.png": {
+      "path": "assets/icons/mine.png",
+      "replaceable": true,
+      "source": "imagegen"
+    },
+    "assets/icons/lumber.png": {
+      "path": "assets/icons/lumber.png",
+      "replaceable": true,
+      "source": "imagegen"
+    },
+    "assets/icons/workshop.png": {
+      "path": "assets/icons/workshop.png",
+      "replaceable": true,
+      "source": "imagegen"
+    },
+    "assets/icons/berrytree.png": {
+      "path": "assets/icons/berrytree.png",
+      "replaceable": true,
+      "source": "imagegen"
+    }
+  }
+}

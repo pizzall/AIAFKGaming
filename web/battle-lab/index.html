@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>宝可梦 AFK · 战斗验证</title>
+  <link rel="icon" type="image/png" href="/assets/pokemon/front/25.png">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <header><strong>POKÉMON <b>AFK</b></strong><span>战斗基础验证</span></header>
+  <main>
+    <div class="title"><div><small>BATTLE FOUNDATION</small><h1>让六位伙伴，并肩上场。</h1>
+      <p>真实等级 · 六只全员双打 · 仅 Mega 进化 · 隐藏对方预设</p></div><span class="badge">H5 + Node 后端</span></div>
+    <div class="layout"><section>
+      <div class="panel"><div class="row"><h2>本方测试队伍</h2><span>固定策略 · AI 尚未接入</span></div><div id="party" class="party"></div></div>
+      <div class="panel opponent"><div><small>YOUR OPPONENT</small><h2>研究员青叶</h2><p>开战时随机选取一套队伍与风格，随后固定。</p>
+        <div class="hidden-team" aria-label="对方队伍未公开">?　?　?　?　?　?</div></div>
+        <button id="start" disabled>正在连接后端…</button></div>
+      <div class="panel"><div class="row"><h2>战斗记录</h2><span id="status" role="status">准备就绪后即可开始</span></div>
+        <div id="summary" class="summary" hidden></div><div id="report" class="report" aria-live="polite"><p>战斗由服务器独立执行。这里会显示允许本方看到的真实事件。</p></div></div>
+    </section><aside>
+      <div class="panel"><small>RULES IN PLAY</small><h2>当前规则</h2><ul><li>第九世代机制为基础</li><li>等级保持实际值</li><li>每方六只，同时在场两只</li><li>Mega 由原版引擎执行</li><li>极巨化、太晶化、Z 招式关闭</li></ul></div>
+      <div class="panel"><small>CONFIGURABLE EFFECTS</small><h2>本期效果配置</h2><div id="effects"></div>
+        <p class="note">道具、特性和持续条件共用定义基类。参数修改随新配置版本发布。</p></div>
+      <p class="note">这是第一条功能验证流程。队伍与风格是测试预设，固定策略暂不分析战术文本。</p>
+    </aside></div>
+  </main>
+</body>
+</html>

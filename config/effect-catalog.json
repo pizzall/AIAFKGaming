@@ -1,0 +1,4271 @@
+{
+  "engineRevision": "7e743761cd13cdb361fc0f58eb5a866284894f5b",
+  "mechanicsMod": "gen9",
+  "technicalCatalogOnly": true,
+  "effects": [
+    {
+      "kind": "ability",
+      "engineId": "adaptability"
+    },
+    {
+      "kind": "ability",
+      "engineId": "aerilate"
+    },
+    {
+      "kind": "ability",
+      "engineId": "aftermath"
+    },
+    {
+      "kind": "ability",
+      "engineId": "airlock"
+    },
+    {
+      "kind": "ability",
+      "engineId": "analytic"
+    },
+    {
+      "kind": "ability",
+      "engineId": "angerpoint"
+    },
+    {
+      "kind": "ability",
+      "engineId": "angershell"
+    },
+    {
+      "kind": "ability",
+      "engineId": "anticipation"
+    },
+    {
+      "kind": "ability",
+      "engineId": "arenatrap"
+    },
+    {
+      "kind": "ability",
+      "engineId": "armortail"
+    },
+    {
+      "kind": "ability",
+      "engineId": "aromaveil"
+    },
+    {
+      "kind": "ability",
+      "engineId": "asoneglastrier"
+    },
+    {
+      "kind": "ability",
+      "engineId": "asonespectrier"
+    },
+    {
+      "kind": "ability",
+      "engineId": "aurabreak"
+    },
+    {
+      "kind": "ability",
+      "engineId": "auraguard"
+    },
+    {
+      "kind": "ability",
+      "engineId": "baddreams"
+    },
+    {
+      "kind": "ability",
+      "engineId": "ballfetch"
+    },
+    {
+      "kind": "ability",
+      "engineId": "battery"
+    },
+    {
+      "kind": "ability",
+      "engineId": "battlearmor"
+    },
+    {
+      "kind": "ability",
+      "engineId": "battlebond"
+    },
+    {
+      "kind": "ability",
+      "engineId": "beadsofruin"
+    },
+    {
+      "kind": "ability",
+      "engineId": "beastboost"
+    },
+    {
+      "kind": "ability",
+      "engineId": "berserk"
+    },
+    {
+      "kind": "ability",
+      "engineId": "bigpecks"
+    },
+    {
+      "kind": "ability",
+      "engineId": "blaze"
+    },
+    {
+      "kind": "ability",
+      "engineId": "bulletproof"
+    },
+    {
+      "kind": "ability",
+      "engineId": "cheekpouch"
+    },
+    {
+      "kind": "ability",
+      "engineId": "chillingneigh"
+    },
+    {
+      "kind": "ability",
+      "engineId": "chlorophyll"
+    },
+    {
+      "kind": "ability",
+      "engineId": "clearbody"
+    },
+    {
+      "kind": "ability",
+      "engineId": "cloudnine"
+    },
+    {
+      "kind": "ability",
+      "engineId": "colorchange"
+    },
+    {
+      "kind": "ability",
+      "engineId": "comatose"
+    },
+    {
+      "kind": "ability",
+      "engineId": "commander"
+    },
+    {
+      "kind": "ability",
+      "engineId": "competitive"
+    },
+    {
+      "kind": "ability",
+      "engineId": "compoundeyes"
+    },
+    {
+      "kind": "ability",
+      "engineId": "contrary"
+    },
+    {
+      "kind": "ability",
+      "engineId": "corrosion"
+    },
+    {
+      "kind": "ability",
+      "engineId": "costar"
+    },
+    {
+      "kind": "ability",
+      "engineId": "cottondown"
+    },
+    {
+      "kind": "ability",
+      "engineId": "cudchew"
+    },
+    {
+      "kind": "ability",
+      "engineId": "curiousmedicine"
+    },
+    {
+      "kind": "ability",
+      "engineId": "cursedbody"
+    },
+    {
+      "kind": "ability",
+      "engineId": "cutecharm"
+    },
+    {
+      "kind": "ability",
+      "engineId": "damp"
+    },
+    {
+      "kind": "ability",
+      "engineId": "dancer"
+    },
+    {
+      "kind": "ability",
+      "engineId": "darkaura"
+    },
+    {
+      "kind": "ability",
+      "engineId": "dauntlessshield"
+    },
+    {
+      "kind": "ability",
+      "engineId": "dazzling"
+    },
+    {
+      "kind": "ability",
+      "engineId": "defeatist"
+    },
+    {
+      "kind": "ability",
+      "engineId": "defiant"
+    },
+    {
+      "kind": "ability",
+      "engineId": "deltastream"
+    },
+    {
+      "kind": "ability",
+      "engineId": "desolateland"
+    },
+    {
+      "kind": "ability",
+      "engineId": "disguise"
+    },
+    {
+      "kind": "ability",
+      "engineId": "download"
+    },
+    {
+      "kind": "ability",
+      "engineId": "dragonize"
+    },
+    {
+      "kind": "ability",
+      "engineId": "dragonsmaw"
+    },
+    {
+      "kind": "ability",
+      "engineId": "drizzle"
+    },
+    {
+      "kind": "ability",
+      "engineId": "drought"
+    },
+    {
+      "kind": "ability",
+      "engineId": "dryskin"
+    },
+    {
+      "kind": "ability",
+      "engineId": "earlybird"
+    },
+    {
+      "kind": "ability",
+      "engineId": "eartheater"
+    },
+    {
+      "kind": "ability",
+      "engineId": "eelevate"
+    },
+    {
+      "kind": "ability",
+      "engineId": "effectspore"
+    },
+    {
+      "kind": "ability",
+      "engineId": "electricsurge"
+    },
+    {
+      "kind": "ability",
+      "engineId": "electromorphosis"
+    },
+    {
+      "kind": "ability",
+      "engineId": "embodyaspectcornerstone"
+    },
+    {
+      "kind": "ability",
+      "engineId": "embodyaspecthearthflame"
+    },
+    {
+      "kind": "ability",
+      "engineId": "embodyaspectteal"
+    },
+    {
+      "kind": "ability",
+      "engineId": "embodyaspectwellspring"
+    },
+    {
+      "kind": "ability",
+      "engineId": "emergencyexit"
+    },
+    {
+      "kind": "ability",
+      "engineId": "fairyaura"
+    },
+    {
+      "kind": "ability",
+      "engineId": "filter"
+    },
+    {
+      "kind": "ability",
+      "engineId": "firemane"
+    },
+    {
+      "kind": "ability",
+      "engineId": "flamebody"
+    },
+    {
+      "kind": "ability",
+      "engineId": "flareboost"
+    },
+    {
+      "kind": "ability",
+      "engineId": "flashfire"
+    },
+    {
+      "kind": "ability",
+      "engineId": "flowergift"
+    },
+    {
+      "kind": "ability",
+      "engineId": "flowerveil"
+    },
+    {
+      "kind": "ability",
+      "engineId": "fluffy"
+    },
+    {
+      "kind": "ability",
+      "engineId": "forecast"
+    },
+    {
+      "kind": "ability",
+      "engineId": "forewarn"
+    },
+    {
+      "kind": "ability",
+      "engineId": "friendguard"
+    },
+    {
+      "kind": "ability",
+      "engineId": "frisk"
+    },
+    {
+      "kind": "ability",
+      "engineId": "fullmetalbody"
+    },
+    {
+      "kind": "ability",
+      "engineId": "furcoat"
+    },
+    {
+      "kind": "ability",
+      "engineId": "galewings"
+    },
+    {
+      "kind": "ability",
+      "engineId": "galvanize"
+    },
+    {
+      "kind": "ability",
+      "engineId": "gluttony"
+    },
+    {
+      "kind": "ability",
+      "engineId": "goodasgold"
+    },
+    {
+      "kind": "ability",
+      "engineId": "gooey"
+    },
+    {
+      "kind": "ability",
+      "engineId": "gorillatactics"
+    },
+    {
+      "kind": "ability",
+      "engineId": "grasspelt"
+    },
+    {
+      "kind": "ability",
+      "engineId": "grassysurge"
+    },
+    {
+      "kind": "ability",
+      "engineId": "grimneigh"
+    },
+    {
+      "kind": "ability",
+      "engineId": "guarddog"
+    },
+    {
+      "kind": "ability",
+      "engineId": "gulpmissile"
+    },
+    {
+      "kind": "ability",
+      "engineId": "guts"
+    },
+    {
+      "kind": "ability",
+      "engineId": "hadronengine"
+    },
+    {
+      "kind": "ability",
+      "engineId": "harvest"
+    },
+    {
+      "kind": "ability",
+      "engineId": "healer"
+    },
+    {
+      "kind": "ability",
+      "engineId": "heatproof"
+    },
+    {
+      "kind": "ability",
+      "engineId": "heavymetal"
+    },
+    {
+      "kind": "ability",
+      "engineId": "honeygather"
+    },
+    {
+      "kind": "ability",
+      "engineId": "hospitality"
+    },
+    {
+      "kind": "ability",
+      "engineId": "hugepower"
+    },
+    {
+      "kind": "ability",
+      "engineId": "hungerswitch"
+    },
+    {
+      "kind": "ability",
+      "engineId": "hustle"
+    },
+    {
+      "kind": "ability",
+      "engineId": "hydration"
+    },
+    {
+      "kind": "ability",
+      "engineId": "hypercutter"
+    },
+    {
+      "kind": "ability",
+      "engineId": "icebody"
+    },
+    {
+      "kind": "ability",
+      "engineId": "iceface"
+    },
+    {
+      "kind": "ability",
+      "engineId": "icescales"
+    },
+    {
+      "kind": "ability",
+      "engineId": "illuminate"
+    },
+    {
+      "kind": "ability",
+      "engineId": "illusion"
+    },
+    {
+      "kind": "ability",
+      "engineId": "immunity"
+    },
+    {
+      "kind": "ability",
+      "engineId": "imposter"
+    },
+    {
+      "kind": "ability",
+      "engineId": "infiltrator"
+    },
+    {
+      "kind": "ability",
+      "engineId": "innardsout"
+    },
+    {
+      "kind": "ability",
+      "engineId": "innerfocus"
+    },
+    {
+      "kind": "ability",
+      "engineId": "insomnia"
+    },
+    {
+      "kind": "ability",
+      "engineId": "intimidate"
+    },
+    {
+      "kind": "ability",
+      "engineId": "intrepidsword"
+    },
+    {
+      "kind": "ability",
+      "engineId": "ironbarbs"
+    },
+    {
+      "kind": "ability",
+      "engineId": "ironfist"
+    },
+    {
+      "kind": "ability",
+      "engineId": "justified"
+    },
+    {
+      "kind": "ability",
+      "engineId": "keeneye"
+    },
+    {
+      "kind": "ability",
+      "engineId": "klutz"
+    },
+    {
+      "kind": "ability",
+      "engineId": "leafguard"
+    },
+    {
+      "kind": "ability",
+      "engineId": "levitate"
+    },
+    {
+      "kind": "ability",
+      "engineId": "libero"
+    },
+    {
+      "kind": "ability",
+      "engineId": "lightmetal"
+    },
+    {
+      "kind": "ability",
+      "engineId": "lightningrod"
+    },
+    {
+      "kind": "ability",
+      "engineId": "limber"
+    },
+    {
+      "kind": "ability",
+      "engineId": "lingeringaroma"
+    },
+    {
+      "kind": "ability",
+      "engineId": "liquidooze"
+    },
+    {
+      "kind": "ability",
+      "engineId": "liquidvoice"
+    },
+    {
+      "kind": "ability",
+      "engineId": "longreach"
+    },
+    {
+      "kind": "ability",
+      "engineId": "magicbounce"
+    },
+    {
+      "kind": "ability",
+      "engineId": "magicguard"
+    },
+    {
+      "kind": "ability",
+      "engineId": "magician"
+    },
+    {
+      "kind": "ability",
+      "engineId": "magmaarmor"
+    },
+    {
+      "kind": "ability",
+      "engineId": "magnetpull"
+    },
+    {
+      "kind": "ability",
+      "engineId": "marvelscale"
+    },
+    {
+      "kind": "ability",
+      "engineId": "megalauncher"
+    },
+    {
+      "kind": "ability",
+      "engineId": "megasol"
+    },
+    {
+      "kind": "ability",
+      "engineId": "merciless"
+    },
+    {
+      "kind": "ability",
+      "engineId": "mimicry"
+    },
+    {
+      "kind": "ability",
+      "engineId": "mindseye"
+    },
+    {
+      "kind": "ability",
+      "engineId": "minus"
+    },
+    {
+      "kind": "ability",
+      "engineId": "mirrorarmor"
+    },
+    {
+      "kind": "ability",
+      "engineId": "mistysurge"
+    },
+    {
+      "kind": "ability",
+      "engineId": "moldbreaker"
+    },
+    {
+      "kind": "ability",
+      "engineId": "moody"
+    },
+    {
+      "kind": "ability",
+      "engineId": "motordrive"
+    },
+    {
+      "kind": "ability",
+      "engineId": "mountaineer"
+    },
+    {
+      "kind": "ability",
+      "engineId": "moxie"
+    },
+    {
+      "kind": "ability",
+      "engineId": "multiscale"
+    },
+    {
+      "kind": "ability",
+      "engineId": "multitype"
+    },
+    {
+      "kind": "ability",
+      "engineId": "mummy"
+    },
+    {
+      "kind": "ability",
+      "engineId": "myceliummight"
+    },
+    {
+      "kind": "ability",
+      "engineId": "naturalcure"
+    },
+    {
+      "kind": "ability",
+      "engineId": "neuroforce"
+    },
+    {
+      "kind": "ability",
+      "engineId": "neutralizinggas"
+    },
+    {
+      "kind": "ability",
+      "engineId": "noability"
+    },
+    {
+      "kind": "ability",
+      "engineId": "noguard"
+    },
+    {
+      "kind": "ability",
+      "engineId": "normalize"
+    },
+    {
+      "kind": "ability",
+      "engineId": "oblivious"
+    },
+    {
+      "kind": "ability",
+      "engineId": "opportunist"
+    },
+    {
+      "kind": "ability",
+      "engineId": "orichalcumpulse"
+    },
+    {
+      "kind": "ability",
+      "engineId": "overcoat"
+    },
+    {
+      "kind": "ability",
+      "engineId": "overgrow"
+    },
+    {
+      "kind": "ability",
+      "engineId": "owntempo"
+    },
+    {
+      "kind": "ability",
+      "engineId": "parentalbond"
+    },
+    {
+      "kind": "ability",
+      "engineId": "pastelveil"
+    },
+    {
+      "kind": "ability",
+      "engineId": "perishbody"
+    },
+    {
+      "kind": "ability",
+      "engineId": "persistent"
+    },
+    {
+      "kind": "ability",
+      "engineId": "pickpocket"
+    },
+    {
+      "kind": "ability",
+      "engineId": "pickup"
+    },
+    {
+      "kind": "ability",
+      "engineId": "piercingdrill"
+    },
+    {
+      "kind": "ability",
+      "engineId": "pixilate"
+    },
+    {
+      "kind": "ability",
+      "engineId": "plus"
+    },
+    {
+      "kind": "ability",
+      "engineId": "poisonheal"
+    },
+    {
+      "kind": "ability",
+      "engineId": "poisonpoint"
+    },
+    {
+      "kind": "ability",
+      "engineId": "poisonpuppeteer"
+    },
+    {
+      "kind": "ability",
+      "engineId": "poisontouch"
+    },
+    {
+      "kind": "ability",
+      "engineId": "powerconstruct"
+    },
+    {
+      "kind": "ability",
+      "engineId": "powerofalchemy"
+    },
+    {
+      "kind": "ability",
+      "engineId": "powerspot"
+    },
+    {
+      "kind": "ability",
+      "engineId": "prankster"
+    },
+    {
+      "kind": "ability",
+      "engineId": "pressure"
+    },
+    {
+      "kind": "ability",
+      "engineId": "primordialsea"
+    },
+    {
+      "kind": "ability",
+      "engineId": "prismarmor"
+    },
+    {
+      "kind": "ability",
+      "engineId": "propellertail"
+    },
+    {
+      "kind": "ability",
+      "engineId": "protean"
+    },
+    {
+      "kind": "ability",
+      "engineId": "protosynthesis"
+    },
+    {
+      "kind": "ability",
+      "engineId": "psychicsurge"
+    },
+    {
+      "kind": "ability",
+      "engineId": "punkrock"
+    },
+    {
+      "kind": "ability",
+      "engineId": "purepower"
+    },
+    {
+      "kind": "ability",
+      "engineId": "purifyingsalt"
+    },
+    {
+      "kind": "ability",
+      "engineId": "quarkdrive"
+    },
+    {
+      "kind": "ability",
+      "engineId": "queenlymajesty"
+    },
+    {
+      "kind": "ability",
+      "engineId": "quickdraw"
+    },
+    {
+      "kind": "ability",
+      "engineId": "quickfeet"
+    },
+    {
+      "kind": "ability",
+      "engineId": "raindish"
+    },
+    {
+      "kind": "ability",
+      "engineId": "rattled"
+    },
+    {
+      "kind": "ability",
+      "engineId": "rebound"
+    },
+    {
+      "kind": "ability",
+      "engineId": "receiver"
+    },
+    {
+      "kind": "ability",
+      "engineId": "reckless"
+    },
+    {
+      "kind": "ability",
+      "engineId": "refrigerate"
+    },
+    {
+      "kind": "ability",
+      "engineId": "regenerator"
+    },
+    {
+      "kind": "ability",
+      "engineId": "ripen"
+    },
+    {
+      "kind": "ability",
+      "engineId": "rivalry"
+    },
+    {
+      "kind": "ability",
+      "engineId": "rkssystem"
+    },
+    {
+      "kind": "ability",
+      "engineId": "rockhead"
+    },
+    {
+      "kind": "ability",
+      "engineId": "rockypayload"
+    },
+    {
+      "kind": "ability",
+      "engineId": "roughskin"
+    },
+    {
+      "kind": "ability",
+      "engineId": "runaway"
+    },
+    {
+      "kind": "ability",
+      "engineId": "sandforce"
+    },
+    {
+      "kind": "ability",
+      "engineId": "sandrush"
+    },
+    {
+      "kind": "ability",
+      "engineId": "sandspit"
+    },
+    {
+      "kind": "ability",
+      "engineId": "sandstream"
+    },
+    {
+      "kind": "ability",
+      "engineId": "sandveil"
+    },
+    {
+      "kind": "ability",
+      "engineId": "sapsipper"
+    },
+    {
+      "kind": "ability",
+      "engineId": "schooling"
+    },
+    {
+      "kind": "ability",
+      "engineId": "scrappy"
+    },
+    {
+      "kind": "ability",
+      "engineId": "screencleaner"
+    },
+    {
+      "kind": "ability",
+      "engineId": "seedsower"
+    },
+    {
+      "kind": "ability",
+      "engineId": "serenegrace"
+    },
+    {
+      "kind": "ability",
+      "engineId": "shadowshield"
+    },
+    {
+      "kind": "ability",
+      "engineId": "shadowtag"
+    },
+    {
+      "kind": "ability",
+      "engineId": "sharpness"
+    },
+    {
+      "kind": "ability",
+      "engineId": "shedskin"
+    },
+    {
+      "kind": "ability",
+      "engineId": "sheerforce"
+    },
+    {
+      "kind": "ability",
+      "engineId": "shellarmor"
+    },
+    {
+      "kind": "ability",
+      "engineId": "shielddust"
+    },
+    {
+      "kind": "ability",
+      "engineId": "shieldsdown"
+    },
+    {
+      "kind": "ability",
+      "engineId": "simple"
+    },
+    {
+      "kind": "ability",
+      "engineId": "skilllink"
+    },
+    {
+      "kind": "ability",
+      "engineId": "slowstart"
+    },
+    {
+      "kind": "ability",
+      "engineId": "slushrush"
+    },
+    {
+      "kind": "ability",
+      "engineId": "sniper"
+    },
+    {
+      "kind": "ability",
+      "engineId": "snowcloak"
+    },
+    {
+      "kind": "ability",
+      "engineId": "snowwarning"
+    },
+    {
+      "kind": "ability",
+      "engineId": "solarpower"
+    },
+    {
+      "kind": "ability",
+      "engineId": "solidrock"
+    },
+    {
+      "kind": "ability",
+      "engineId": "soulheart"
+    },
+    {
+      "kind": "ability",
+      "engineId": "soundproof"
+    },
+    {
+      "kind": "ability",
+      "engineId": "speedboost"
+    },
+    {
+      "kind": "ability",
+      "engineId": "spicyspray"
+    },
+    {
+      "kind": "ability",
+      "engineId": "stakeout"
+    },
+    {
+      "kind": "ability",
+      "engineId": "stall"
+    },
+    {
+      "kind": "ability",
+      "engineId": "stalwart"
+    },
+    {
+      "kind": "ability",
+      "engineId": "stamina"
+    },
+    {
+      "kind": "ability",
+      "engineId": "stancechange"
+    },
+    {
+      "kind": "ability",
+      "engineId": "static"
+    },
+    {
+      "kind": "ability",
+      "engineId": "steadfast"
+    },
+    {
+      "kind": "ability",
+      "engineId": "steamengine"
+    },
+    {
+      "kind": "ability",
+      "engineId": "steelworker"
+    },
+    {
+      "kind": "ability",
+      "engineId": "steelyspirit"
+    },
+    {
+      "kind": "ability",
+      "engineId": "stench"
+    },
+    {
+      "kind": "ability",
+      "engineId": "stickyhold"
+    },
+    {
+      "kind": "ability",
+      "engineId": "stormdrain"
+    },
+    {
+      "kind": "ability",
+      "engineId": "strongjaw"
+    },
+    {
+      "kind": "ability",
+      "engineId": "sturdy"
+    },
+    {
+      "kind": "ability",
+      "engineId": "suctioncups"
+    },
+    {
+      "kind": "ability",
+      "engineId": "superluck"
+    },
+    {
+      "kind": "ability",
+      "engineId": "supersweetsyrup"
+    },
+    {
+      "kind": "ability",
+      "engineId": "supremeoverlord"
+    },
+    {
+      "kind": "ability",
+      "engineId": "surgesurfer"
+    },
+    {
+      "kind": "ability",
+      "engineId": "swarm"
+    },
+    {
+      "kind": "ability",
+      "engineId": "sweetveil"
+    },
+    {
+      "kind": "ability",
+      "engineId": "swiftswim"
+    },
+    {
+      "kind": "ability",
+      "engineId": "swordofruin"
+    },
+    {
+      "kind": "ability",
+      "engineId": "symbiosis"
+    },
+    {
+      "kind": "ability",
+      "engineId": "synchronize"
+    },
+    {
+      "kind": "ability",
+      "engineId": "tabletsofruin"
+    },
+    {
+      "kind": "ability",
+      "engineId": "tangledfeet"
+    },
+    {
+      "kind": "ability",
+      "engineId": "tanglinghair"
+    },
+    {
+      "kind": "ability",
+      "engineId": "technician"
+    },
+    {
+      "kind": "ability",
+      "engineId": "telepathy"
+    },
+    {
+      "kind": "ability",
+      "engineId": "teraformzero"
+    },
+    {
+      "kind": "ability",
+      "engineId": "terashell"
+    },
+    {
+      "kind": "ability",
+      "engineId": "terashift"
+    },
+    {
+      "kind": "ability",
+      "engineId": "teravolt"
+    },
+    {
+      "kind": "ability",
+      "engineId": "thermalexchange"
+    },
+    {
+      "kind": "ability",
+      "engineId": "thickfat"
+    },
+    {
+      "kind": "ability",
+      "engineId": "tintedlens"
+    },
+    {
+      "kind": "ability",
+      "engineId": "torrent"
+    },
+    {
+      "kind": "ability",
+      "engineId": "toughclaws"
+    },
+    {
+      "kind": "ability",
+      "engineId": "toxicboost"
+    },
+    {
+      "kind": "ability",
+      "engineId": "toxicchain"
+    },
+    {
+      "kind": "ability",
+      "engineId": "toxicdebris"
+    },
+    {
+      "kind": "ability",
+      "engineId": "trace"
+    },
+    {
+      "kind": "ability",
+      "engineId": "transistor"
+    },
+    {
+      "kind": "ability",
+      "engineId": "triage"
+    },
+    {
+      "kind": "ability",
+      "engineId": "truant"
+    },
+    {
+      "kind": "ability",
+      "engineId": "turboblaze"
+    },
+    {
+      "kind": "ability",
+      "engineId": "unaware"
+    },
+    {
+      "kind": "ability",
+      "engineId": "unburden"
+    },
+    {
+      "kind": "ability",
+      "engineId": "unnerve"
+    },
+    {
+      "kind": "ability",
+      "engineId": "unseenfist"
+    },
+    {
+      "kind": "ability",
+      "engineId": "vesselofruin"
+    },
+    {
+      "kind": "ability",
+      "engineId": "victorystar"
+    },
+    {
+      "kind": "ability",
+      "engineId": "vitalspirit"
+    },
+    {
+      "kind": "ability",
+      "engineId": "voltabsorb"
+    },
+    {
+      "kind": "ability",
+      "engineId": "wanderingspirit"
+    },
+    {
+      "kind": "ability",
+      "engineId": "waterabsorb"
+    },
+    {
+      "kind": "ability",
+      "engineId": "waterbubble"
+    },
+    {
+      "kind": "ability",
+      "engineId": "watercompaction"
+    },
+    {
+      "kind": "ability",
+      "engineId": "waterveil"
+    },
+    {
+      "kind": "ability",
+      "engineId": "weakarmor"
+    },
+    {
+      "kind": "ability",
+      "engineId": "wellbakedbody"
+    },
+    {
+      "kind": "ability",
+      "engineId": "whitesmoke"
+    },
+    {
+      "kind": "ability",
+      "engineId": "wimpout"
+    },
+    {
+      "kind": "ability",
+      "engineId": "windpower"
+    },
+    {
+      "kind": "ability",
+      "engineId": "windrider"
+    },
+    {
+      "kind": "ability",
+      "engineId": "wonderguard"
+    },
+    {
+      "kind": "ability",
+      "engineId": "wonderskin"
+    },
+    {
+      "kind": "ability",
+      "engineId": "zenmode"
+    },
+    {
+      "kind": "ability",
+      "engineId": "zerotohero"
+    },
+    {
+      "kind": "condition",
+      "engineId": "allyswitch"
+    },
+    {
+      "kind": "condition",
+      "engineId": "aquaring"
+    },
+    {
+      "kind": "condition",
+      "engineId": "arceus"
+    },
+    {
+      "kind": "condition",
+      "engineId": "attract"
+    },
+    {
+      "kind": "condition",
+      "engineId": "auroraveil"
+    },
+    {
+      "kind": "condition",
+      "engineId": "banefulbunker"
+    },
+    {
+      "kind": "condition",
+      "engineId": "beakblast"
+    },
+    {
+      "kind": "condition",
+      "engineId": "bide"
+    },
+    {
+      "kind": "condition",
+      "engineId": "bounce"
+    },
+    {
+      "kind": "condition",
+      "engineId": "brn"
+    },
+    {
+      "kind": "condition",
+      "engineId": "burningbulwark"
+    },
+    {
+      "kind": "condition",
+      "engineId": "charge"
+    },
+    {
+      "kind": "condition",
+      "engineId": "chillyreception"
+    },
+    {
+      "kind": "condition",
+      "engineId": "choicelock"
+    },
+    {
+      "kind": "condition",
+      "engineId": "commanded"
+    },
+    {
+      "kind": "condition",
+      "engineId": "commanding"
+    },
+    {
+      "kind": "condition",
+      "engineId": "confusion"
+    },
+    {
+      "kind": "condition",
+      "engineId": "counter"
+    },
+    {
+      "kind": "condition",
+      "engineId": "craftyshield"
+    },
+    {
+      "kind": "condition",
+      "engineId": "curse"
+    },
+    {
+      "kind": "condition",
+      "engineId": "defensecurl"
+    },
+    {
+      "kind": "condition",
+      "engineId": "deltastream"
+    },
+    {
+      "kind": "condition",
+      "engineId": "desolateland"
+    },
+    {
+      "kind": "condition",
+      "engineId": "destinybond"
+    },
+    {
+      "kind": "condition",
+      "engineId": "dig"
+    },
+    {
+      "kind": "condition",
+      "engineId": "disable"
+    },
+    {
+      "kind": "condition",
+      "engineId": "dive"
+    },
+    {
+      "kind": "condition",
+      "engineId": "dragoncheer"
+    },
+    {
+      "kind": "condition",
+      "engineId": "dynamax"
+    },
+    {
+      "kind": "condition",
+      "engineId": "echoedvoice"
+    },
+    {
+      "kind": "condition",
+      "engineId": "electricterrain"
+    },
+    {
+      "kind": "condition",
+      "engineId": "electrify"
+    },
+    {
+      "kind": "condition",
+      "engineId": "embargo"
+    },
+    {
+      "kind": "condition",
+      "engineId": "encore"
+    },
+    {
+      "kind": "condition",
+      "engineId": "endure"
+    },
+    {
+      "kind": "condition",
+      "engineId": "fairylock"
+    },
+    {
+      "kind": "condition",
+      "engineId": "firepledge"
+    },
+    {
+      "kind": "condition",
+      "engineId": "flinch"
+    },
+    {
+      "kind": "condition",
+      "engineId": "fling"
+    },
+    {
+      "kind": "condition",
+      "engineId": "fly"
+    },
+    {
+      "kind": "condition",
+      "engineId": "focusenergy"
+    },
+    {
+      "kind": "condition",
+      "engineId": "focuspunch"
+    },
+    {
+      "kind": "condition",
+      "engineId": "followme"
+    },
+    {
+      "kind": "condition",
+      "engineId": "foresight"
+    },
+    {
+      "kind": "condition",
+      "engineId": "frz"
+    },
+    {
+      "kind": "condition",
+      "engineId": "furycutter"
+    },
+    {
+      "kind": "condition",
+      "engineId": "futuremove"
+    },
+    {
+      "kind": "condition",
+      "engineId": "gastroacid"
+    },
+    {
+      "kind": "condition",
+      "engineId": "gem"
+    },
+    {
+      "kind": "condition",
+      "engineId": "glaiverush"
+    },
+    {
+      "kind": "condition",
+      "engineId": "gmaxcannonade"
+    },
+    {
+      "kind": "condition",
+      "engineId": "gmaxchistrike"
+    },
+    {
+      "kind": "condition",
+      "engineId": "gmaxsteelsurge"
+    },
+    {
+      "kind": "condition",
+      "engineId": "gmaxvinelash"
+    },
+    {
+      "kind": "condition",
+      "engineId": "gmaxvolcalith"
+    },
+    {
+      "kind": "condition",
+      "engineId": "gmaxwildfire"
+    },
+    {
+      "kind": "condition",
+      "engineId": "grasspledge"
+    },
+    {
+      "kind": "condition",
+      "engineId": "grassyterrain"
+    },
+    {
+      "kind": "condition",
+      "engineId": "gravity"
+    },
+    {
+      "kind": "condition",
+      "engineId": "grudge"
+    },
+    {
+      "kind": "condition",
+      "engineId": "hail"
+    },
+    {
+      "kind": "condition",
+      "engineId": "healblock"
+    },
+    {
+      "kind": "condition",
+      "engineId": "healingwish"
+    },
+    {
+      "kind": "condition",
+      "engineId": "healreplacement"
+    },
+    {
+      "kind": "condition",
+      "engineId": "helpinghand"
+    },
+    {
+      "kind": "condition",
+      "engineId": "iceball"
+    },
+    {
+      "kind": "condition",
+      "engineId": "imprison"
+    },
+    {
+      "kind": "condition",
+      "engineId": "ingrain"
+    },
+    {
+      "kind": "condition",
+      "engineId": "iondeluge"
+    },
+    {
+      "kind": "condition",
+      "engineId": "kingsshield"
+    },
+    {
+      "kind": "condition",
+      "engineId": "laserfocus"
+    },
+    {
+      "kind": "condition",
+      "engineId": "leechseed"
+    },
+    {
+      "kind": "condition",
+      "engineId": "lightscreen"
+    },
+    {
+      "kind": "condition",
+      "engineId": "lockedmove"
+    },
+    {
+      "kind": "condition",
+      "engineId": "lockon"
+    },
+    {
+      "kind": "condition",
+      "engineId": "luckychant"
+    },
+    {
+      "kind": "condition",
+      "engineId": "lunardance"
+    },
+    {
+      "kind": "condition",
+      "engineId": "magiccoat"
+    },
+    {
+      "kind": "condition",
+      "engineId": "magicroom"
+    },
+    {
+      "kind": "condition",
+      "engineId": "magnetrise"
+    },
+    {
+      "kind": "condition",
+      "engineId": "matblock"
+    },
+    {
+      "kind": "condition",
+      "engineId": "maxguard"
+    },
+    {
+      "kind": "condition",
+      "engineId": "mefirst"
+    },
+    {
+      "kind": "condition",
+      "engineId": "minimize"
+    },
+    {
+      "kind": "condition",
+      "engineId": "miracleeye"
+    },
+    {
+      "kind": "condition",
+      "engineId": "mirrorcoat"
+    },
+    {
+      "kind": "condition",
+      "engineId": "mist"
+    },
+    {
+      "kind": "condition",
+      "engineId": "mistyterrain"
+    },
+    {
+      "kind": "condition",
+      "engineId": "mudsport"
+    },
+    {
+      "kind": "condition",
+      "engineId": "mustrecharge"
+    },
+    {
+      "kind": "condition",
+      "engineId": "nightmare"
+    },
+    {
+      "kind": "condition",
+      "engineId": "noretreat"
+    },
+    {
+      "kind": "condition",
+      "engineId": "obstruct"
+    },
+    {
+      "kind": "condition",
+      "engineId": "octolock"
+    },
+    {
+      "kind": "condition",
+      "engineId": "par"
+    },
+    {
+      "kind": "condition",
+      "engineId": "partiallytrapped"
+    },
+    {
+      "kind": "condition",
+      "engineId": "perishsong"
+    },
+    {
+      "kind": "condition",
+      "engineId": "phantomforce"
+    },
+    {
+      "kind": "condition",
+      "engineId": "powder"
+    },
+    {
+      "kind": "condition",
+      "engineId": "powershift"
+    },
+    {
+      "kind": "condition",
+      "engineId": "powertrick"
+    },
+    {
+      "kind": "condition",
+      "engineId": "primordialsea"
+    },
+    {
+      "kind": "condition",
+      "engineId": "protect"
+    },
+    {
+      "kind": "condition",
+      "engineId": "psn"
+    },
+    {
+      "kind": "condition",
+      "engineId": "psychicterrain"
+    },
+    {
+      "kind": "condition",
+      "engineId": "pursuit"
+    },
+    {
+      "kind": "condition",
+      "engineId": "quickguard"
+    },
+    {
+      "kind": "condition",
+      "engineId": "rage"
+    },
+    {
+      "kind": "condition",
+      "engineId": "ragepowder"
+    },
+    {
+      "kind": "condition",
+      "engineId": "raindance"
+    },
+    {
+      "kind": "condition",
+      "engineId": "reflect"
+    },
+    {
+      "kind": "condition",
+      "engineId": "revivalblessing"
+    },
+    {
+      "kind": "condition",
+      "engineId": "rollout"
+    },
+    {
+      "kind": "condition",
+      "engineId": "rolloutstorage"
+    },
+    {
+      "kind": "condition",
+      "engineId": "roost"
+    },
+    {
+      "kind": "condition",
+      "engineId": "safeguard"
+    },
+    {
+      "kind": "condition",
+      "engineId": "saltcure"
+    },
+    {
+      "kind": "condition",
+      "engineId": "sandstorm"
+    },
+    {
+      "kind": "condition",
+      "engineId": "shadowforce"
+    },
+    {
+      "kind": "condition",
+      "engineId": "shelltrap"
+    },
+    {
+      "kind": "condition",
+      "engineId": "silktrap"
+    },
+    {
+      "kind": "condition",
+      "engineId": "silvally"
+    },
+    {
+      "kind": "condition",
+      "engineId": "skydrop"
+    },
+    {
+      "kind": "condition",
+      "engineId": "slp"
+    },
+    {
+      "kind": "condition",
+      "engineId": "smackdown"
+    },
+    {
+      "kind": "condition",
+      "engineId": "snatch"
+    },
+    {
+      "kind": "condition",
+      "engineId": "snowscape"
+    },
+    {
+      "kind": "condition",
+      "engineId": "spikes"
+    },
+    {
+      "kind": "condition",
+      "engineId": "spikyshield"
+    },
+    {
+      "kind": "condition",
+      "engineId": "spotlight"
+    },
+    {
+      "kind": "condition",
+      "engineId": "stall"
+    },
+    {
+      "kind": "condition",
+      "engineId": "stealthrock"
+    },
+    {
+      "kind": "condition",
+      "engineId": "stickyweb"
+    },
+    {
+      "kind": "condition",
+      "engineId": "stockpile"
+    },
+    {
+      "kind": "condition",
+      "engineId": "substitute"
+    },
+    {
+      "kind": "condition",
+      "engineId": "sunnyday"
+    },
+    {
+      "kind": "condition",
+      "engineId": "syrupbomb"
+    },
+    {
+      "kind": "condition",
+      "engineId": "tailwind"
+    },
+    {
+      "kind": "condition",
+      "engineId": "tarshot"
+    },
+    {
+      "kind": "condition",
+      "engineId": "taunt"
+    },
+    {
+      "kind": "condition",
+      "engineId": "telekinesis"
+    },
+    {
+      "kind": "condition",
+      "engineId": "throatchop"
+    },
+    {
+      "kind": "condition",
+      "engineId": "torment"
+    },
+    {
+      "kind": "condition",
+      "engineId": "tox"
+    },
+    {
+      "kind": "condition",
+      "engineId": "toxicspikes"
+    },
+    {
+      "kind": "condition",
+      "engineId": "trapped"
+    },
+    {
+      "kind": "condition",
+      "engineId": "trapper"
+    },
+    {
+      "kind": "condition",
+      "engineId": "trickroom"
+    },
+    {
+      "kind": "condition",
+      "engineId": "twoturnmove"
+    },
+    {
+      "kind": "condition",
+      "engineId": "uproar"
+    },
+    {
+      "kind": "condition",
+      "engineId": "waterpledge"
+    },
+    {
+      "kind": "condition",
+      "engineId": "watersport"
+    },
+    {
+      "kind": "condition",
+      "engineId": "wideguard"
+    },
+    {
+      "kind": "condition",
+      "engineId": "wish"
+    },
+    {
+      "kind": "condition",
+      "engineId": "wonderroom"
+    },
+    {
+      "kind": "condition",
+      "engineId": "yawn"
+    },
+    {
+      "kind": "condition",
+      "engineId": "zacian"
+    },
+    {
+      "kind": "condition",
+      "engineId": "zamazenta"
+    },
+    {
+      "kind": "item",
+      "engineId": "abilityshield"
+    },
+    {
+      "kind": "item",
+      "engineId": "abomasite"
+    },
+    {
+      "kind": "item",
+      "engineId": "absolite"
+    },
+    {
+      "kind": "item",
+      "engineId": "absolitez"
+    },
+    {
+      "kind": "item",
+      "engineId": "absorbbulb"
+    },
+    {
+      "kind": "item",
+      "engineId": "adamantcrystal"
+    },
+    {
+      "kind": "item",
+      "engineId": "adamantorb"
+    },
+    {
+      "kind": "item",
+      "engineId": "adrenalineorb"
+    },
+    {
+      "kind": "item",
+      "engineId": "aerodactylite"
+    },
+    {
+      "kind": "item",
+      "engineId": "aggronite"
+    },
+    {
+      "kind": "item",
+      "engineId": "aguavberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "airballoon"
+    },
+    {
+      "kind": "item",
+      "engineId": "alakazite"
+    },
+    {
+      "kind": "item",
+      "engineId": "aloraichiumz"
+    },
+    {
+      "kind": "item",
+      "engineId": "altarianite"
+    },
+    {
+      "kind": "item",
+      "engineId": "ampharosite"
+    },
+    {
+      "kind": "item",
+      "engineId": "apicotberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "armorfossil"
+    },
+    {
+      "kind": "item",
+      "engineId": "aspearberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "assaultvest"
+    },
+    {
+      "kind": "item",
+      "engineId": "audinite"
+    },
+    {
+      "kind": "item",
+      "engineId": "auspiciousarmor"
+    },
+    {
+      "kind": "item",
+      "engineId": "babiriberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "banettite"
+    },
+    {
+      "kind": "item",
+      "engineId": "barbaracite"
+    },
+    {
+      "kind": "item",
+      "engineId": "baxcalibrite"
+    },
+    {
+      "kind": "item",
+      "engineId": "beastball"
+    },
+    {
+      "kind": "item",
+      "engineId": "beedrillite"
+    },
+    {
+      "kind": "item",
+      "engineId": "belueberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "berry"
+    },
+    {
+      "kind": "item",
+      "engineId": "berryjuice"
+    },
+    {
+      "kind": "item",
+      "engineId": "berrysweet"
+    },
+    {
+      "kind": "item",
+      "engineId": "berserkgene"
+    },
+    {
+      "kind": "item",
+      "engineId": "bignugget"
+    },
+    {
+      "kind": "item",
+      "engineId": "bigroot"
+    },
+    {
+      "kind": "item",
+      "engineId": "bindingband"
+    },
+    {
+      "kind": "item",
+      "engineId": "bitterberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "blackaugurite"
+    },
+    {
+      "kind": "item",
+      "engineId": "blackbelt"
+    },
+    {
+      "kind": "item",
+      "engineId": "blackglasses"
+    },
+    {
+      "kind": "item",
+      "engineId": "blacksludge"
+    },
+    {
+      "kind": "item",
+      "engineId": "blankplate"
+    },
+    {
+      "kind": "item",
+      "engineId": "blastoisinite"
+    },
+    {
+      "kind": "item",
+      "engineId": "blazikenite"
+    },
+    {
+      "kind": "item",
+      "engineId": "blueorb"
+    },
+    {
+      "kind": "item",
+      "engineId": "blukberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "blunderpolicy"
+    },
+    {
+      "kind": "item",
+      "engineId": "boosterenergy"
+    },
+    {
+      "kind": "item",
+      "engineId": "bottlecap"
+    },
+    {
+      "kind": "item",
+      "engineId": "brightpowder"
+    },
+    {
+      "kind": "item",
+      "engineId": "buggem"
+    },
+    {
+      "kind": "item",
+      "engineId": "buginiumz"
+    },
+    {
+      "kind": "item",
+      "engineId": "bugmemory"
+    },
+    {
+      "kind": "item",
+      "engineId": "burndrive"
+    },
+    {
+      "kind": "item",
+      "engineId": "burntberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "cameruptite"
+    },
+    {
+      "kind": "item",
+      "engineId": "cellbattery"
+    },
+    {
+      "kind": "item",
+      "engineId": "chandelurite"
+    },
+    {
+      "kind": "item",
+      "engineId": "charcoal"
+    },
+    {
+      "kind": "item",
+      "engineId": "charizarditex"
+    },
+    {
+      "kind": "item",
+      "engineId": "charizarditey"
+    },
+    {
+      "kind": "item",
+      "engineId": "chartiberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "cheriberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "cherishball"
+    },
+    {
+      "kind": "item",
+      "engineId": "chesnaughtite"
+    },
+    {
+      "kind": "item",
+      "engineId": "chestoberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "chilanberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "chilldrive"
+    },
+    {
+      "kind": "item",
+      "engineId": "chimechite"
+    },
+    {
+      "kind": "item",
+      "engineId": "chippedpot"
+    },
+    {
+      "kind": "item",
+      "engineId": "choiceband"
+    },
+    {
+      "kind": "item",
+      "engineId": "choicescarf"
+    },
+    {
+      "kind": "item",
+      "engineId": "choicespecs"
+    },
+    {
+      "kind": "item",
+      "engineId": "chopleberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "clawfossil"
+    },
+    {
+      "kind": "item",
+      "engineId": "clearamulet"
+    },
+    {
+      "kind": "item",
+      "engineId": "clefablite"
+    },
+    {
+      "kind": "item",
+      "engineId": "cloversweet"
+    },
+    {
+      "kind": "item",
+      "engineId": "cobaberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "colburberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "cornerstonemask"
+    },
+    {
+      "kind": "item",
+      "engineId": "cornnberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "coverfossil"
+    },
+    {
+      "kind": "item",
+      "engineId": "covertcloak"
+    },
+    {
+      "kind": "item",
+      "engineId": "crabominite"
+    },
+    {
+      "kind": "item",
+      "engineId": "crackedpot"
+    },
+    {
+      "kind": "item",
+      "engineId": "crucibellite"
+    },
+    {
+      "kind": "item",
+      "engineId": "custapberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "damprock"
+    },
+    {
+      "kind": "item",
+      "engineId": "darkgem"
+    },
+    {
+      "kind": "item",
+      "engineId": "darkiniumz"
+    },
+    {
+      "kind": "item",
+      "engineId": "darkmemory"
+    },
+    {
+      "kind": "item",
+      "engineId": "darkranite"
+    },
+    {
+      "kind": "item",
+      "engineId": "dawnstone"
+    },
+    {
+      "kind": "item",
+      "engineId": "decidiumz"
+    },
+    {
+      "kind": "item",
+      "engineId": "deepseascale"
+    },
+    {
+      "kind": "item",
+      "engineId": "deepseatooth"
+    },
+    {
+      "kind": "item",
+      "engineId": "delphoxite"
+    },
+    {
+      "kind": "item",
+      "engineId": "destinyknot"
+    },
+    {
+      "kind": "item",
+      "engineId": "diancite"
+    },
+    {
+      "kind": "item",
+      "engineId": "diveball"
+    },
+    {
+      "kind": "item",
+      "engineId": "domefossil"
+    },
+    {
+      "kind": "item",
+      "engineId": "dousedrive"
+    },
+    {
+      "kind": "item",
+      "engineId": "dracoplate"
+    },
+    {
+      "kind": "item",
+      "engineId": "dragalgite"
+    },
+    {
+      "kind": "item",
+      "engineId": "dragonfang"
+    },
+    {
+      "kind": "item",
+      "engineId": "dragongem"
+    },
+    {
+      "kind": "item",
+      "engineId": "dragoninite"
+    },
+    {
+      "kind": "item",
+      "engineId": "dragoniumz"
+    },
+    {
+      "kind": "item",
+      "engineId": "dragonmemory"
+    },
+    {
+      "kind": "item",
+      "engineId": "dragonscale"
+    },
+    {
+      "kind": "item",
+      "engineId": "drampanite"
+    },
+    {
+      "kind": "item",
+      "engineId": "dreadplate"
+    },
+    {
+      "kind": "item",
+      "engineId": "dreamball"
+    },
+    {
+      "kind": "item",
+      "engineId": "dubiousdisc"
+    },
+    {
+      "kind": "item",
+      "engineId": "durinberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "duskball"
+    },
+    {
+      "kind": "item",
+      "engineId": "duskstone"
+    },
+    {
+      "kind": "item",
+      "engineId": "earthplate"
+    },
+    {
+      "kind": "item",
+      "engineId": "eelektrossite"
+    },
+    {
+      "kind": "item",
+      "engineId": "eeviumz"
+    },
+    {
+      "kind": "item",
+      "engineId": "ejectbutton"
+    },
+    {
+      "kind": "item",
+      "engineId": "ejectpack"
+    },
+    {
+      "kind": "item",
+      "engineId": "electirizer"
+    },
+    {
+      "kind": "item",
+      "engineId": "electricgem"
+    },
+    {
+      "kind": "item",
+      "engineId": "electricmemory"
+    },
+    {
+      "kind": "item",
+      "engineId": "electricseed"
+    },
+    {
+      "kind": "item",
+      "engineId": "electriumz"
+    },
+    {
+      "kind": "item",
+      "engineId": "emboarite"
+    },
+    {
+      "kind": "item",
+      "engineId": "enigmaberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "eviolite"
+    },
+    {
+      "kind": "item",
+      "engineId": "excadrite"
+    },
+    {
+      "kind": "item",
+      "engineId": "expertbelt"
+    },
+    {
+      "kind": "item",
+      "engineId": "fairiumz"
+    },
+    {
+      "kind": "item",
+      "engineId": "fairyfeather"
+    },
+    {
+      "kind": "item",
+      "engineId": "fairygem"
+    },
+    {
+      "kind": "item",
+      "engineId": "fairymemory"
+    },
+    {
+      "kind": "item",
+      "engineId": "falinksite"
+    },
+    {
+      "kind": "item",
+      "engineId": "fastball"
+    },
+    {
+      "kind": "item",
+      "engineId": "feraligite"
+    },
+    {
+      "kind": "item",
+      "engineId": "fightinggem"
+    },
+    {
+      "kind": "item",
+      "engineId": "fightingmemory"
+    },
+    {
+      "kind": "item",
+      "engineId": "fightiniumz"
+    },
+    {
+      "kind": "item",
+      "engineId": "figyberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "firegem"
+    },
+    {
+      "kind": "item",
+      "engineId": "firememory"
+    },
+    {
+      "kind": "item",
+      "engineId": "firestone"
+    },
+    {
+      "kind": "item",
+      "engineId": "firiumz"
+    },
+    {
+      "kind": "item",
+      "engineId": "fistplate"
+    },
+    {
+      "kind": "item",
+      "engineId": "flameorb"
+    },
+    {
+      "kind": "item",
+      "engineId": "flameplate"
+    },
+    {
+      "kind": "item",
+      "engineId": "floatstone"
+    },
+    {
+      "kind": "item",
+      "engineId": "floettite"
+    },
+    {
+      "kind": "item",
+      "engineId": "flowersweet"
+    },
+    {
+      "kind": "item",
+      "engineId": "flyinggem"
+    },
+    {
+      "kind": "item",
+      "engineId": "flyingmemory"
+    },
+    {
+      "kind": "item",
+      "engineId": "flyiniumz"
+    },
+    {
+      "kind": "item",
+      "engineId": "focusband"
+    },
+    {
+      "kind": "item",
+      "engineId": "focussash"
+    },
+    {
+      "kind": "item",
+      "engineId": "fossilizedbird"
+    },
+    {
+      "kind": "item",
+      "engineId": "fossilizeddino"
+    },
+    {
+      "kind": "item",
+      "engineId": "fossilizeddrake"
+    },
+    {
+      "kind": "item",
+      "engineId": "fossilizedfish"
+    },
+    {
+      "kind": "item",
+      "engineId": "friendball"
+    },
+    {
+      "kind": "item",
+      "engineId": "froslassite"
+    },
+    {
+      "kind": "item",
+      "engineId": "fullincense"
+    },
+    {
+      "kind": "item",
+      "engineId": "galaricacuff"
+    },
+    {
+      "kind": "item",
+      "engineId": "galaricawreath"
+    },
+    {
+      "kind": "item",
+      "engineId": "galladite"
+    },
+    {
+      "kind": "item",
+      "engineId": "ganlonberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "garchompite"
+    },
+    {
+      "kind": "item",
+      "engineId": "garchompitez"
+    },
+    {
+      "kind": "item",
+      "engineId": "gardevoirite"
+    },
+    {
+      "kind": "item",
+      "engineId": "gengarite"
+    },
+    {
+      "kind": "item",
+      "engineId": "ghostgem"
+    },
+    {
+      "kind": "item",
+      "engineId": "ghostiumz"
+    },
+    {
+      "kind": "item",
+      "engineId": "ghostmemory"
+    },
+    {
+      "kind": "item",
+      "engineId": "glalitite"
+    },
+    {
+      "kind": "item",
+      "engineId": "glimmoranite"
+    },
+    {
+      "kind": "item",
+      "engineId": "goldberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "goldbottlecap"
+    },
+    {
+      "kind": "item",
+      "engineId": "golisopite"
+    },
+    {
+      "kind": "item",
+      "engineId": "golurkite"
+    },
+    {
+      "kind": "item",
+      "engineId": "grassgem"
+    },
+    {
+      "kind": "item",
+      "engineId": "grassiumz"
+    },
+    {
+      "kind": "item",
+      "engineId": "grassmemory"
+    },
+    {
+      "kind": "item",
+      "engineId": "grassyseed"
+    },
+    {
+      "kind": "item",
+      "engineId": "greatball"
+    },
+    {
+      "kind": "item",
+      "engineId": "greninjite"
+    },
+    {
+      "kind": "item",
+      "engineId": "grepaberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "gripclaw"
+    },
+    {
+      "kind": "item",
+      "engineId": "griseouscore"
+    },
+    {
+      "kind": "item",
+      "engineId": "griseousorb"
+    },
+    {
+      "kind": "item",
+      "engineId": "groundgem"
+    },
+    {
+      "kind": "item",
+      "engineId": "groundiumz"
+    },
+    {
+      "kind": "item",
+      "engineId": "groundmemory"
+    },
+    {
+      "kind": "item",
+      "engineId": "gyaradosite"
+    },
+    {
+      "kind": "item",
+      "engineId": "habanberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "hardstone"
+    },
+    {
+      "kind": "item",
+      "engineId": "hawluchanite"
+    },
+    {
+      "kind": "item",
+      "engineId": "healball"
+    },
+    {
+      "kind": "item",
+      "engineId": "hearthflamemask"
+    },
+    {
+      "kind": "item",
+      "engineId": "heatranite"
+    },
+    {
+      "kind": "item",
+      "engineId": "heatrock"
+    },
+    {
+      "kind": "item",
+      "engineId": "heavyball"
+    },
+    {
+      "kind": "item",
+      "engineId": "heavydutyboots"
+    },
+    {
+      "kind": "item",
+      "engineId": "helixfossil"
+    },
+    {
+      "kind": "item",
+      "engineId": "heracronite"
+    },
+    {
+      "kind": "item",
+      "engineId": "hondewberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "houndoominite"
+    },
+    {
+      "kind": "item",
+      "engineId": "iapapaberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "iceberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "icegem"
+    },
+    {
+      "kind": "item",
+      "engineId": "icememory"
+    },
+    {
+      "kind": "item",
+      "engineId": "icestone"
+    },
+    {
+      "kind": "item",
+      "engineId": "icicleplate"
+    },
+    {
+      "kind": "item",
+      "engineId": "iciumz"
+    },
+    {
+      "kind": "item",
+      "engineId": "icyrock"
+    },
+    {
+      "kind": "item",
+      "engineId": "inciniumz"
+    },
+    {
+      "kind": "item",
+      "engineId": "insectplate"
+    },
+    {
+      "kind": "item",
+      "engineId": "ironball"
+    },
+    {
+      "kind": "item",
+      "engineId": "ironplate"
+    },
+    {
+      "kind": "item",
+      "engineId": "jabocaberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "jawfossil"
+    },
+    {
+      "kind": "item",
+      "engineId": "kangaskhanite"
+    },
+    {
+      "kind": "item",
+      "engineId": "kasibberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "kebiaberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "keeberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "kelpsyberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "kingsrock"
+    },
+    {
+      "kind": "item",
+      "engineId": "kommoniumz"
+    },
+    {
+      "kind": "item",
+      "engineId": "laggingtail"
+    },
+    {
+      "kind": "item",
+      "engineId": "lansatberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "latiasite"
+    },
+    {
+      "kind": "item",
+      "engineId": "latiosite"
+    },
+    {
+      "kind": "item",
+      "engineId": "laxincense"
+    },
+    {
+      "kind": "item",
+      "engineId": "leafstone"
+    },
+    {
+      "kind": "item",
+      "engineId": "leek"
+    },
+    {
+      "kind": "item",
+      "engineId": "leftovers"
+    },
+    {
+      "kind": "item",
+      "engineId": "legendplate"
+    },
+    {
+      "kind": "item",
+      "engineId": "leppaberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "levelball"
+    },
+    {
+      "kind": "item",
+      "engineId": "liechiberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "lifeorb"
+    },
+    {
+      "kind": "item",
+      "engineId": "lightball"
+    },
+    {
+      "kind": "item",
+      "engineId": "lightclay"
+    },
+    {
+      "kind": "item",
+      "engineId": "loadeddice"
+    },
+    {
+      "kind": "item",
+      "engineId": "lopunnite"
+    },
+    {
+      "kind": "item",
+      "engineId": "loveball"
+    },
+    {
+      "kind": "item",
+      "engineId": "lovesweet"
+    },
+    {
+      "kind": "item",
+      "engineId": "lucarionite"
+    },
+    {
+      "kind": "item",
+      "engineId": "lucarionitez"
+    },
+    {
+      "kind": "item",
+      "engineId": "luckypunch"
+    },
+    {
+      "kind": "item",
+      "engineId": "lumberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "luminousmoss"
+    },
+    {
+      "kind": "item",
+      "engineId": "lunaliumz"
+    },
+    {
+      "kind": "item",
+      "engineId": "lureball"
+    },
+    {
+      "kind": "item",
+      "engineId": "lustrousglobe"
+    },
+    {
+      "kind": "item",
+      "engineId": "lustrousorb"
+    },
+    {
+      "kind": "item",
+      "engineId": "luxuryball"
+    },
+    {
+      "kind": "item",
+      "engineId": "lycaniumz"
+    },
+    {
+      "kind": "item",
+      "engineId": "machobrace"
+    },
+    {
+      "kind": "item",
+      "engineId": "magearnite"
+    },
+    {
+      "kind": "item",
+      "engineId": "magmarizer"
+    },
+    {
+      "kind": "item",
+      "engineId": "magnet"
+    },
+    {
+      "kind": "item",
+      "engineId": "magoberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "magostberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "mail"
+    },
+    {
+      "kind": "item",
+      "engineId": "malamarite"
+    },
+    {
+      "kind": "item",
+      "engineId": "maliciousarmor"
+    },
+    {
+      "kind": "item",
+      "engineId": "manectite"
+    },
+    {
+      "kind": "item",
+      "engineId": "marangaberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "marshadiumz"
+    },
+    {
+      "kind": "item",
+      "engineId": "masterball"
+    },
+    {
+      "kind": "item",
+      "engineId": "masterpieceteacup"
+    },
+    {
+      "kind": "item",
+      "engineId": "mawilite"
+    },
+    {
+      "kind": "item",
+      "engineId": "meadowplate"
+    },
+    {
+      "kind": "item",
+      "engineId": "medichamite"
+    },
+    {
+      "kind": "item",
+      "engineId": "meganiumite"
+    },
+    {
+      "kind": "item",
+      "engineId": "mentalherb"
+    },
+    {
+      "kind": "item",
+      "engineId": "meowsticite"
+    },
+    {
+      "kind": "item",
+      "engineId": "metagrossite"
+    },
+    {
+      "kind": "item",
+      "engineId": "metalalloy"
+    },
+    {
+      "kind": "item",
+      "engineId": "metalcoat"
+    },
+    {
+      "kind": "item",
+      "engineId": "metalpowder"
+    },
+    {
+      "kind": "item",
+      "engineId": "metronome"
+    },
+    {
+      "kind": "item",
+      "engineId": "mewniumz"
+    },
+    {
+      "kind": "item",
+      "engineId": "mewtwonitex"
+    },
+    {
+      "kind": "item",
+      "engineId": "mewtwonitey"
+    },
+    {
+      "kind": "item",
+      "engineId": "micleberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "mimikiumz"
+    },
+    {
+      "kind": "item",
+      "engineId": "mindplate"
+    },
+    {
+      "kind": "item",
+      "engineId": "mintberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "miracleberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "miracleseed"
+    },
+    {
+      "kind": "item",
+      "engineId": "mirrorherb"
+    },
+    {
+      "kind": "item",
+      "engineId": "mistyseed"
+    },
+    {
+      "kind": "item",
+      "engineId": "moonball"
+    },
+    {
+      "kind": "item",
+      "engineId": "moonstone"
+    },
+    {
+      "kind": "item",
+      "engineId": "muscleband"
+    },
+    {
+      "kind": "item",
+      "engineId": "mysteryberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "mysticwater"
+    },
+    {
+      "kind": "item",
+      "engineId": "nanabberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "nestball"
+    },
+    {
+      "kind": "item",
+      "engineId": "netball"
+    },
+    {
+      "kind": "item",
+      "engineId": "nevermeltice"
+    },
+    {
+      "kind": "item",
+      "engineId": "nomelberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "normalgem"
+    },
+    {
+      "kind": "item",
+      "engineId": "normaliumz"
+    },
+    {
+      "kind": "item",
+      "engineId": "occaberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "oddincense"
+    },
+    {
+      "kind": "item",
+      "engineId": "oldamber"
+    },
+    {
+      "kind": "item",
+      "engineId": "oranberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "ovalstone"
+    },
+    {
+      "kind": "item",
+      "engineId": "pamtreberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "parkball"
+    },
+    {
+      "kind": "item",
+      "engineId": "passhoberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "payapaberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "peatblock"
+    },
+    {
+      "kind": "item",
+      "engineId": "pechaberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "persimberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "petayaberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "pidgeotite"
+    },
+    {
+      "kind": "item",
+      "engineId": "pikaniumz"
+    },
+    {
+      "kind": "item",
+      "engineId": "pikashuniumz"
+    },
+    {
+      "kind": "item",
+      "engineId": "pinapberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "pinkbow"
+    },
+    {
+      "kind": "item",
+      "engineId": "pinsirite"
+    },
+    {
+      "kind": "item",
+      "engineId": "pixieplate"
+    },
+    {
+      "kind": "item",
+      "engineId": "plumefossil"
+    },
+    {
+      "kind": "item",
+      "engineId": "poisonbarb"
+    },
+    {
+      "kind": "item",
+      "engineId": "poisongem"
+    },
+    {
+      "kind": "item",
+      "engineId": "poisoniumz"
+    },
+    {
+      "kind": "item",
+      "engineId": "poisonmemory"
+    },
+    {
+      "kind": "item",
+      "engineId": "pokeball"
+    },
+    {
+      "kind": "item",
+      "engineId": "polkadotbow"
+    },
+    {
+      "kind": "item",
+      "engineId": "pomegberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "poweranklet"
+    },
+    {
+      "kind": "item",
+      "engineId": "powerband"
+    },
+    {
+      "kind": "item",
+      "engineId": "powerbelt"
+    },
+    {
+      "kind": "item",
+      "engineId": "powerbracer"
+    },
+    {
+      "kind": "item",
+      "engineId": "powerherb"
+    },
+    {
+      "kind": "item",
+      "engineId": "powerlens"
+    },
+    {
+      "kind": "item",
+      "engineId": "powerweight"
+    },
+    {
+      "kind": "item",
+      "engineId": "premierball"
+    },
+    {
+      "kind": "item",
+      "engineId": "prettyfeather"
+    },
+    {
+      "kind": "item",
+      "engineId": "primariumz"
+    },
+    {
+      "kind": "item",
+      "engineId": "prismscale"
+    },
+    {
+      "kind": "item",
+      "engineId": "protectivepads"
+    },
+    {
+      "kind": "item",
+      "engineId": "protector"
+    },
+    {
+      "kind": "item",
+      "engineId": "przcureberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "psncureberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "psychicgem"
+    },
+    {
+      "kind": "item",
+      "engineId": "psychicmemory"
+    },
+    {
+      "kind": "item",
+      "engineId": "psychicseed"
+    },
+    {
+      "kind": "item",
+      "engineId": "psychiumz"
+    },
+    {
+      "kind": "item",
+      "engineId": "punchingglove"
+    },
+    {
+      "kind": "item",
+      "engineId": "pyroarite"
+    },
+    {
+      "kind": "item",
+      "engineId": "qualotberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "quickball"
+    },
+    {
+      "kind": "item",
+      "engineId": "quickclaw"
+    },
+    {
+      "kind": "item",
+      "engineId": "quickpowder"
+    },
+    {
+      "kind": "item",
+      "engineId": "rabutaberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "raichunitex"
+    },
+    {
+      "kind": "item",
+      "engineId": "raichunitey"
+    },
+    {
+      "kind": "item",
+      "engineId": "rarebone"
+    },
+    {
+      "kind": "item",
+      "engineId": "rawstberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "razorclaw"
+    },
+    {
+      "kind": "item",
+      "engineId": "razorfang"
+    },
+    {
+      "kind": "item",
+      "engineId": "razzberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "reapercloth"
+    },
+    {
+      "kind": "item",
+      "engineId": "redcard"
+    },
+    {
+      "kind": "item",
+      "engineId": "redorb"
+    },
+    {
+      "kind": "item",
+      "engineId": "repeatball"
+    },
+    {
+      "kind": "item",
+      "engineId": "ribbonsweet"
+    },
+    {
+      "kind": "item",
+      "engineId": "rindoberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "ringtarget"
+    },
+    {
+      "kind": "item",
+      "engineId": "rockgem"
+    },
+    {
+      "kind": "item",
+      "engineId": "rockincense"
+    },
+    {
+      "kind": "item",
+      "engineId": "rockiumz"
+    },
+    {
+      "kind": "item",
+      "engineId": "rockmemory"
+    },
+    {
+      "kind": "item",
+      "engineId": "rockyhelmet"
+    },
+    {
+      "kind": "item",
+      "engineId": "roomservice"
+    },
+    {
+      "kind": "item",
+      "engineId": "rootfossil"
+    },
+    {
+      "kind": "item",
+      "engineId": "roseincense"
+    },
+    {
+      "kind": "item",
+      "engineId": "roseliberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "rowapberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "rustedshield"
+    },
+    {
+      "kind": "item",
+      "engineId": "rustedsword"
+    },
+    {
+      "kind": "item",
+      "engineId": "sablenite"
+    },
+    {
+      "kind": "item",
+      "engineId": "sachet"
+    },
+    {
+      "kind": "item",
+      "engineId": "safariball"
+    },
+    {
+      "kind": "item",
+      "engineId": "safetygoggles"
+    },
+    {
+      "kind": "item",
+      "engineId": "sailfossil"
+    },
+    {
+      "kind": "item",
+      "engineId": "salacberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "salamencite"
+    },
+    {
+      "kind": "item",
+      "engineId": "sceptilite"
+    },
+    {
+      "kind": "item",
+      "engineId": "scizorite"
+    },
+    {
+      "kind": "item",
+      "engineId": "scolipite"
+    },
+    {
+      "kind": "item",
+      "engineId": "scopelens"
+    },
+    {
+      "kind": "item",
+      "engineId": "scovillainite"
+    },
+    {
+      "kind": "item",
+      "engineId": "scraftinite"
+    },
+    {
+      "kind": "item",
+      "engineId": "seaincense"
+    },
+    {
+      "kind": "item",
+      "engineId": "sharpbeak"
+    },
+    {
+      "kind": "item",
+      "engineId": "sharpedonite"
+    },
+    {
+      "kind": "item",
+      "engineId": "shedshell"
+    },
+    {
+      "kind": "item",
+      "engineId": "shellbell"
+    },
+    {
+      "kind": "item",
+      "engineId": "shinystone"
+    },
+    {
+      "kind": "item",
+      "engineId": "shockdrive"
+    },
+    {
+      "kind": "item",
+      "engineId": "shucaberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "silkscarf"
+    },
+    {
+      "kind": "item",
+      "engineId": "silverpowder"
+    },
+    {
+      "kind": "item",
+      "engineId": "sitrusberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "skarmorite"
+    },
+    {
+      "kind": "item",
+      "engineId": "skullfossil"
+    },
+    {
+      "kind": "item",
+      "engineId": "skyplate"
+    },
+    {
+      "kind": "item",
+      "engineId": "slowbronite"
+    },
+    {
+      "kind": "item",
+      "engineId": "smoothrock"
+    },
+    {
+      "kind": "item",
+      "engineId": "snorliumz"
+    },
+    {
+      "kind": "item",
+      "engineId": "snowball"
+    },
+    {
+      "kind": "item",
+      "engineId": "softsand"
+    },
+    {
+      "kind": "item",
+      "engineId": "solganiumz"
+    },
+    {
+      "kind": "item",
+      "engineId": "souldew"
+    },
+    {
+      "kind": "item",
+      "engineId": "spelltag"
+    },
+    {
+      "kind": "item",
+      "engineId": "spelonberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "splashplate"
+    },
+    {
+      "kind": "item",
+      "engineId": "spookyplate"
+    },
+    {
+      "kind": "item",
+      "engineId": "sportball"
+    },
+    {
+      "kind": "item",
+      "engineId": "staraptite"
+    },
+    {
+      "kind": "item",
+      "engineId": "starfberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "starminite"
+    },
+    {
+      "kind": "item",
+      "engineId": "starsweet"
+    },
+    {
+      "kind": "item",
+      "engineId": "steelgem"
+    },
+    {
+      "kind": "item",
+      "engineId": "steeliumz"
+    },
+    {
+      "kind": "item",
+      "engineId": "steelixite"
+    },
+    {
+      "kind": "item",
+      "engineId": "steelmemory"
+    },
+    {
+      "kind": "item",
+      "engineId": "stick"
+    },
+    {
+      "kind": "item",
+      "engineId": "stickybarb"
+    },
+    {
+      "kind": "item",
+      "engineId": "stoneplate"
+    },
+    {
+      "kind": "item",
+      "engineId": "strangeball"
+    },
+    {
+      "kind": "item",
+      "engineId": "strawberrysweet"
+    },
+    {
+      "kind": "item",
+      "engineId": "sunstone"
+    },
+    {
+      "kind": "item",
+      "engineId": "swampertite"
+    },
+    {
+      "kind": "item",
+      "engineId": "sweetapple"
+    },
+    {
+      "kind": "item",
+      "engineId": "syrupyapple"
+    },
+    {
+      "kind": "item",
+      "engineId": "tamatoberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "tangaberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "tapuniumz"
+    },
+    {
+      "kind": "item",
+      "engineId": "tartapple"
+    },
+    {
+      "kind": "item",
+      "engineId": "tatsugirinite"
+    },
+    {
+      "kind": "item",
+      "engineId": "terrainextender"
+    },
+    {
+      "kind": "item",
+      "engineId": "thickclub"
+    },
+    {
+      "kind": "item",
+      "engineId": "throatspray"
+    },
+    {
+      "kind": "item",
+      "engineId": "thunderstone"
+    },
+    {
+      "kind": "item",
+      "engineId": "timerball"
+    },
+    {
+      "kind": "item",
+      "engineId": "toxicorb"
+    },
+    {
+      "kind": "item",
+      "engineId": "toxicplate"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr00"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr01"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr02"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr03"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr04"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr05"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr06"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr07"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr08"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr09"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr10"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr11"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr12"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr13"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr14"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr15"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr16"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr17"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr18"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr19"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr20"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr21"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr22"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr23"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr24"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr25"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr26"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr27"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr28"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr29"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr30"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr31"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr32"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr33"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr34"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr35"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr36"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr37"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr38"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr39"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr40"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr41"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr42"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr43"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr44"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr45"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr46"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr47"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr48"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr49"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr50"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr51"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr52"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr53"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr54"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr55"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr56"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr57"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr58"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr59"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr60"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr61"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr62"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr63"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr64"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr65"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr66"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr67"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr68"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr69"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr70"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr71"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr72"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr73"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr74"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr75"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr76"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr77"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr78"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr79"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr80"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr81"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr82"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr83"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr84"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr85"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr86"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr87"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr88"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr89"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr90"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr91"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr92"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr93"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr94"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr95"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr96"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr97"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr98"
+    },
+    {
+      "kind": "item",
+      "engineId": "tr99"
+    },
+    {
+      "kind": "item",
+      "engineId": "twistedspoon"
+    },
+    {
+      "kind": "item",
+      "engineId": "tyranitarite"
+    },
+    {
+      "kind": "item",
+      "engineId": "ultraball"
+    },
+    {
+      "kind": "item",
+      "engineId": "ultranecroziumz"
+    },
+    {
+      "kind": "item",
+      "engineId": "unremarkableteacup"
+    },
+    {
+      "kind": "item",
+      "engineId": "upgrade"
+    },
+    {
+      "kind": "item",
+      "engineId": "utilityumbrella"
+    },
+    {
+      "kind": "item",
+      "engineId": "venusaurite"
+    },
+    {
+      "kind": "item",
+      "engineId": "victreebelite"
+    },
+    {
+      "kind": "item",
+      "engineId": "vilevial"
+    },
+    {
+      "kind": "item",
+      "engineId": "wacanberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "watergem"
+    },
+    {
+      "kind": "item",
+      "engineId": "wateriumz"
+    },
+    {
+      "kind": "item",
+      "engineId": "watermemory"
+    },
+    {
+      "kind": "item",
+      "engineId": "waterstone"
+    },
+    {
+      "kind": "item",
+      "engineId": "watmelberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "waveincense"
+    },
+    {
+      "kind": "item",
+      "engineId": "weaknesspolicy"
+    },
+    {
+      "kind": "item",
+      "engineId": "wellspringmask"
+    },
+    {
+      "kind": "item",
+      "engineId": "wepearberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "whippeddream"
+    },
+    {
+      "kind": "item",
+      "engineId": "whiteherb"
+    },
+    {
+      "kind": "item",
+      "engineId": "widelens"
+    },
+    {
+      "kind": "item",
+      "engineId": "wikiberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "wiseglasses"
+    },
+    {
+      "kind": "item",
+      "engineId": "yacheberry"
+    },
+    {
+      "kind": "item",
+      "engineId": "zapplate"
+    },
+    {
+      "kind": "item",
+      "engineId": "zeraorite"
+    },
+    {
+      "kind": "item",
+      "engineId": "zoomlens"
+    },
+    {
+      "kind": "item",
+      "engineId": "zygardite"
+    }
+  ]
+}

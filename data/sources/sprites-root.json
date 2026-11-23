@@ -1,0 +1,83 @@
+{
+  "sha": "c0542f7c51215d9672439012838c99f520596cbd",
+  "url": "https://api.github.com/repos/PokeAPI/sprites/git/trees/c0542f7c51215d9672439012838c99f520596cbd",
+  "tree": [
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "774755142007317ff970758ec6c99e8c4dd3491e",
+      "url": "https://api.github.com/repos/PokeAPI/sprites/git/trees/774755142007317ff970758ec6c99e8c4dd3491e"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f11d492d3f6ce286a96b37358d261620ad064d04",
+      "size": 614,
+      "url": "https://api.github.com/repos/PokeAPI/sprites/git/blobs/f11d492d3f6ce286a96b37358d261620ad064d04"
+    },
+    {
+      "path": "CONTRIBUTING_SPRITES.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dcb552ca3a22e405dce047bedfc28bfa802577e4",
+      "size": 4400,
+      "url": "https://api.github.com/repos/PokeAPI/sprites/git/blobs/dcb552ca3a22e405dce047bedfc28bfa802577e4"
+    },
+    {
+      "path": "LICENCE.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f08318829a5c65e870b79ddd7e03b7f51416f3d9",
+      "size": 6655,
+      "url": "https://api.github.com/repos/PokeAPI/sprites/git/blobs/f08318829a5c65e870b79ddd7e03b7f51416f3d9"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ae2e6e138985e05e38f44564320f4791ae8c844d",
+      "size": 36101,
+      "url": "https://api.github.com/repos/PokeAPI/sprites/git/blobs/ae2e6e138985e05e38f44564320f4791ae8c844d"
+    },
+    {
+      "path": "bower.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18150a069d85ee29f57f5a88f7a7e7891a6123cd",
+      "size": 346,
+      "url": "https://api.github.com/repos/PokeAPI/sprites/git/blobs/18150a069d85ee29f57f5a88f7a7e7891a6123cd"
+    },
+    {
+      "path": "package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e630b4c409c62605f2225e3ce10b38fac29a052",
+      "size": 512,
+      "url": "https://api.github.com/repos/PokeAPI/sprites/git/blobs/5e630b4c409c62605f2225e3ce10b38fac29a052"
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b3857a8c9dc12e4cfbf8726e0f8f68f26c01e8c0",
+      "url": "https://api.github.com/repos/PokeAPI/sprites/git/trees/b3857a8c9dc12e4cfbf8726e0f8f68f26c01e8c0"
+    },
+    {
+      "path": "sprites",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ec56a5fae60f2a6363083d7d0581271744673695",
+      "url": "https://api.github.com/repos/PokeAPI/sprites/git/trees/ec56a5fae60f2a6363083d7d0581271744673695"
+    },
+    {
+      "path": "website",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e94725bb02d98928020303c511680d0705c133db",
+      "url": "https://api.github.com/repos/PokeAPI/sprites/git/trees/e94725bb02d98928020303c511680d0705c133db"
+    }
+  ],
+  "truncated": false
+}

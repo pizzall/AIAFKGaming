@@ -1,0 +1,29 @@
+{
+  "fixtureOnly": true,
+  "player": [
+    {"species":"Charizard","level":60,"ability":"Blaze","item":"Charizardite Y","moves":["Heat Wave","Air Slash","Solar Beam","Protect"]},
+    {"species":"Azumarill","level":58,"ability":"Huge Power","item":"Sitrus Berry","moves":["Play Rough","Aqua Jet","Liquidation","Protect"]},
+    {"species":"Garchomp","level":59,"ability":"Rough Skin","item":"Life Orb","moves":["Dragon Claw","Earthquake","Rock Slide","Protect"]},
+    {"species":"Rotom-Wash","level":58,"ability":"Levitate","item":"Leftovers","moves":["Hydro Pump","Thunderbolt","Will-O-Wisp","Protect"]},
+    {"species":"Togekiss","level":57,"ability":"Serene Grace","item":"Sitrus Berry","moves":["Dazzling Gleam","Air Slash","Follow Me","Protect"]},
+    {"species":"Scizor","level":59,"ability":"Technician","item":"Life Orb","moves":["Bullet Punch","U-turn","X-Scissor","Protect"]}
+  ],
+  "npcs": [
+    {"key":"garden","name":"研究员青叶","tactic":"以持续压制与稳健换人为主。","team":[
+      {"species":"Venusaur","level":60,"ability":"Overgrow","item":"Venusaurite","moves":["Sludge Bomb","Giga Drain","Earth Power","Protect"]},
+      {"species":"Gengar","level":58,"ability":"Cursed Body","item":"Focus Sash","moves":["Shadow Ball","Sludge Bomb","Energy Ball","Protect"]},
+      {"species":"Gastrodon","level":58,"ability":"Storm Drain","item":"Leftovers","moves":["Earth Power","Ice Beam","Muddy Water","Recover"]},
+      {"species":"Tyranitar","level":59,"ability":"Sand Stream","item":"Sitrus Berry","moves":["Rock Slide","Crunch","Ice Punch","Protect"]},
+      {"species":"Metagross","level":59,"ability":"Clear Body","item":"Life Orb","moves":["Bullet Punch","Iron Head","Zen Headbutt","Protect"]},
+      {"species":"Arcanine","level":58,"ability":"Intimidate","item":"Sitrus Berry","moves":["Flare Blitz","Extreme Speed","Snarl","Protect"]}
+    ]},
+    {"key":"water","name":"研究员青叶","tactic":"优先制造进攻窗口，集中火力。","team":[
+      {"species":"Blastoise","level":60,"ability":"Torrent","item":"Blastoisinite","moves":["Hydro Pump","Dark Pulse","Aura Sphere","Ice Beam"]},
+      {"species":"Salamence","level":59,"ability":"Intimidate","item":"Life Orb","moves":["Dragon Claw","Flamethrower","Rock Slide","Protect"]},
+      {"species":"Ferrothorn","level":58,"ability":"Iron Barbs","item":"Leftovers","moves":["Gyro Ball","Power Whip","Leech Seed","Protect"]},
+      {"species":"Hydreigon","level":59,"ability":"Levitate","item":"Life Orb","moves":["Dark Pulse","Dragon Pulse","Flamethrower","Protect"]},
+      {"species":"Amoonguss","level":57,"ability":"Regenerator","item":"Sitrus Berry","moves":["Giga Drain","Sludge Bomb","Rage Powder","Spore"]},
+      {"species":"Machamp","level":58,"ability":"No Guard","item":"Sitrus Berry","moves":["Dynamic Punch","Rock Slide","Knock Off","Protect"]}
+    ]}
+  ]
+}

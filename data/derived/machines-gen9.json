@@ -1,0 +1,1842 @@
+{
+  "generation": 9,
+  "versionGroups": [
+    25,
+    26,
+    27
+  ],
+  "machines": [
+    {
+      "number": 1,
+      "resource": "tm9_001",
+      "itemId": 305,
+      "moveId": 36,
+      "move": "takedown",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 2,
+      "resource": "tm9_002",
+      "itemId": 306,
+      "moveId": 204,
+      "move": "charm",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 3,
+      "resource": "tm9_003",
+      "itemId": 307,
+      "moveId": 313,
+      "move": "faketears",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 4,
+      "resource": "tm9_004",
+      "itemId": 308,
+      "moveId": 97,
+      "move": "agility",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 5,
+      "resource": "tm9_005",
+      "itemId": 309,
+      "moveId": 189,
+      "move": "mudslap",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 6,
+      "resource": "tm9_006",
+      "itemId": 310,
+      "moveId": 184,
+      "move": "scaryface",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 7,
+      "resource": "tm9_007",
+      "itemId": 311,
+      "moveId": 182,
+      "move": "protect",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 8,
+      "resource": "tm9_008",
+      "itemId": 312,
+      "moveId": 424,
+      "move": "firefang",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 9,
+      "resource": "tm9_009",
+      "itemId": 313,
+      "moveId": 422,
+      "move": "thunderfang",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 10,
+      "resource": "tm9_010",
+      "itemId": 314,
+      "moveId": 423,
+      "move": "icefang",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 11,
+      "resource": "tm9_011",
+      "itemId": 315,
+      "moveId": 352,
+      "move": "waterpulse",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 12,
+      "resource": "tm9_012",
+      "itemId": 316,
+      "moveId": 67,
+      "move": "lowkick",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 13,
+      "resource": "tm9_013",
+      "itemId": 317,
+      "moveId": 491,
+      "move": "acidspray",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 14,
+      "resource": "tm9_014",
+      "itemId": 318,
+      "moveId": 512,
+      "move": "acrobatics",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 15,
+      "resource": "tm9_015",
+      "itemId": 319,
+      "moveId": 522,
+      "move": "strugglebug",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 16,
+      "resource": "tm9_016",
+      "itemId": 320,
+      "moveId": 60,
+      "move": "psybeam",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 17,
+      "resource": "tm9_017",
+      "itemId": 321,
+      "moveId": 109,
+      "move": "confuseray",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 18,
+      "resource": "tm9_018",
+      "itemId": 322,
+      "moveId": 168,
+      "move": "thief",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 19,
+      "resource": "tm9_019",
+      "itemId": 323,
+      "moveId": 574,
+      "move": "disarmingvoice",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 20,
+      "resource": "tm9_020",
+      "itemId": 324,
+      "moveId": 885,
+      "move": "trailblaze",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 21,
+      "resource": "tm9_021",
+      "itemId": 325,
+      "moveId": 884,
+      "move": "pounce",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 22,
+      "resource": "tm9_022",
+      "itemId": 326,
+      "moveId": 886,
+      "move": "chillingwater",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 23,
+      "resource": "tm9_023",
+      "itemId": 327,
+      "moveId": 451,
+      "move": "chargebeam",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 24,
+      "resource": "tm9_024",
+      "itemId": 328,
+      "moveId": 83,
+      "move": "firespin",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 25,
+      "resource": "tm9_025",
+      "itemId": 329,
+      "moveId": 263,
+      "move": "facade",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 26,
+      "resource": "tm9_026",
+      "itemId": 330,
+      "moveId": 342,
+      "move": "poisontail",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 27,
+      "resource": "tm9_027",
+      "itemId": 331,
+      "moveId": 332,
+      "move": "aerialace",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 28,
+      "resource": "tm9_028",
+      "itemId": 332,
+      "moveId": 523,
+      "move": "bulldoze",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 29,
+      "resource": "tm9_029",
+      "itemId": 333,
+      "moveId": 506,
+      "move": "hex",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 30,
+      "resource": "tm9_030",
+      "itemId": 334,
+      "moveId": 555,
+      "move": "snarl",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 31,
+      "resource": "tm9_031",
+      "itemId": 335,
+      "moveId": 232,
+      "move": "metalclaw",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 32,
+      "resource": "tm9_032",
+      "itemId": 336,
+      "moveId": 129,
+      "move": "swift",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 33,
+      "resource": "tm9_033",
+      "itemId": 337,
+      "moveId": 345,
+      "move": "magicalleaf",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 34,
+      "resource": "tm9_034",
+      "itemId": 338,
+      "moveId": 196,
+      "move": "icywind",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 35,
+      "resource": "tm9_035",
+      "itemId": 339,
+      "moveId": 341,
+      "move": "mudshot",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 36,
+      "resource": "tm9_036",
+      "itemId": 340,
+      "moveId": 317,
+      "move": "rocktomb",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 37,
+      "resource": "tm9_037",
+      "itemId": 341,
+      "moveId": 577,
+      "move": "drainingkiss",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 38,
+      "resource": "tm9_038",
+      "itemId": 342,
+      "moveId": 488,
+      "move": "flamecharge",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 39,
+      "resource": "tm9_039",
+      "itemId": 343,
+      "moveId": 490,
+      "move": "lowsweep",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 40,
+      "resource": "tm9_040",
+      "itemId": 344,
+      "moveId": 314,
+      "move": "aircutter",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 41,
+      "resource": "tm9_041",
+      "itemId": 345,
+      "moveId": 500,
+      "move": "storedpower",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 42,
+      "resource": "tm9_042",
+      "itemId": 346,
+      "moveId": 101,
+      "move": "nightshade",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 43,
+      "resource": "tm9_043",
+      "itemId": 347,
+      "moveId": 374,
+      "move": "fling",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 44,
+      "resource": "tm9_044",
+      "itemId": 348,
+      "moveId": 525,
+      "move": "dragontail",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 45,
+      "resource": "tm9_045",
+      "itemId": 349,
+      "moveId": 474,
+      "move": "venoshock",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 46,
+      "resource": "tm9_046",
+      "itemId": 350,
+      "moveId": 419,
+      "move": "avalanche",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 47,
+      "resource": "tm9_047",
+      "itemId": 351,
+      "moveId": 203,
+      "move": "endure",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 48,
+      "resource": "tm9_048",
+      "itemId": 352,
+      "moveId": 521,
+      "move": "voltswitch",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 49,
+      "resource": "tm9_049",
+      "itemId": 353,
+      "moveId": 241,
+      "move": "sunnyday",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 50,
+      "resource": "tm9_050",
+      "itemId": 354,
+      "moveId": 240,
+      "move": "raindance",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 51,
+      "resource": "tm9_051",
+      "itemId": 355,
+      "moveId": 201,
+      "move": "sandstorm",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 52,
+      "resource": "tm9_052",
+      "itemId": 356,
+      "moveId": 883,
+      "move": "snowscape",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 53,
+      "resource": "tm9_053",
+      "itemId": 357,
+      "moveId": 684,
+      "move": "smartstrike",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 54,
+      "resource": "tm9_054",
+      "itemId": 358,
+      "moveId": 473,
+      "move": "psyshock",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 55,
+      "resource": "tm9_055",
+      "itemId": 359,
+      "moveId": 91,
+      "move": "dig",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 56,
+      "resource": "tm9_056",
+      "itemId": 360,
+      "moveId": 331,
+      "move": "bulletseed",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 57,
+      "resource": "tm9_057",
+      "itemId": 361,
+      "moveId": 206,
+      "move": "falseswipe",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 58,
+      "resource": "tm9_058",
+      "itemId": 362,
+      "moveId": 280,
+      "move": "brickbreak",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 59,
+      "resource": "tm9_059",
+      "itemId": 363,
+      "moveId": 428,
+      "move": "zenheadbutt",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 60,
+      "resource": "tm9_060",
+      "itemId": 364,
+      "moveId": 369,
+      "move": "uturn",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 61,
+      "resource": "tm9_061",
+      "itemId": 365,
+      "moveId": 421,
+      "move": "shadowclaw",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 62,
+      "resource": "tm9_062",
+      "itemId": 366,
+      "moveId": 492,
+      "move": "foulplay",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 63,
+      "resource": "tm9_063",
+      "itemId": 367,
+      "moveId": 706,
+      "move": "psychicfangs",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 64,
+      "resource": "tm9_064",
+      "itemId": 368,
+      "moveId": 339,
+      "move": "bulkup",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 65,
+      "resource": "tm9_065",
+      "itemId": 369,
+      "moveId": 403,
+      "move": "airslash",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 66,
+      "resource": "tm9_066",
+      "itemId": 370,
+      "moveId": 34,
+      "move": "bodyslam",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 67,
+      "resource": "tm9_067",
+      "itemId": 371,
+      "moveId": 7,
+      "move": "firepunch",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 68,
+      "resource": "tm9_068",
+      "itemId": 372,
+      "moveId": 9,
+      "move": "thunderpunch",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 69,
+      "resource": "tm9_069",
+      "itemId": 373,
+      "moveId": 8,
+      "move": "icepunch",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 70,
+      "resource": "tm9_070",
+      "itemId": 374,
+      "moveId": 214,
+      "move": "sleeptalk",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 71,
+      "resource": "tm9_071",
+      "itemId": 375,
+      "moveId": 402,
+      "move": "seedbomb",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 72,
+      "resource": "tm9_072",
+      "itemId": 376,
+      "moveId": 486,
+      "move": "electroball",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 73,
+      "resource": "tm9_073",
+      "itemId": 377,
+      "moveId": 409,
+      "move": "drainpunch",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 74,
+      "resource": "tm9_074",
+      "itemId": 378,
+      "moveId": 115,
+      "move": "reflect",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 75,
+      "resource": "tm9_075",
+      "itemId": 379,
+      "moveId": 113,
+      "move": "lightscreen",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 76,
+      "resource": "tm9_076",
+      "itemId": 380,
+      "moveId": 350,
+      "move": "rockblast",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 77,
+      "resource": "tm9_077",
+      "itemId": 381,
+      "moveId": 127,
+      "move": "waterfall",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 78,
+      "resource": "tm9_078",
+      "itemId": 382,
+      "moveId": 337,
+      "move": "dragonclaw",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 79,
+      "resource": "tm9_079",
+      "itemId": 383,
+      "moveId": 605,
+      "move": "dazzlinggleam",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 80,
+      "resource": "tm9_080",
+      "itemId": 384,
+      "moveId": 118,
+      "move": "metronome",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 81,
+      "resource": "tm9_081",
+      "itemId": 385,
+      "moveId": 447,
+      "move": "grassknot",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 82,
+      "resource": "tm9_082",
+      "itemId": 386,
+      "moveId": 86,
+      "move": "thunderwave",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 83,
+      "resource": "tm9_083",
+      "itemId": 387,
+      "moveId": 398,
+      "move": "poisonjab",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 84,
+      "resource": "tm9_084",
+      "itemId": 388,
+      "moveId": 707,
+      "move": "stompingtantrum",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 85,
+      "resource": "tm9_085",
+      "itemId": 389,
+      "moveId": 156,
+      "move": "rest",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 86,
+      "resource": "tm9_086",
+      "itemId": 390,
+      "moveId": 157,
+      "move": "rockslide",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 87,
+      "resource": "tm9_087",
+      "itemId": 391,
+      "moveId": 269,
+      "move": "taunt",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 88,
+      "resource": "tm9_088",
+      "itemId": 392,
+      "moveId": 14,
+      "move": "swordsdance",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 89,
+      "resource": "tm9_089",
+      "itemId": 393,
+      "moveId": 776,
+      "move": "bodypress",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 90,
+      "resource": "tm9_090",
+      "itemId": 394,
+      "moveId": 191,
+      "move": "spikes",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 91,
+      "resource": "tm9_091",
+      "itemId": 395,
+      "moveId": 390,
+      "move": "toxicspikes",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 92,
+      "resource": "tm9_092",
+      "itemId": 396,
+      "moveId": 286,
+      "move": "imprison",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 93,
+      "resource": "tm9_093",
+      "itemId": 659,
+      "moveId": 430,
+      "move": "flashcannon",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 94,
+      "resource": "tm9_094",
+      "itemId": 660,
+      "moveId": 399,
+      "move": "darkpulse",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 95,
+      "resource": "tm9_095",
+      "itemId": 661,
+      "moveId": 141,
+      "move": "leechlife",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 96,
+      "resource": "tm9_096",
+      "itemId": 745,
+      "moveId": 598,
+      "move": "eerieimpulse",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 97,
+      "resource": "tm9_097",
+      "itemId": 746,
+      "moveId": 19,
+      "move": "fly",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 98,
+      "resource": "tm9_098",
+      "itemId": 747,
+      "moveId": 285,
+      "move": "skillswap",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 99,
+      "resource": "tm9_099",
+      "itemId": 748,
+      "moveId": 442,
+      "move": "ironhead",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 100,
+      "resource": "tm9_100",
+      "itemId": 749,
+      "moveId": 349,
+      "move": "dragondance",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 101,
+      "resource": "tm9_101",
+      "itemId": 1944,
+      "moveId": 408,
+      "move": "powergem",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 102,
+      "resource": "tm9_102",
+      "itemId": 1945,
+      "moveId": 441,
+      "move": "gunkshot",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 103,
+      "resource": "tm9_103",
+      "itemId": 1946,
+      "moveId": 164,
+      "move": "substitute",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 104,
+      "resource": "tm9_104",
+      "itemId": 1947,
+      "moveId": 334,
+      "move": "irondefense",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 105,
+      "resource": "tm9_105",
+      "itemId": 1948,
+      "moveId": 404,
+      "move": "xscissor",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 106,
+      "resource": "tm9_106",
+      "itemId": 1949,
+      "moveId": 529,
+      "move": "drillrun",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 107,
+      "resource": "tm9_107",
+      "itemId": 1950,
+      "moveId": 261,
+      "move": "willowisp",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 108,
+      "resource": "tm9_108",
+      "itemId": 1951,
+      "moveId": 242,
+      "move": "crunch",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 109,
+      "resource": "tm9_109",
+      "itemId": 1952,
+      "moveId": 271,
+      "move": "trick",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 110,
+      "resource": "tm9_110",
+      "itemId": 1953,
+      "moveId": 710,
+      "move": "liquidation",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 111,
+      "resource": "tm9_111",
+      "itemId": 1954,
+      "moveId": 202,
+      "move": "gigadrain",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 112,
+      "resource": "tm9_112",
+      "itemId": 1955,
+      "moveId": 396,
+      "move": "aurasphere",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 113,
+      "resource": "tm9_113",
+      "itemId": 1956,
+      "moveId": 366,
+      "move": "tailwind",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 114,
+      "resource": "tm9_114",
+      "itemId": 1957,
+      "moveId": 247,
+      "move": "shadowball",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 115,
+      "resource": "tm9_115",
+      "itemId": 1958,
+      "moveId": 406,
+      "move": "dragonpulse",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 116,
+      "resource": "tm9_116",
+      "itemId": 1959,
+      "moveId": 446,
+      "move": "stealthrock",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 117,
+      "resource": "tm9_117",
+      "itemId": 1960,
+      "moveId": 304,
+      "move": "hypervoice",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 118,
+      "resource": "tm9_118",
+      "itemId": 1961,
+      "moveId": 257,
+      "move": "heatwave",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 119,
+      "resource": "tm9_119",
+      "itemId": 1962,
+      "moveId": 412,
+      "move": "energyball",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 120,
+      "resource": "tm9_120",
+      "itemId": 1963,
+      "moveId": 94,
+      "move": "psychic",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 121,
+      "resource": "tm9_121",
+      "itemId": 1964,
+      "moveId": 484,
+      "move": "heavyslam",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 122,
+      "resource": "tm9_122",
+      "itemId": 1965,
+      "moveId": 227,
+      "move": "encore",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 123,
+      "resource": "tm9_123",
+      "itemId": 1966,
+      "moveId": 57,
+      "move": "surf",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 124,
+      "resource": "tm9_124",
+      "itemId": 1967,
+      "moveId": 861,
+      "move": "icespinner",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 125,
+      "resource": "tm9_125",
+      "itemId": 1968,
+      "moveId": 53,
+      "move": "flamethrower",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 126,
+      "resource": "tm9_126",
+      "itemId": 1969,
+      "moveId": 85,
+      "move": "thunderbolt",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 127,
+      "resource": "tm9_127",
+      "itemId": 1970,
+      "moveId": 583,
+      "move": "playrough",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 128,
+      "resource": "tm9_128",
+      "itemId": 1971,
+      "moveId": 133,
+      "move": "amnesia",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 129,
+      "resource": "tm9_129",
+      "itemId": 1972,
+      "moveId": 347,
+      "move": "calmmind",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 130,
+      "resource": "tm9_130",
+      "itemId": 1973,
+      "moveId": 270,
+      "move": "helpinghand",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 131,
+      "resource": "tm9_131",
+      "itemId": 1974,
+      "moveId": 676,
+      "move": "pollenpuff",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 132,
+      "resource": "tm9_132",
+      "itemId": 1975,
+      "moveId": 226,
+      "move": "batonpass",
+      "sourceVersionGroup": 26
+    },
+    {
+      "number": 133,
+      "resource": "tm9_133",
+      "itemId": 1976,
+      "moveId": 414,
+      "move": "earthpower",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 134,
+      "resource": "tm9_134",
+      "itemId": 1977,
+      "moveId": 179,
+      "move": "reversal",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 135,
+      "resource": "tm9_135",
+      "itemId": 1978,
+      "moveId": 58,
+      "move": "icebeam",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 136,
+      "resource": "tm9_136",
+      "itemId": 1979,
+      "moveId": 604,
+      "move": "electricterrain",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 137,
+      "resource": "tm9_137",
+      "itemId": 1980,
+      "moveId": 580,
+      "move": "grassyterrain",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 138,
+      "resource": "tm9_138",
+      "itemId": 1981,
+      "moveId": 678,
+      "move": "psychicterrain",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 139,
+      "resource": "tm9_139",
+      "itemId": 1982,
+      "moveId": 581,
+      "move": "mistyterrain",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 140,
+      "resource": "tm9_140",
+      "itemId": 1983,
+      "moveId": 417,
+      "move": "nastyplot",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 141,
+      "resource": "tm9_141",
+      "itemId": 1984,
+      "moveId": 126,
+      "move": "fireblast",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 142,
+      "resource": "tm9_142",
+      "itemId": 1985,
+      "moveId": 56,
+      "move": "hydropump",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 143,
+      "resource": "tm9_143",
+      "itemId": 1986,
+      "moveId": 59,
+      "move": "blizzard",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 144,
+      "resource": "tm9_144",
+      "itemId": 1987,
+      "moveId": 519,
+      "move": "firepledge",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 145,
+      "resource": "tm9_145",
+      "itemId": 1988,
+      "moveId": 518,
+      "move": "waterpledge",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 146,
+      "resource": "tm9_146",
+      "itemId": 1989,
+      "moveId": 520,
+      "move": "grasspledge",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 147,
+      "resource": "tm9_147",
+      "itemId": 1990,
+      "moveId": 528,
+      "move": "wildcharge",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 148,
+      "resource": "tm9_148",
+      "itemId": 1991,
+      "moveId": 188,
+      "move": "sludgebomb",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 149,
+      "resource": "tm9_149",
+      "itemId": 1992,
+      "moveId": 89,
+      "move": "earthquake",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 150,
+      "resource": "tm9_150",
+      "itemId": 1993,
+      "moveId": 444,
+      "move": "stoneedge",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 151,
+      "resource": "tm9_151",
+      "itemId": 1994,
+      "moveId": 566,
+      "move": "phantomforce",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 152,
+      "resource": "tm9_152",
+      "itemId": 1995,
+      "moveId": 416,
+      "move": "gigaimpact",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 153,
+      "resource": "tm9_153",
+      "itemId": 1996,
+      "moveId": 307,
+      "move": "blastburn",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 154,
+      "resource": "tm9_154",
+      "itemId": 1997,
+      "moveId": 308,
+      "move": "hydrocannon",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 155,
+      "resource": "tm9_155",
+      "itemId": 1998,
+      "moveId": 338,
+      "move": "frenzyplant",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 156,
+      "resource": "tm9_156",
+      "itemId": 1999,
+      "moveId": 200,
+      "move": "outrage",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 157,
+      "resource": "tm9_157",
+      "itemId": 2000,
+      "moveId": 315,
+      "move": "overheat",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 158,
+      "resource": "tm9_158",
+      "itemId": 2001,
+      "moveId": 411,
+      "move": "focusblast",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 159,
+      "resource": "tm9_159",
+      "itemId": 2002,
+      "moveId": 437,
+      "move": "leafstorm",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 160,
+      "resource": "tm9_160",
+      "itemId": 2003,
+      "moveId": 542,
+      "move": "hurricane",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 161,
+      "resource": "tm9_161",
+      "itemId": 2004,
+      "moveId": 433,
+      "move": "trickroom",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 162,
+      "resource": "tm9_162",
+      "itemId": 2005,
+      "moveId": 405,
+      "move": "bugbuzz",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 163,
+      "resource": "tm9_163",
+      "itemId": 2006,
+      "moveId": 63,
+      "move": "hyperbeam",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 164,
+      "resource": "tm9_164",
+      "itemId": 2007,
+      "moveId": 413,
+      "move": "bravebird",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 165,
+      "resource": "tm9_165",
+      "itemId": 2008,
+      "moveId": 394,
+      "move": "flareblitz",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 166,
+      "resource": "tm9_166",
+      "itemId": 2009,
+      "moveId": 87,
+      "move": "thunder",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 167,
+      "resource": "tm9_167",
+      "itemId": 2010,
+      "moveId": 370,
+      "move": "closecombat",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 168,
+      "resource": "tm9_168",
+      "itemId": 2011,
+      "moveId": 76,
+      "move": "solarbeam",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 169,
+      "resource": "tm9_169",
+      "itemId": 2012,
+      "moveId": 434,
+      "move": "dracometeor",
+      "sourceVersionGroup": 25
+    },
+    {
+      "number": 170,
+      "resource": "tm9_170",
+      "itemId": 2013,
+      "moveId": 796,
+      "move": "steelbeam",
+      "sourceVersionGroup": 26
+    },
+    {
+      "number": 171,
+      "resource": "tm9_171",
+      "itemId": 2014,
+      "moveId": 851,
+      "move": "terablast",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 172,
+      "resource": "tm9_172",
+      "itemId": 2161,
+      "moveId": 46,
+      "move": "roar",
+      "sourceVersionGroup": 26
+    },
+    {
+      "number": 173,
+      "resource": "tm9_173",
+      "itemId": 2162,
+      "moveId": 268,
+      "move": "charge",
+      "sourceVersionGroup": 26
+    },
+    {
+      "number": 174,
+      "resource": "tm9_174",
+      "itemId": 2163,
+      "moveId": 114,
+      "move": "haze",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 175,
+      "resource": "tm9_175",
+      "itemId": 2164,
+      "moveId": 92,
+      "move": "toxic",
+      "sourceVersionGroup": 26
+    },
+    {
+      "number": 176,
+      "resource": "tm9_176",
+      "itemId": 2165,
+      "moveId": 328,
+      "move": "sandtomb",
+      "sourceVersionGroup": 26
+    },
+    {
+      "number": 177,
+      "resource": "tm9_177",
+      "itemId": 2166,
+      "moveId": 180,
+      "move": "spite",
+      "sourceVersionGroup": 26
+    },
+    {
+      "number": 178,
+      "resource": "tm9_178",
+      "itemId": 2167,
+      "moveId": 356,
+      "move": "gravity",
+      "sourceVersionGroup": 26
+    },
+    {
+      "number": 179,
+      "resource": "tm9_179",
+      "itemId": 2168,
+      "moveId": 479,
+      "move": "smackdown",
+      "sourceVersionGroup": 26
+    },
+    {
+      "number": 180,
+      "resource": "tm9_180",
+      "itemId": 2169,
+      "moveId": 360,
+      "move": "gyroball",
+      "sourceVersionGroup": 26
+    },
+    {
+      "number": 181,
+      "resource": "tm9_181",
+      "itemId": 2170,
+      "moveId": 282,
+      "move": "knockoff",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 182,
+      "resource": "tm9_182",
+      "itemId": 2171,
+      "moveId": 450,
+      "move": "bugbite",
+      "sourceVersionGroup": 26
+    },
+    {
+      "number": 183,
+      "resource": "tm9_183",
+      "itemId": 2172,
+      "moveId": 162,
+      "move": "superfang",
+      "sourceVersionGroup": 26
+    },
+    {
+      "number": 184,
+      "resource": "tm9_184",
+      "itemId": 2173,
+      "moveId": 410,
+      "move": "vacuumwave",
+      "sourceVersionGroup": 26
+    },
+    {
+      "number": 185,
+      "resource": "tm9_185",
+      "itemId": 2174,
+      "moveId": 679,
+      "move": "lunge",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 186,
+      "resource": "tm9_186",
+      "itemId": 2175,
+      "moveId": 667,
+      "move": "highhorsepower",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 187,
+      "resource": "tm9_187",
+      "itemId": 2176,
+      "moveId": 333,
+      "move": "iciclespear",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 188,
+      "resource": "tm9_188",
+      "itemId": 2177,
+      "moveId": 503,
+      "move": "scald",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 189,
+      "resource": "tm9_189",
+      "itemId": 2178,
+      "moveId": 535,
+      "move": "heatcrash",
+      "sourceVersionGroup": 26
+    },
+    {
+      "number": 190,
+      "resource": "tm9_190",
+      "itemId": 2179,
+      "moveId": 669,
+      "move": "solarblade",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 191,
+      "resource": "tm9_191",
+      "itemId": 2180,
+      "moveId": 253,
+      "move": "uproar",
+      "sourceVersionGroup": 26
+    },
+    {
+      "number": 192,
+      "resource": "tm9_192",
+      "itemId": 2181,
+      "moveId": 264,
+      "move": "focuspunch",
+      "sourceVersionGroup": 26
+    },
+    {
+      "number": 193,
+      "resource": "tm9_193",
+      "itemId": 2182,
+      "moveId": 311,
+      "move": "weatherball",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 194,
+      "resource": "tm9_194",
+      "itemId": 2183,
+      "moveId": 803,
+      "move": "grassyglide",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 195,
+      "resource": "tm9_195",
+      "itemId": 2184,
+      "moveId": 807,
+      "move": "burningjealousy",
+      "sourceVersionGroup": 26
+    },
+    {
+      "number": 196,
+      "resource": "tm9_196",
+      "itemId": 2185,
+      "moveId": 812,
+      "move": "flipturn",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 197,
+      "resource": "tm9_197",
+      "itemId": 2186,
+      "moveId": 814,
+      "move": "dualwingbeat",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 198,
+      "resource": "tm9_198",
+      "itemId": 2187,
+      "moveId": 809,
+      "move": "poltergeist",
+      "sourceVersionGroup": 26
+    },
+    {
+      "number": 199,
+      "resource": "tm9_199",
+      "itemId": 2188,
+      "moveId": 808,
+      "move": "lashout",
+      "sourceVersionGroup": 26
+    },
+    {
+      "number": 200,
+      "resource": "tm9_200",
+      "itemId": 2189,
+      "moveId": 799,
+      "move": "scaleshot",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 201,
+      "resource": "tm9_201",
+      "itemId": 2190,
+      "moveId": 802,
+      "move": "mistyexplosion",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 202,
+      "resource": "tm9_202",
+      "itemId": 2191,
+      "moveId": 220,
+      "move": "painsplit",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 203,
+      "resource": "tm9_203",
+      "itemId": 2192,
+      "moveId": 244,
+      "move": "psychup",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 204,
+      "resource": "tm9_204",
+      "itemId": 2193,
+      "moveId": 38,
+      "move": "doubleedge",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 205,
+      "resource": "tm9_205",
+      "itemId": 2194,
+      "moveId": 283,
+      "move": "endeavor",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 206,
+      "resource": "tm9_206",
+      "itemId": 2195,
+      "moveId": 572,
+      "move": "petalblizzard",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 207,
+      "resource": "tm9_207",
+      "itemId": 2196,
+      "moveId": 915,
+      "move": "temperflare",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 208,
+      "resource": "tm9_208",
+      "itemId": 2197,
+      "moveId": 250,
+      "move": "whirlpool",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 209,
+      "resource": "tm9_209",
+      "itemId": 2198,
+      "moveId": 330,
+      "move": "muddywater",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 210,
+      "resource": "tm9_210",
+      "itemId": 2199,
+      "moveId": 916,
+      "move": "supercellslam",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 211,
+      "resource": "tm9_211",
+      "itemId": 2200,
+      "moveId": 527,
+      "move": "electroweb",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 212,
+      "resource": "tm9_212",
+      "itemId": 2201,
+      "moveId": 813,
+      "move": "tripleaxel",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 213,
+      "resource": "tm9_213",
+      "itemId": 2202,
+      "moveId": 811,
+      "move": "coaching",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 214,
+      "resource": "tm9_214",
+      "itemId": 2203,
+      "moveId": 482,
+      "move": "sludgewave",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 215,
+      "resource": "tm9_215",
+      "itemId": 2204,
+      "moveId": 815,
+      "move": "scorchingsands",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 216,
+      "resource": "tm9_216",
+      "itemId": 2205,
+      "moveId": 297,
+      "move": "featherdance",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 217,
+      "resource": "tm9_217",
+      "itemId": 2206,
+      "moveId": 248,
+      "move": "futuresight",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 218,
+      "resource": "tm9_218",
+      "itemId": 2207,
+      "moveId": 797,
+      "move": "expandingforce",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 219,
+      "resource": "tm9_219",
+      "itemId": 2208,
+      "moveId": 806,
+      "move": "skittersmack",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 220,
+      "resource": "tm9_220",
+      "itemId": 2209,
+      "moveId": 800,
+      "move": "meteorbeam",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 221,
+      "resource": "tm9_221",
+      "itemId": 2210,
+      "moveId": 675,
+      "move": "throatchop",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 222,
+      "resource": "tm9_222",
+      "itemId": 2211,
+      "moveId": 784,
+      "move": "breakingswipe",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 223,
+      "resource": "tm9_223",
+      "itemId": 2212,
+      "moveId": 319,
+      "move": "metalsound",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 224,
+      "resource": "tm9_224",
+      "itemId": 2213,
+      "moveId": 174,
+      "move": "curse",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 225,
+      "resource": "tm9_225",
+      "itemId": 2214,
+      "moveId": 912,
+      "move": "hardpress",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 226,
+      "resource": "tm9_226",
+      "itemId": 2215,
+      "moveId": 913,
+      "move": "dragoncheer",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 227,
+      "resource": "tm9_227",
+      "itemId": 2216,
+      "moveId": 914,
+      "move": "alluringvoice",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 228,
+      "resource": "tm9_228",
+      "itemId": 2217,
+      "moveId": 917,
+      "move": "psychicnoise",
+      "sourceVersionGroup": 27
+    },
+    {
+      "number": 229,
+      "resource": "tm9_229",
+      "itemId": 2218,
+      "moveId": 918,
+      "move": "upperhand",
+      "sourceVersionGroup": 27
+    }
+  ]
+}

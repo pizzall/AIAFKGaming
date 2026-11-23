@@ -1,0 +1,121 @@
+import type {TeamMember} from '../battle/fixtures.ts';
+
+export type Stats = {hp: number; atk: number; def: number; spa: number; spd: number; spe: number};
+export interface Partner {
+  id: string;
+  species: string;
+  name: string;
+  nickname?: string;
+  image: string | null;
+  level: number;
+  exp: number;
+  nature: string;
+  ability: string;
+  gender: string;
+  ivs: Stats;
+  evs: Stats;
+  friendship: number;
+  moves: string[];
+  learnedMoves: string[];
+  pp: Record<string, number>;
+  heldItem: string;
+  hp: number;
+  maxHp: number;
+  status: string;
+  origin: string;
+}
+export interface Exploration {
+  region: string;
+  team: string[];
+  cursor: number;
+  recoveryUntil: number | null;
+  startedAt: number;
+  supplies?: Array<SupplySlot | null>;
+  summary: {wins: number; losses: number; captures: number; xp: number; recoverySeconds: number};
+}
+export interface SupplySlot {
+  resource: string;
+  quantity: number;
+}
+export interface Facility {
+  key: string;
+  level: number;
+  workers: string[];
+  cursor: number;
+  remainder: number;
+}
+export interface Plot {
+  berry: string | null;
+  plantedAt: number;
+  cursor: number;
+  buffer: number;
+}
+export interface Nursery {
+  phase: 'empty' | 'producing' | 'ready' | 'hatching' | 'complete';
+  parents: string[];
+  manager: string | null;
+  eggCount: number;
+  completeAt: number;
+  offspring: Partner[];
+}
+export interface GameLog {
+  at: number;
+  kind: string;
+  message: string;
+}
+export interface TeamPreset {
+  id: string;
+  name: string;
+  team: string[];
+  tactic: string;
+}
+export interface PlayerClockState {
+  clockOffset: number;
+  clockRate?: number;
+  clockAnchorRealAt?: number;
+}
+export interface PlayerState extends PlayerClockState {
+  id: string;
+  username: string;
+  rng: number;
+  serial: number;
+  inventory: Record<string, number>;
+  pokemon: Partner[];
+  team: string[];
+  tactic: string;
+  presets?: TeamPreset[];
+  readyPresetId?: string | null;
+  wishlist: string[];
+  exploration: Exploration | null;
+  facilities: Facility[];
+  plots: Plot[];
+  nursery: Nursery;
+  honors: string[];
+  logs: GameLog[];
+  catchingUp: boolean;
+  purchaseCounts: Record<string, number>;
+  centerUntil: number | null;
+  centerTeam?: string[];
+}
+export interface Gym {
+  key: string;
+  name: string;
+  level: number;
+  holderKind: 'npc' | 'player';
+  ownerId?: string;
+  ownerName: string;
+  defense?: {team: TeamMember[]; tactic: string};
+  version: number;
+  activeBattleId: string | null;
+}
+export interface WorldState {
+  season: number;
+  gyms: Gym[];
+}
+export class GameError extends Error {
+  status: number;
+  constructor(message: string, status = 400) {
+    super(message);
+    this.status = status;
+  }
+}

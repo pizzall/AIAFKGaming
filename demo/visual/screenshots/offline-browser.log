@@ -1,0 +1,12 @@
+[62748:39204:1114/103335.779:ERROR:chrome\installer\util\google_update_settings_win.cc:270] Failed opening key Software\Google\Update\ClientStateMedium\{8A69D345-D564-463c-AFF1-A69D9E530F96} to set usagestats; result: 5
+[62748:28432:1114/103335.929:ERROR:content\browser\gpu\gpu_process_host.cc:1042] GPU process exited unexpectedly: exit_code=-1073741790
+[62748:39204:1114/103335.930:ERROR:components\viz\host\persistent_cache_sandboxed_file_factory.cc:153] Failed to open persistent cache files in directory "C:\Users\25684\AppData\Local\Temp\afk-pokemon-visual-offline\GPUPersistentCache\DawnGraphiteCache\23IMHJGI2WIIJ3PDLCHAHUJAGHTLTEBB", error: 0: 另一个程序正在使用此文件，进程无法访问。 (0x20)
+[62748:28432:1114/103335.969:ERROR:content\browser\gpu\gpu_process_host.cc:1042] GPU process exited unexpectedly: exit_code=-1073741790
+[62748:28432:1114/103335.984:ERROR:content\browser\gpu\gpu_process_host.cc:1042] GPU process exited unexpectedly: exit_code=-1073741790
+[62748:38316:1114/103335.985:ERROR:components\viz\host\persistent_cache_sandboxed_file_factory.cc:153] Failed to open persistent cache files in directory "C:\Users\25684\AppData\Local\Temp\afk-pokemon-visual-offline\GPUPersistentCache\DawnGraphiteCache\23IMHJGI2WIIJ3PDLCHAHUJAGHTLTEBB", error: 0: 另一个程序正在使用此文件，进程无法访问。 (0x20)
+[62748:28432:1114/103336.001:ERROR:content\browser\gpu\gpu_process_host.cc:1042] GPU process exited unexpectedly: exit_code=-1073741790
+[62748:62472:1114/103336.016:ERROR:services\device\public\cpp\geolocation\system_geolocation_source_win.cc:124] Failed to create IAppCapability: 拒绝访问。 (0x80070005)
+[62748:28432:1114/103336.020:ERROR:content\browser\gpu\gpu_process_host.cc:1042] GPU process exited unexpectedly: exit_code=-1073741790
+[62748:39204:1114/103336.021:ERROR:components\viz\host\persistent_cache_sandboxed_file_factory.cc:153] Failed to open persistent cache files in directory "C:\Users\25684\AppData\Local\Temp\afk-pokemon-visual-offline\GPUPersistentCache\DawnGraphiteCache\23IMHJGI2WIIJ3PDLCHAHUJAGHTLTEBB", error: 0: 另一个程序正在使用此文件，进程无法访问。 (0x20)
+[62748:28432:1114/103336.033:ERROR:content\browser\gpu\gpu_process_host.cc:1042] GPU process exited unexpectedly: exit_code=-1073741790
+[62748:28432:1114/103336.033:FATAL:content\browser\gpu\gpu_data_manager_impl_private.cc:385] GPU process isn't usable. Goodbye.

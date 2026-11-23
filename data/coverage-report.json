@@ -1,0 +1,2290 @@
+{
+  "sources": {
+    "pokeapi": {
+      "repository": "https://github.com/PokeAPI/pokeapi",
+      "commit": "8a92bfa7dab2f12b84b5d151562f9857c133ff30",
+      "tree": "65893838570da39a6563dc4304b5209a60203f8d",
+      "committed_at": "2026-11-12T09:34:01Z"
+    },
+    "sprites": {
+      "repository": "https://github.com/PokeAPI/sprites",
+      "commit": "c0542f7c51215d9672439012838c99f520596cbd",
+      "tree": "12ebaad610d8a63967af52aabb15e4d7507151cb",
+      "committed_at": "2026-11-13T09:40:43Z"
+    }
+  },
+  "summary": {
+    "species": 1025,
+    "pokemon": 1351,
+    "forms": 1579,
+    "raw_tables": 187,
+    "image_files": 8532,
+    "species_with_chinese_name": 1025,
+    "default_pokemon_missing_images": {
+      "artwork": [],
+      "front": [],
+      "back": []
+    },
+    "missing_image_counts": {
+      "pokemon": {
+        "artwork": 4,
+        "front": 9,
+        "back": 9,
+        "front_shiny": 9,
+        "back_shiny": 9
+      },
+      "forms": {
+        "artwork": 45,
+        "front": 49,
+        "back": 49,
+        "front_shiny": 49,
+        "back_shiny": 49
+      }
+    },
+    "image_counts_by_category": {
+      "artwork": 1940,
+      "back": 3302,
+      "front": 1541,
+      "front_female": 105,
+      "front_shiny": 1644
+    }
+  },
+  "missing_images": {
+    "pokemon": {
+      "artwork": [
+        {
+          "id": 10264,
+          "identifier": "koraidon-limited-build",
+          "species_id": 1007
+        },
+        {
+          "id": 10266,
+          "identifier": "koraidon-swimming-build",
+          "species_id": 1007
+        },
+        {
+          "id": 10268,
+          "identifier": "miraidon-low-power-mode",
+          "species_id": 1008
+        },
+        {
+          "id": 10270,
+          "identifier": "miraidon-aquatic-mode",
+          "species_id": 1008
+        }
+      ],
+      "front": [
+        {
+          "id": 10264,
+          "identifier": "koraidon-limited-build",
+          "species_id": 1007
+        },
+        {
+          "id": 10265,
+          "identifier": "koraidon-sprinting-build",
+          "species_id": 1007
+        },
+        {
+          "id": 10266,
+          "identifier": "koraidon-swimming-build",
+          "species_id": 1007
+        },
+        {
+          "id": 10267,
+          "identifier": "koraidon-gliding-build",
+          "species_id": 1007
+        },
+        {
+          "id": 10268,
+          "identifier": "miraidon-low-power-mode",
+          "species_id": 1008
+        },
+        {
+          "id": 10269,
+          "identifier": "miraidon-drive-mode",
+          "species_id": 1008
+        },
+        {
+          "id": 10270,
+          "identifier": "miraidon-aquatic-mode",
+          "species_id": 1008
+        },
+        {
+          "id": 10271,
+          "identifier": "miraidon-glide-mode",
+          "species_id": 1008
+        },
+        {
+          "id": 10301,
+          "identifier": "zygarde-mega",
+          "species_id": 718
+        }
+      ],
+      "back": [
+        {
+          "id": 10264,
+          "identifier": "koraidon-limited-build",
+          "species_id": 1007
+        },
+        {
+          "id": 10265,
+          "identifier": "koraidon-sprinting-build",
+          "species_id": 1007
+        },
+        {
+          "id": 10266,
+          "identifier": "koraidon-swimming-build",
+          "species_id": 1007
+        },
+        {
+          "id": 10267,
+          "identifier": "koraidon-gliding-build",
+          "species_id": 1007
+        },
+        {
+          "id": 10268,
+          "identifier": "miraidon-low-power-mode",
+          "species_id": 1008
+        },
+        {
+          "id": 10269,
+          "identifier": "miraidon-drive-mode",
+          "species_id": 1008
+        },
+        {
+          "id": 10270,
+          "identifier": "miraidon-aquatic-mode",
+          "species_id": 1008
+        },
+        {
+          "id": 10271,
+          "identifier": "miraidon-glide-mode",
+          "species_id": 1008
+        },
+        {
+          "id": 10301,
+          "identifier": "zygarde-mega",
+          "species_id": 718
+        }
+      ],
+      "front_shiny": [
+        {
+          "id": 10264,
+          "identifier": "koraidon-limited-build",
+          "species_id": 1007
+        },
+        {
+          "id": 10265,
+          "identifier": "koraidon-sprinting-build",
+          "species_id": 1007
+        },
+        {
+          "id": 10266,
+          "identifier": "koraidon-swimming-build",
+          "species_id": 1007
+        },
+        {
+          "id": 10267,
+          "identifier": "koraidon-gliding-build",
+          "species_id": 1007
+        },
+        {
+          "id": 10268,
+          "identifier": "miraidon-low-power-mode",
+          "species_id": 1008
+        },
+        {
+          "id": 10269,
+          "identifier": "miraidon-drive-mode",
+          "species_id": 1008
+        },
+        {
+          "id": 10270,
+          "identifier": "miraidon-aquatic-mode",
+          "species_id": 1008
+        },
+        {
+          "id": 10271,
+          "identifier": "miraidon-glide-mode",
+          "species_id": 1008
+        },
+        {
+          "id": 10301,
+          "identifier": "zygarde-mega",
+          "species_id": 718
+        }
+      ],
+      "back_shiny": [
+        {
+          "id": 10264,
+          "identifier": "koraidon-limited-build",
+          "species_id": 1007
+        },
+        {
+          "id": 10265,
+          "identifier": "koraidon-sprinting-build",
+          "species_id": 1007
+        },
+        {
+          "id": 10266,
+          "identifier": "koraidon-swimming-build",
+          "species_id": 1007
+        },
+        {
+          "id": 10267,
+          "identifier": "koraidon-gliding-build",
+          "species_id": 1007
+        },
+        {
+          "id": 10268,
+          "identifier": "miraidon-low-power-mode",
+          "species_id": 1008
+        },
+        {
+          "id": 10269,
+          "identifier": "miraidon-drive-mode",
+          "species_id": 1008
+        },
+        {
+          "id": 10270,
+          "identifier": "miraidon-aquatic-mode",
+          "species_id": 1008
+        },
+        {
+          "id": 10271,
+          "identifier": "miraidon-glide-mode",
+          "species_id": 1008
+        },
+        {
+          "id": 10301,
+          "identifier": "zygarde-mega",
+          "species_id": 718
+        }
+      ]
+    },
+    "forms": {
+      "artwork": [
+        {
+          "id": 10057,
+          "identifier": "arceus-unknown",
+          "species_id": 493
+        },
+        {
+          "id": 10269,
+          "identifier": "mothim-sandy",
+          "species_id": 414
+        },
+        {
+          "id": 10270,
+          "identifier": "mothim-trash",
+          "species_id": 414
+        },
+        {
+          "id": 10271,
+          "identifier": "scatterbug-polar",
+          "species_id": 664
+        },
+        {
+          "id": 10272,
+          "identifier": "scatterbug-tundra",
+          "species_id": 664
+        },
+        {
+          "id": 10273,
+          "identifier": "scatterbug-continental",
+          "species_id": 664
+        },
+        {
+          "id": 10274,
+          "identifier": "scatterbug-garden",
+          "species_id": 664
+        },
+        {
+          "id": 10275,
+          "identifier": "scatterbug-elegant",
+          "species_id": 664
+        },
+        {
+          "id": 10276,
+          "identifier": "scatterbug-meadow",
+          "species_id": 664
+        },
+        {
+          "id": 10277,
+          "identifier": "scatterbug-modern",
+          "species_id": 664
+        },
+        {
+          "id": 10278,
+          "identifier": "scatterbug-marine",
+          "species_id": 664
+        },
+        {
+          "id": 10279,
+          "identifier": "scatterbug-archipelago",
+          "species_id": 664
+        },
+        {
+          "id": 10280,
+          "identifier": "scatterbug-high-plains",
+          "species_id": 664
+        },
+        {
+          "id": 10281,
+          "identifier": "scatterbug-sandstorm",
+          "species_id": 664
+        },
+        {
+          "id": 10282,
+          "identifier": "scatterbug-river",
+          "species_id": 664
+        },
+        {
+          "id": 10283,
+          "identifier": "scatterbug-monsoon",
+          "species_id": 664
+        },
+        {
+          "id": 10284,
+          "identifier": "scatterbug-savanna",
+          "species_id": 664
+        },
+        {
+          "id": 10285,
+          "identifier": "scatterbug-sun",
+          "species_id": 664
+        },
+        {
+          "id": 10286,
+          "identifier": "scatterbug-ocean",
+          "species_id": 664
+        },
+        {
+          "id": 10287,
+          "identifier": "scatterbug-jungle",
+          "species_id": 664
+        },
+        {
+          "id": 10288,
+          "identifier": "scatterbug-fancy",
+          "species_id": 664
+        },
+        {
+          "id": 10289,
+          "identifier": "scatterbug-poke-ball",
+          "species_id": 664
+        },
+        {
+          "id": 10290,
+          "identifier": "spewpa-polar",
+          "species_id": 665
+        },
+        {
+          "id": 10291,
+          "identifier": "spewpa-tundra",
+          "species_id": 665
+        },
+        {
+          "id": 10292,
+          "identifier": "spewpa-continental",
+          "species_id": 665
+        },
+        {
+          "id": 10293,
+          "identifier": "spewpa-garden",
+          "species_id": 665
+        },
+        {
+          "id": 10294,
+          "identifier": "spewpa-elegant",
+          "species_id": 665
+        },
+        {
+          "id": 10295,
+          "identifier": "spewpa-meadow",
+          "species_id": 665
+        },
+        {
+          "id": 10296,
+          "identifier": "spewpa-modern",
+          "species_id": 665
+        },
+        {
+          "id": 10297,
+          "identifier": "spewpa-marine",
+          "species_id": 665
+        },
+        {
+          "id": 10298,
+          "identifier": "spewpa-archipelago",
+          "species_id": 665
+        },
+        {
+          "id": 10299,
+          "identifier": "spewpa-high-plains",
+          "species_id": 665
+        },
+        {
+          "id": 10300,
+          "identifier": "spewpa-sandstorm",
+          "species_id": 665
+        },
+        {
+          "id": 10301,
+          "identifier": "spewpa-river",
+          "species_id": 665
+        },
+        {
+          "id": 10302,
+          "identifier": "spewpa-monsoon",
+          "species_id": 665
+        },
+        {
+          "id": 10303,
+          "identifier": "spewpa-savanna",
+          "species_id": 665
+        },
+        {
+          "id": 10304,
+          "identifier": "spewpa-sun",
+          "species_id": 665
+        },
+        {
+          "id": 10305,
+          "identifier": "spewpa-ocean",
+          "species_id": 665
+        },
+        {
+          "id": 10306,
+          "identifier": "spewpa-jungle",
+          "species_id": 665
+        },
+        {
+          "id": 10307,
+          "identifier": "spewpa-fancy",
+          "species_id": 665
+        },
+        {
+          "id": 10308,
+          "identifier": "spewpa-poke-ball",
+          "species_id": 665
+        },
+        {
+          "id": 10433,
+          "identifier": "koraidon-limited-build",
+          "species_id": 1007
+        },
+        {
+          "id": 10435,
+          "identifier": "koraidon-swimming-build",
+          "species_id": 1007
+        },
+        {
+          "id": 10437,
+          "identifier": "miraidon-low-power-mode",
+          "species_id": 1008
+        },
+        {
+          "id": 10439,
+          "identifier": "miraidon-aquatic-mode",
+          "species_id": 1008
+        }
+      ],
+      "front": [
+        {
+          "id": 10269,
+          "identifier": "mothim-sandy",
+          "species_id": 414
+        },
+        {
+          "id": 10270,
+          "identifier": "mothim-trash",
+          "species_id": 414
+        },
+        {
+          "id": 10271,
+          "identifier": "scatterbug-polar",
+          "species_id": 664
+        },
+        {
+          "id": 10272,
+          "identifier": "scatterbug-tundra",
+          "species_id": 664
+        },
+        {
+          "id": 10273,
+          "identifier": "scatterbug-continental",
+          "species_id": 664
+        },
+        {
+          "id": 10274,
+          "identifier": "scatterbug-garden",
+          "species_id": 664
+        },
+        {
+          "id": 10275,
+          "identifier": "scatterbug-elegant",
+          "species_id": 664
+        },
+        {
+          "id": 10276,
+          "identifier": "scatterbug-meadow",
+          "species_id": 664
+        },
+        {
+          "id": 10277,
+          "identifier": "scatterbug-modern",
+          "species_id": 664
+        },
+        {
+          "id": 10278,
+          "identifier": "scatterbug-marine",
+          "species_id": 664
+        },
+        {
+          "id": 10279,
+          "identifier": "scatterbug-archipelago",
+          "species_id": 664
+        },
+        {
+          "id": 10280,
+          "identifier": "scatterbug-high-plains",
+          "species_id": 664
+        },
+        {
+          "id": 10281,
+          "identifier": "scatterbug-sandstorm",
+          "species_id": 664
+        },
+        {
+          "id": 10282,
+          "identifier": "scatterbug-river",
+          "species_id": 664
+        },
+        {
+          "id": 10283,
+          "identifier": "scatterbug-monsoon",
+          "species_id": 664
+        },
+        {
+          "id": 10284,
+          "identifier": "scatterbug-savanna",
+          "species_id": 664
+        },
+        {
+          "id": 10285,
+          "identifier": "scatterbug-sun",
+          "species_id": 664
+        },
+        {
+          "id": 10286,
+          "identifier": "scatterbug-ocean",
+          "species_id": 664
+        },
+        {
+          "id": 10287,
+          "identifier": "scatterbug-jungle",
+          "species_id": 664
+        },
+        {
+          "id": 10288,
+          "identifier": "scatterbug-fancy",
+          "species_id": 664
+        },
+        {
+          "id": 10289,
+          "identifier": "scatterbug-poke-ball",
+          "species_id": 664
+        },
+        {
+          "id": 10290,
+          "identifier": "spewpa-polar",
+          "species_id": 665
+        },
+        {
+          "id": 10291,
+          "identifier": "spewpa-tundra",
+          "species_id": 665
+        },
+        {
+          "id": 10292,
+          "identifier": "spewpa-continental",
+          "species_id": 665
+        },
+        {
+          "id": 10293,
+          "identifier": "spewpa-garden",
+          "species_id": 665
+        },
+        {
+          "id": 10294,
+          "identifier": "spewpa-elegant",
+          "species_id": 665
+        },
+        {
+          "id": 10295,
+          "identifier": "spewpa-meadow",
+          "species_id": 665
+        },
+        {
+          "id": 10296,
+          "identifier": "spewpa-modern",
+          "species_id": 665
+        },
+        {
+          "id": 10297,
+          "identifier": "spewpa-marine",
+          "species_id": 665
+        },
+        {
+          "id": 10298,
+          "identifier": "spewpa-archipelago",
+          "species_id": 665
+        },
+        {
+          "id": 10299,
+          "identifier": "spewpa-high-plains",
+          "species_id": 665
+        },
+        {
+          "id": 10300,
+          "identifier": "spewpa-sandstorm",
+          "species_id": 665
+        },
+        {
+          "id": 10301,
+          "identifier": "spewpa-river",
+          "species_id": 665
+        },
+        {
+          "id": 10302,
+          "identifier": "spewpa-monsoon",
+          "species_id": 665
+        },
+        {
+          "id": 10303,
+          "identifier": "spewpa-savanna",
+          "species_id": 665
+        },
+        {
+          "id": 10304,
+          "identifier": "spewpa-sun",
+          "species_id": 665
+        },
+        {
+          "id": 10305,
+          "identifier": "spewpa-ocean",
+          "species_id": 665
+        },
+        {
+          "id": 10306,
+          "identifier": "spewpa-jungle",
+          "species_id": 665
+        },
+        {
+          "id": 10307,
+          "identifier": "spewpa-fancy",
+          "species_id": 665
+        },
+        {
+          "id": 10308,
+          "identifier": "spewpa-poke-ball",
+          "species_id": 665
+        },
+        {
+          "id": 10433,
+          "identifier": "koraidon-limited-build",
+          "species_id": 1007
+        },
+        {
+          "id": 10434,
+          "identifier": "koraidon-sprinting-build",
+          "species_id": 1007
+        },
+        {
+          "id": 10435,
+          "identifier": "koraidon-swimming-build",
+          "species_id": 1007
+        },
+        {
+          "id": 10436,
+          "identifier": "koraidon-gliding-build",
+          "species_id": 1007
+        },
+        {
+          "id": 10437,
+          "identifier": "miraidon-low-power-mode",
+          "species_id": 1008
+        },
+        {
+          "id": 10438,
+          "identifier": "miraidon-drive-mode",
+          "species_id": 1008
+        },
+        {
+          "id": 10439,
+          "identifier": "miraidon-aquatic-mode",
+          "species_id": 1008
+        },
+        {
+          "id": 10440,
+          "identifier": "miraidon-glide-mode",
+          "species_id": 1008
+        },
+        {
+          "id": 10526,
+          "identifier": "zygarde-mega",
+          "species_id": 718
+        }
+      ],
+      "back": [
+        {
+          "id": 10269,
+          "identifier": "mothim-sandy",
+          "species_id": 414
+        },
+        {
+          "id": 10270,
+          "identifier": "mothim-trash",
+          "species_id": 414
+        },
+        {
+          "id": 10271,
+          "identifier": "scatterbug-polar",
+          "species_id": 664
+        },
+        {
+          "id": 10272,
+          "identifier": "scatterbug-tundra",
+          "species_id": 664
+        },
+        {
+          "id": 10273,
+          "identifier": "scatterbug-continental",
+          "species_id": 664
+        },
+        {
+          "id": 10274,
+          "identifier": "scatterbug-garden",
+          "species_id": 664
+        },
+        {
+          "id": 10275,
+          "identifier": "scatterbug-elegant",
+          "species_id": 664
+        },
+        {
+          "id": 10276,
+          "identifier": "scatterbug-meadow",
+          "species_id": 664
+        },
+        {
+          "id": 10277,
+          "identifier": "scatterbug-modern",
+          "species_id": 664
+        },
+        {
+          "id": 10278,
+          "identifier": "scatterbug-marine",
+          "species_id": 664
+        },
+        {
+          "id": 10279,
+          "identifier": "scatterbug-archipelago",
+          "species_id": 664
+        },
+        {
+          "id": 10280,
+          "identifier": "scatterbug-high-plains",
+          "species_id": 664
+        },
+        {
+          "id": 10281,
+          "identifier": "scatterbug-sandstorm",
+          "species_id": 664
+        },
+        {
+          "id": 10282,
+          "identifier": "scatterbug-river",
+          "species_id": 664
+        },
+        {
+          "id": 10283,
+          "identifier": "scatterbug-monsoon",
+          "species_id": 664
+        },
+        {
+          "id": 10284,
+          "identifier": "scatterbug-savanna",
+          "species_id": 664
+        },
+        {
+          "id": 10285,
+          "identifier": "scatterbug-sun",
+          "species_id": 664
+        },
+        {
+          "id": 10286,
+          "identifier": "scatterbug-ocean",
+          "species_id": 664
+        },
+        {
+          "id": 10287,
+          "identifier": "scatterbug-jungle",
+          "species_id": 664
+        },
+        {
+          "id": 10288,
+          "identifier": "scatterbug-fancy",
+          "species_id": 664
+        },
+        {
+          "id": 10289,
+          "identifier": "scatterbug-poke-ball",
+          "species_id": 664
+        },
+        {
+          "id": 10290,
+          "identifier": "spewpa-polar",
+          "species_id": 665
+        },
+        {
+          "id": 10291,
+          "identifier": "spewpa-tundra",
+          "species_id": 665
+        },
+        {
+          "id": 10292,
+          "identifier": "spewpa-continental",
+          "species_id": 665
+        },
+        {
+          "id": 10293,
+          "identifier": "spewpa-garden",
+          "species_id": 665
+        },
+        {
+          "id": 10294,
+          "identifier": "spewpa-elegant",
+          "species_id": 665
+        },
+        {
+          "id": 10295,
+          "identifier": "spewpa-meadow",
+          "species_id": 665
+        },
+        {
+          "id": 10296,
+          "identifier": "spewpa-modern",
+          "species_id": 665
+        },
+        {
+          "id": 10297,
+          "identifier": "spewpa-marine",
+          "species_id": 665
+        },
+        {
+          "id": 10298,
+          "identifier": "spewpa-archipelago",
+          "species_id": 665
+        },
+        {
+          "id": 10299,
+          "identifier": "spewpa-high-plains",
+          "species_id": 665
+        },
+        {
+          "id": 10300,
+          "identifier": "spewpa-sandstorm",
+          "species_id": 665
+        },
+        {
+          "id": 10301,
+          "identifier": "spewpa-river",
+          "species_id": 665
+        },
+        {
+          "id": 10302,
+          "identifier": "spewpa-monsoon",
+          "species_id": 665
+        },
+        {
+          "id": 10303,
+          "identifier": "spewpa-savanna",
+          "species_id": 665
+        },
+        {
+          "id": 10304,
+          "identifier": "spewpa-sun",
+          "species_id": 665
+        },
+        {
+          "id": 10305,
+          "identifier": "spewpa-ocean",
+          "species_id": 665
+        },
+        {
+          "id": 10306,
+          "identifier": "spewpa-jungle",
+          "species_id": 665
+        },
+        {
+          "id": 10307,
+          "identifier": "spewpa-fancy",
+          "species_id": 665
+        },
+        {
+          "id": 10308,
+          "identifier": "spewpa-poke-ball",
+          "species_id": 665
+        },
+        {
+          "id": 10433,
+          "identifier": "koraidon-limited-build",
+          "species_id": 1007
+        },
+        {
+          "id": 10434,
+          "identifier": "koraidon-sprinting-build",
+          "species_id": 1007
+        },
+        {
+          "id": 10435,
+          "identifier": "koraidon-swimming-build",
+          "species_id": 1007
+        },
+        {
+          "id": 10436,
+          "identifier": "koraidon-gliding-build",
+          "species_id": 1007
+        },
+        {
+          "id": 10437,
+          "identifier": "miraidon-low-power-mode",
+          "species_id": 1008
+        },
+        {
+          "id": 10438,
+          "identifier": "miraidon-drive-mode",
+          "species_id": 1008
+        },
+        {
+          "id": 10439,
+          "identifier": "miraidon-aquatic-mode",
+          "species_id": 1008
+        },
+        {
+          "id": 10440,
+          "identifier": "miraidon-glide-mode",
+          "species_id": 1008
+        },
+        {
+          "id": 10526,
+          "identifier": "zygarde-mega",
+          "species_id": 718
+        }
+      ],
+      "front_shiny": [
+        {
+          "id": 10269,
+          "identifier": "mothim-sandy",
+          "species_id": 414
+        },
+        {
+          "id": 10270,
+          "identifier": "mothim-trash",
+          "species_id": 414
+        },
+        {
+          "id": 10271,
+          "identifier": "scatterbug-polar",
+          "species_id": 664
+        },
+        {
+          "id": 10272,
+          "identifier": "scatterbug-tundra",
+          "species_id": 664
+        },
+        {
+          "id": 10273,
+          "identifier": "scatterbug-continental",
+          "species_id": 664
+        },
+        {
+          "id": 10274,
+          "identifier": "scatterbug-garden",
+          "species_id": 664
+        },
+        {
+          "id": 10275,
+          "identifier": "scatterbug-elegant",
+          "species_id": 664
+        },
+        {
+          "id": 10276,
+          "identifier": "scatterbug-meadow",
+          "species_id": 664
+        },
+        {
+          "id": 10277,
+          "identifier": "scatterbug-modern",
+          "species_id": 664
+        },
+        {
+          "id": 10278,
+          "identifier": "scatterbug-marine",
+          "species_id": 664
+        },
+        {
+          "id": 10279,
+          "identifier": "scatterbug-archipelago",
+          "species_id": 664
+        },
+        {
+          "id": 10280,
+          "identifier": "scatterbug-high-plains",
+          "species_id": 664
+        },
+        {
+          "id": 10281,
+          "identifier": "scatterbug-sandstorm",
+          "species_id": 664
+        },
+        {
+          "id": 10282,
+          "identifier": "scatterbug-river",
+          "species_id": 664
+        },
+        {
+          "id": 10283,
+          "identifier": "scatterbug-monsoon",
+          "species_id": 664
+        },
+        {
+          "id": 10284,
+          "identifier": "scatterbug-savanna",
+          "species_id": 664
+        },
+        {
+          "id": 10285,
+          "identifier": "scatterbug-sun",
+          "species_id": 664
+        },
+        {
+          "id": 10286,
+          "identifier": "scatterbug-ocean",
+          "species_id": 664
+        },
+        {
+          "id": 10287,
+          "identifier": "scatterbug-jungle",
+          "species_id": 664
+        },
+        {
+          "id": 10288,
+          "identifier": "scatterbug-fancy",
+          "species_id": 664
+        },
+        {
+          "id": 10289,
+          "identifier": "scatterbug-poke-ball",
+          "species_id": 664
+        },
+        {
+          "id": 10290,
+          "identifier": "spewpa-polar",
+          "species_id": 665
+        },
+        {
+          "id": 10291,
+          "identifier": "spewpa-tundra",
+          "species_id": 665
+        },
+        {
+          "id": 10292,
+          "identifier": "spewpa-continental",
+          "species_id": 665
+        },
+        {
+          "id": 10293,
+          "identifier": "spewpa-garden",
+          "species_id": 665
+        },
+        {
+          "id": 10294,
+          "identifier": "spewpa-elegant",
+          "species_id": 665
+        },
+        {
+          "id": 10295,
+          "identifier": "spewpa-meadow",
+          "species_id": 665
+        },
+        {
+          "id": 10296,
+          "identifier": "spewpa-modern",
+          "species_id": 665
+        },
+        {
+          "id": 10297,
+          "identifier": "spewpa-marine",
+          "species_id": 665
+        },
+        {
+          "id": 10298,
+          "identifier": "spewpa-archipelago",
+          "species_id": 665
+        },
+        {
+          "id": 10299,
+          "identifier": "spewpa-high-plains",
+          "species_id": 665
+        },
+        {
+          "id": 10300,
+          "identifier": "spewpa-sandstorm",
+          "species_id": 665
+        },
+        {
+          "id": 10301,
+          "identifier": "spewpa-river",
+          "species_id": 665
+        },
+        {
+          "id": 10302,
+          "identifier": "spewpa-monsoon",
+          "species_id": 665
+        },
+        {
+          "id": 10303,
+          "identifier": "spewpa-savanna",
+          "species_id": 665
+        },
+        {
+          "id": 10304,
+          "identifier": "spewpa-sun",
+          "species_id": 665
+        },
+        {
+          "id": 10305,
+          "identifier": "spewpa-ocean",
+          "species_id": 665
+        },
+        {
+          "id": 10306,
+          "identifier": "spewpa-jungle",
+          "species_id": 665
+        },
+        {
+          "id": 10307,
+          "identifier": "spewpa-fancy",
+          "species_id": 665
+        },
+        {
+          "id": 10308,
+          "identifier": "spewpa-poke-ball",
+          "species_id": 665
+        },
+        {
+          "id": 10433,
+          "identifier": "koraidon-limited-build",
+          "species_id": 1007
+        },
+        {
+          "id": 10434,
+          "identifier": "koraidon-sprinting-build",
+          "species_id": 1007
+        },
+        {
+          "id": 10435,
+          "identifier": "koraidon-swimming-build",
+          "species_id": 1007
+        },
+        {
+          "id": 10436,
+          "identifier": "koraidon-gliding-build",
+          "species_id": 1007
+        },
+        {
+          "id": 10437,
+          "identifier": "miraidon-low-power-mode",
+          "species_id": 1008
+        },
+        {
+          "id": 10438,
+          "identifier": "miraidon-drive-mode",
+          "species_id": 1008
+        },
+        {
+          "id": 10439,
+          "identifier": "miraidon-aquatic-mode",
+          "species_id": 1008
+        },
+        {
+          "id": 10440,
+          "identifier": "miraidon-glide-mode",
+          "species_id": 1008
+        },
+        {
+          "id": 10526,
+          "identifier": "zygarde-mega",
+          "species_id": 718
+        }
+      ],
+      "back_shiny": [
+        {
+          "id": 10269,
+          "identifier": "mothim-sandy",
+          "species_id": 414
+        },
+        {
+          "id": 10270,
+          "identifier": "mothim-trash",
+          "species_id": 414
+        },
+        {
+          "id": 10271,
+          "identifier": "scatterbug-polar",
+          "species_id": 664
+        },
+        {
+          "id": 10272,
+          "identifier": "scatterbug-tundra",
+          "species_id": 664
+        },
+        {
+          "id": 10273,
+          "identifier": "scatterbug-continental",
+          "species_id": 664
+        },
+        {
+          "id": 10274,
+          "identifier": "scatterbug-garden",
+          "species_id": 664
+        },
+        {
+          "id": 10275,
+          "identifier": "scatterbug-elegant",
+          "species_id": 664
+        },
+        {
+          "id": 10276,
+          "identifier": "scatterbug-meadow",
+          "species_id": 664
+        },
+        {
+          "id": 10277,
+          "identifier": "scatterbug-modern",
+          "species_id": 664
+        },
+        {
+          "id": 10278,
+          "identifier": "scatterbug-marine",
+          "species_id": 664
+        },
+        {
+          "id": 10279,
+          "identifier": "scatterbug-archipelago",
+          "species_id": 664
+        },
+        {
+          "id": 10280,
+          "identifier": "scatterbug-high-plains",
+          "species_id": 664
+        },
+        {
+          "id": 10281,
+          "identifier": "scatterbug-sandstorm",
+          "species_id": 664
+        },
+        {
+          "id": 10282,
+          "identifier": "scatterbug-river",
+          "species_id": 664
+        },
+        {
+          "id": 10283,
+          "identifier": "scatterbug-monsoon",
+          "species_id": 664
+        },
+        {
+          "id": 10284,
+          "identifier": "scatterbug-savanna",
+          "species_id": 664
+        },
+        {
+          "id": 10285,
+          "identifier": "scatterbug-sun",
+          "species_id": 664
+        },
+        {
+          "id": 10286,
+          "identifier": "scatterbug-ocean",
+          "species_id": 664
+        },
+        {
+          "id": 10287,
+          "identifier": "scatterbug-jungle",
+          "species_id": 664
+        },
+        {
+          "id": 10288,
+          "identifier": "scatterbug-fancy",
+          "species_id": 664
+        },
+        {
+          "id": 10289,
+          "identifier": "scatterbug-poke-ball",
+          "species_id": 664
+        },
+        {
+          "id": 10290,
+          "identifier": "spewpa-polar",
+          "species_id": 665
+        },
+        {
+          "id": 10291,
+          "identifier": "spewpa-tundra",
+          "species_id": 665
+        },
+        {
+          "id": 10292,
+          "identifier": "spewpa-continental",
+          "species_id": 665
+        },
+        {
+          "id": 10293,
+          "identifier": "spewpa-garden",
+          "species_id": 665
+        },
+        {
+          "id": 10294,
+          "identifier": "spewpa-elegant",
+          "species_id": 665
+        },
+        {
+          "id": 10295,
+          "identifier": "spewpa-meadow",
+          "species_id": 665
+        },
+        {
+          "id": 10296,
+          "identifier": "spewpa-modern",
+          "species_id": 665
+        },
+        {
+          "id": 10297,
+          "identifier": "spewpa-marine",
+          "species_id": 665
+        },
+        {
+          "id": 10298,
+          "identifier": "spewpa-archipelago",
+          "species_id": 665
+        },
+        {
+          "id": 10299,
+          "identifier": "spewpa-high-plains",
+          "species_id": 665
+        },
+        {
+          "id": 10300,
+          "identifier": "spewpa-sandstorm",
+          "species_id": 665
+        },
+        {
+          "id": 10301,
+          "identifier": "spewpa-river",
+          "species_id": 665
+        },
+        {
+          "id": 10302,
+          "identifier": "spewpa-monsoon",
+          "species_id": 665
+        },
+        {
+          "id": 10303,
+          "identifier": "spewpa-savanna",
+          "species_id": 665
+        },
+        {
+          "id": 10304,
+          "identifier": "spewpa-sun",
+          "species_id": 665
+        },
+        {
+          "id": 10305,
+          "identifier": "spewpa-ocean",
+          "species_id": 665
+        },
+        {
+          "id": 10306,
+          "identifier": "spewpa-jungle",
+          "species_id": 665
+        },
+        {
+          "id": 10307,
+          "identifier": "spewpa-fancy",
+          "species_id": 665
+        },
+        {
+          "id": 10308,
+          "identifier": "spewpa-poke-ball",
+          "species_id": 665
+        },
+        {
+          "id": 10433,
+          "identifier": "koraidon-limited-build",
+          "species_id": 1007
+        },
+        {
+          "id": 10434,
+          "identifier": "koraidon-sprinting-build",
+          "species_id": 1007
+        },
+        {
+          "id": 10435,
+          "identifier": "koraidon-swimming-build",
+          "species_id": 1007
+        },
+        {
+          "id": 10436,
+          "identifier": "koraidon-gliding-build",
+          "species_id": 1007
+        },
+        {
+          "id": 10437,
+          "identifier": "miraidon-low-power-mode",
+          "species_id": 1008
+        },
+        {
+          "id": 10438,
+          "identifier": "miraidon-drive-mode",
+          "species_id": 1008
+        },
+        {
+          "id": 10439,
+          "identifier": "miraidon-aquatic-mode",
+          "species_id": 1008
+        },
+        {
+          "id": 10440,
+          "identifier": "miraidon-glide-mode",
+          "species_id": 1008
+        },
+        {
+          "id": 10526,
+          "identifier": "zygarde-mega",
+          "species_id": 718
+        }
+      ]
+    }
+  },
+  "forms_missing_chinese_label": [
+    {
+      "id": 201,
+      "identifier": "unown-a"
+    },
+    {
+      "id": 414,
+      "identifier": "mothim-plant"
+    },
+    {
+      "id": 493,
+      "identifier": "arceus-normal"
+    },
+    {
+      "id": 664,
+      "identifier": "scatterbug-icy-snow"
+    },
+    {
+      "id": 665,
+      "identifier": "spewpa-icy-snow"
+    },
+    {
+      "id": 10001,
+      "identifier": "unown-b"
+    },
+    {
+      "id": 10002,
+      "identifier": "unown-c"
+    },
+    {
+      "id": 10003,
+      "identifier": "unown-d"
+    },
+    {
+      "id": 10004,
+      "identifier": "unown-e"
+    },
+    {
+      "id": 10005,
+      "identifier": "unown-f"
+    },
+    {
+      "id": 10006,
+      "identifier": "unown-g"
+    },
+    {
+      "id": 10007,
+      "identifier": "unown-h"
+    },
+    {
+      "id": 10008,
+      "identifier": "unown-i"
+    },
+    {
+      "id": 10009,
+      "identifier": "unown-j"
+    },
+    {
+      "id": 10010,
+      "identifier": "unown-k"
+    },
+    {
+      "id": 10011,
+      "identifier": "unown-l"
+    },
+    {
+      "id": 10012,
+      "identifier": "unown-m"
+    },
+    {
+      "id": 10013,
+      "identifier": "unown-n"
+    },
+    {
+      "id": 10014,
+      "identifier": "unown-o"
+    },
+    {
+      "id": 10015,
+      "identifier": "unown-p"
+    },
+    {
+      "id": 10016,
+      "identifier": "unown-q"
+    },
+    {
+      "id": 10017,
+      "identifier": "unown-r"
+    },
+    {
+      "id": 10018,
+      "identifier": "unown-s"
+    },
+    {
+      "id": 10019,
+      "identifier": "unown-t"
+    },
+    {
+      "id": 10020,
+      "identifier": "unown-u"
+    },
+    {
+      "id": 10021,
+      "identifier": "unown-v"
+    },
+    {
+      "id": 10022,
+      "identifier": "unown-w"
+    },
+    {
+      "id": 10023,
+      "identifier": "unown-x"
+    },
+    {
+      "id": 10024,
+      "identifier": "unown-y"
+    },
+    {
+      "id": 10025,
+      "identifier": "unown-z"
+    },
+    {
+      "id": 10026,
+      "identifier": "unown-exclamation"
+    },
+    {
+      "id": 10027,
+      "identifier": "unown-question"
+    },
+    {
+      "id": 10041,
+      "identifier": "arceus-bug"
+    },
+    {
+      "id": 10042,
+      "identifier": "arceus-dark"
+    },
+    {
+      "id": 10043,
+      "identifier": "arceus-dragon"
+    },
+    {
+      "id": 10044,
+      "identifier": "arceus-electric"
+    },
+    {
+      "id": 10045,
+      "identifier": "arceus-fighting"
+    },
+    {
+      "id": 10046,
+      "identifier": "arceus-fire"
+    },
+    {
+      "id": 10047,
+      "identifier": "arceus-flying"
+    },
+    {
+      "id": 10048,
+      "identifier": "arceus-ghost"
+    },
+    {
+      "id": 10049,
+      "identifier": "arceus-grass"
+    },
+    {
+      "id": 10050,
+      "identifier": "arceus-ground"
+    },
+    {
+      "id": 10051,
+      "identifier": "arceus-ice"
+    },
+    {
+      "id": 10052,
+      "identifier": "arceus-poison"
+    },
+    {
+      "id": 10053,
+      "identifier": "arceus-psychic"
+    },
+    {
+      "id": 10054,
+      "identifier": "arceus-rock"
+    },
+    {
+      "id": 10055,
+      "identifier": "arceus-steel"
+    },
+    {
+      "id": 10056,
+      "identifier": "arceus-water"
+    },
+    {
+      "id": 10057,
+      "identifier": "arceus-unknown"
+    },
+    {
+      "id": 10065,
+      "identifier": "pichu-spiky-eared"
+    },
+    {
+      "id": 10085,
+      "identifier": "arceus-fairy"
+    },
+    {
+      "id": 10182,
+      "identifier": "pikachu-rock-star"
+    },
+    {
+      "id": 10183,
+      "identifier": "pikachu-belle"
+    },
+    {
+      "id": 10184,
+      "identifier": "pikachu-pop-star"
+    },
+    {
+      "id": 10185,
+      "identifier": "pikachu-phd"
+    },
+    {
+      "id": 10186,
+      "identifier": "pikachu-libre"
+    },
+    {
+      "id": 10187,
+      "identifier": "pikachu-cosplay"
+    },
+    {
+      "id": 10195,
+      "identifier": "raticate-totem-alola"
+    },
+    {
+      "id": 10218,
+      "identifier": "greninja-battle-bond"
+    },
+    {
+      "id": 10223,
+      "identifier": "gumshoos-totem"
+    },
+    {
+      "id": 10224,
+      "identifier": "vikavolt-totem"
+    },
+    {
+      "id": 10230,
+      "identifier": "lurantis-totem"
+    },
+    {
+      "id": 10231,
+      "identifier": "salazzle-totem"
+    },
+    {
+      "id": 10263,
+      "identifier": "mimikyu-totem-disguised"
+    },
+    {
+      "id": 10264,
+      "identifier": "mimikyu-totem-busted"
+    },
+    {
+      "id": 10265,
+      "identifier": "kommo-o-totem"
+    },
+    {
+      "id": 10268,
+      "identifier": "marowak-totem"
+    },
+    {
+      "id": 10269,
+      "identifier": "mothim-sandy"
+    },
+    {
+      "id": 10270,
+      "identifier": "mothim-trash"
+    },
+    {
+      "id": 10271,
+      "identifier": "scatterbug-polar"
+    },
+    {
+      "id": 10272,
+      "identifier": "scatterbug-tundra"
+    },
+    {
+      "id": 10273,
+      "identifier": "scatterbug-continental"
+    },
+    {
+      "id": 10274,
+      "identifier": "scatterbug-garden"
+    },
+    {
+      "id": 10275,
+      "identifier": "scatterbug-elegant"
+    },
+    {
+      "id": 10276,
+      "identifier": "scatterbug-meadow"
+    },
+    {
+      "id": 10277,
+      "identifier": "scatterbug-modern"
+    },
+    {
+      "id": 10278,
+      "identifier": "scatterbug-marine"
+    },
+    {
+      "id": 10279,
+      "identifier": "scatterbug-archipelago"
+    },
+    {
+      "id": 10280,
+      "identifier": "scatterbug-high-plains"
+    },
+    {
+      "id": 10281,
+      "identifier": "scatterbug-sandstorm"
+    },
+    {
+      "id": 10282,
+      "identifier": "scatterbug-river"
+    },
+    {
+      "id": 10283,
+      "identifier": "scatterbug-monsoon"
+    },
+    {
+      "id": 10284,
+      "identifier": "scatterbug-savanna"
+    },
+    {
+      "id": 10285,
+      "identifier": "scatterbug-sun"
+    },
+    {
+      "id": 10286,
+      "identifier": "scatterbug-ocean"
+    },
+    {
+      "id": 10287,
+      "identifier": "scatterbug-jungle"
+    },
+    {
+      "id": 10288,
+      "identifier": "scatterbug-fancy"
+    },
+    {
+      "id": 10289,
+      "identifier": "scatterbug-poke-ball"
+    },
+    {
+      "id": 10290,
+      "identifier": "spewpa-polar"
+    },
+    {
+      "id": 10291,
+      "identifier": "spewpa-tundra"
+    },
+    {
+      "id": 10292,
+      "identifier": "spewpa-continental"
+    },
+    {
+      "id": 10293,
+      "identifier": "spewpa-garden"
+    },
+    {
+      "id": 10294,
+      "identifier": "spewpa-elegant"
+    },
+    {
+      "id": 10295,
+      "identifier": "spewpa-meadow"
+    },
+    {
+      "id": 10296,
+      "identifier": "spewpa-modern"
+    },
+    {
+      "id": 10297,
+      "identifier": "spewpa-marine"
+    },
+    {
+      "id": 10298,
+      "identifier": "spewpa-archipelago"
+    },
+    {
+      "id": 10299,
+      "identifier": "spewpa-high-plains"
+    },
+    {
+      "id": 10300,
+      "identifier": "spewpa-sandstorm"
+    },
+    {
+      "id": 10301,
+      "identifier": "spewpa-river"
+    },
+    {
+      "id": 10302,
+      "identifier": "spewpa-monsoon"
+    },
+    {
+      "id": 10303,
+      "identifier": "spewpa-savanna"
+    },
+    {
+      "id": 10304,
+      "identifier": "spewpa-sun"
+    },
+    {
+      "id": 10305,
+      "identifier": "spewpa-ocean"
+    },
+    {
+      "id": 10306,
+      "identifier": "spewpa-jungle"
+    },
+    {
+      "id": 10307,
+      "identifier": "spewpa-fancy"
+    },
+    {
+      "id": 10308,
+      "identifier": "spewpa-poke-ball"
+    },
+    {
+      "id": 10309,
+      "identifier": "ribombee-totem"
+    },
+    {
+      "id": 10310,
+      "identifier": "rockruff-own-tempo"
+    },
+    {
+      "id": 10312,
+      "identifier": "araquanid-totem"
+    },
+    {
+      "id": 10313,
+      "identifier": "togedemaru-totem"
+    },
+    {
+      "id": 10317,
+      "identifier": "pikachu-starter"
+    },
+    {
+      "id": 10318,
+      "identifier": "eevee-starter"
+    },
+    {
+      "id": 10364,
+      "identifier": "venusaur-gmax"
+    },
+    {
+      "id": 10365,
+      "identifier": "charizard-gmax"
+    },
+    {
+      "id": 10366,
+      "identifier": "blastoise-gmax"
+    },
+    {
+      "id": 10367,
+      "identifier": "butterfree-gmax"
+    },
+    {
+      "id": 10368,
+      "identifier": "pikachu-gmax"
+    },
+    {
+      "id": 10369,
+      "identifier": "meowth-gmax"
+    },
+    {
+      "id": 10370,
+      "identifier": "machamp-gmax"
+    },
+    {
+      "id": 10371,
+      "identifier": "gengar-gmax"
+    },
+    {
+      "id": 10372,
+      "identifier": "kingler-gmax"
+    },
+    {
+      "id": 10373,
+      "identifier": "lapras-gmax"
+    },
+    {
+      "id": 10374,
+      "identifier": "eevee-gmax"
+    },
+    {
+      "id": 10375,
+      "identifier": "snorlax-gmax"
+    },
+    {
+      "id": 10376,
+      "identifier": "garbodor-gmax"
+    },
+    {
+      "id": 10377,
+      "identifier": "melmetal-gmax"
+    },
+    {
+      "id": 10378,
+      "identifier": "rillaboom-gmax"
+    },
+    {
+      "id": 10379,
+      "identifier": "cinderace-gmax"
+    },
+    {
+      "id": 10380,
+      "identifier": "inteleon-gmax"
+    },
+    {
+      "id": 10381,
+      "identifier": "corviknight-gmax"
+    },
+    {
+      "id": 10382,
+      "identifier": "orbeetle-gmax"
+    },
+    {
+      "id": 10383,
+      "identifier": "drednaw-gmax"
+    },
+    {
+      "id": 10384,
+      "identifier": "coalossal-gmax"
+    },
+    {
+      "id": 10385,
+      "identifier": "flapple-gmax"
+    },
+    {
+      "id": 10386,
+      "identifier": "appletun-gmax"
+    },
+    {
+      "id": 10387,
+      "identifier": "sandaconda-gmax"
+    },
+    {
+      "id": 10388,
+      "identifier": "toxtricity-amped-gmax"
+    },
+    {
+      "id": 10389,
+      "identifier": "centiskorch-gmax"
+    },
+    {
+      "id": 10390,
+      "identifier": "hatterene-gmax"
+    },
+    {
+      "id": 10391,
+      "identifier": "grimmsnarl-gmax"
+    },
+    {
+      "id": 10392,
+      "identifier": "alcremie-gmax"
+    },
+    {
+      "id": 10393,
+      "identifier": "copperajah-gmax"
+    },
+    {
+      "id": 10394,
+      "identifier": "duraludon-gmax"
+    },
+    {
+      "id": 10395,
+      "identifier": "urshifu-single-strike-gmax"
+    },
+    {
+      "id": 10396,
+      "identifier": "urshifu-rapid-strike-gmax"
+    },
+    {
+      "id": 10397,
+      "identifier": "toxtricity-low-key-gmax"
+    },
+    {
+      "id": 10449,
+      "identifier": "alcremie-vanilla-cream-berry-sweet"
+    },
+    {
+      "id": 10450,
+      "identifier": "alcremie-ruby-cream-berry-sweet"
+    },
+    {
+      "id": 10451,
+      "identifier": "alcremie-matcha-cream-berry-sweet"
+    },
+    {
+      "id": 10452,
+      "identifier": "alcremie-mint-cream-berry-sweet"
+    },
+    {
+      "id": 10453,
+      "identifier": "alcremie-lemon-cream-berry-sweet"
+    },
+    {
+      "id": 10454,
+      "identifier": "alcremie-salted-cream-berry-sweet"
+    },
+    {
+      "id": 10455,
+      "identifier": "alcremie-ruby-swirl-berry-sweet"
+    },
+    {
+      "id": 10456,
+      "identifier": "alcremie-caramel-swirl-berry-sweet"
+    },
+    {
+      "id": 10457,
+      "identifier": "alcremie-rainbow-swirl-berry-sweet"
+    },
+    {
+      "id": 10458,
+      "identifier": "alcremie-vanilla-cream-love-sweet"
+    },
+    {
+      "id": 10459,
+      "identifier": "alcremie-ruby-cream-love-sweet"
+    },
+    {
+      "id": 10460,
+      "identifier": "alcremie-matcha-cream-love-sweet"
+    },
+    {
+      "id": 10461,
+      "identifier": "alcremie-mint-cream-love-sweet"
+    },
+    {
+      "id": 10462,
+      "identifier": "alcremie-lemon-cream-love-sweet"
+    },
+    {
+      "id": 10463,
+      "identifier": "alcremie-salted-cream-love-sweet"
+    },
+    {
+      "id": 10464,
+      "identifier": "alcremie-ruby-swirl-love-sweet"
+    },
+    {
+      "id": 10465,
+      "identifier": "alcremie-caramel-swirl-love-sweet"
+    },
+    {
+      "id": 10466,
+      "identifier": "alcremie-rainbow-swirl-love-sweet"
+    },
+    {
+      "id": 10467,
+      "identifier": "alcremie-vanilla-cream-star-sweet"
+    },
+    {
+      "id": 10468,
+      "identifier": "alcremie-ruby-cream-star-sweet"
+    },
+    {
+      "id": 10469,
+      "identifier": "alcremie-matcha-cream-star-sweet"
+    },
+    {
+      "id": 10470,
+      "identifier": "alcremie-mint-cream-star-sweet"
+    },
+    {
+      "id": 10471,
+      "identifier": "alcremie-lemon-cream-star-sweet"
+    },
+    {
+      "id": 10472,
+      "identifier": "alcremie-salted-cream-star-sweet"
+    },
+    {
+      "id": 10473,
+      "identifier": "alcremie-ruby-swirl-star-sweet"
+    },
+    {
+      "id": 10474,
+      "identifier": "alcremie-caramel-swirl-star-sweet"
+    },
+    {
+      "id": 10475,
+      "identifier": "alcremie-rainbow-swirl-star-sweet"
+    },
+    {
+      "id": 10476,
+      "identifier": "alcremie-vanilla-cream-clover-sweet"
+    },
+    {
+      "id": 10477,
+      "identifier": "alcremie-ruby-cream-clover-sweet"
+    },
+    {
+      "id": 10478,
+      "identifier": "alcremie-matcha-cream-clover-sweet"
+    },
+    {
+      "id": 10479,
+      "identifier": "alcremie-mint-cream-clover-sweet"
+    },
+    {
+      "id": 10480,
+      "identifier": "alcremie-lemon-cream-clover-sweet"
+    },
+    {
+      "id": 10481,
+      "identifier": "alcremie-salted-cream-clover-sweet"
+    },
+    {
+      "id": 10482,
+      "identifier": "alcremie-ruby-swirl-clover-sweet"
+    },
+    {
+      "id": 10483,
+      "identifier": "alcremie-caramel-swirl-clover-sweet"
+    },
+    {
+      "id": 10484,
+      "identifier": "alcremie-rainbow-swirl-clover-sweet"
+    },
+    {
+      "id": 10485,
+      "identifier": "alcremie-vanilla-cream-flower-sweet"
+    },
+    {
+      "id": 10486,
+      "identifier": "alcremie-ruby-cream-flower-sweet"
+    },
+    {
+      "id": 10487,
+      "identifier": "alcremie-matcha-cream-flower-sweet"
+    },
+    {
+      "id": 10488,
+      "identifier": "alcremie-mint-cream-flower-sweet"
+    },
+    {
+      "id": 10489,
+      "identifier": "alcremie-lemon-cream-flower-sweet"
+    },
+    {
+      "id": 10490,
+      "identifier": "alcremie-salted-cream-flower-sweet"
+    },
+    {
+      "id": 10491,
+      "identifier": "alcremie-ruby-swirl-flower-sweet"
+    },
+    {
+      "id": 10492,
+      "identifier": "alcremie-caramel-swirl-flower-sweet"
+    },
+    {
+      "id": 10493,
+      "identifier": "alcremie-rainbow-swirl-flower-sweet"
+    },
+    {
+      "id": 10494,
+      "identifier": "alcremie-vanilla-cream-ribbon-sweet"
+    },
+    {
+      "id": 10495,
+      "identifier": "alcremie-ruby-cream-ribbon-sweet"
+    },
+    {
+      "id": 10496,
+      "identifier": "alcremie-matcha-cream-ribbon-sweet"
+    },
+    {
+      "id": 10497,
+      "identifier": "alcremie-mint-cream-ribbon-sweet"
+    },
+    {
+      "id": 10498,
+      "identifier": "alcremie-lemon-cream-ribbon-sweet"
+    },
+    {
+      "id": 10499,
+      "identifier": "alcremie-salted-cream-ribbon-sweet"
+    },
+    {
+      "id": 10500,
+      "identifier": "alcremie-ruby-swirl-ribbon-sweet"
+    },
+    {
+      "id": 10501,
+      "identifier": "alcremie-caramel-swirl-ribbon-sweet"
+    },
+    {
+      "id": 10502,
+      "identifier": "alcremie-rainbow-swirl-ribbon-sweet"
+    }
+  ],
+  "note": "Missing means absent at the exact upstream filename; no other form is substituted. Download integrity is separate."
+}
