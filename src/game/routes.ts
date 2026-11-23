@@ -60,11 +60,12 @@ export function gameRoutes(context: RouteContext) {
           status: battle.status,
           gymKey: battle.gymKey,
           stale: battle.stale,
-          agentKind: 'scripted',
+          agentKind: battle.result?.agentKind ?? 'scripted',
           winnerSide: battle.result?.winnerSide,
           viewerSide: battle.ownerId === owner ? 'p1' : 'p2',
           turns: battle.result?.turns,
           events: (battle.ownerId === owner ? battle.result?.events : battle.result?.opponentEvents) ?? [],
+          decisions: battle.ownerId === owner ? (battle.result?.playerDecisions ?? []) : [],
           error: battle.status === 'error' ? '执行异常，未判为玩家失败。' : undefined
         });
       } else throw new GameError('接口不存在。', 404);

@@ -50,7 +50,7 @@ start.addEventListener('click', async () => {
   start.disabled = true;
   summary.hidden = true;
   status.textContent = '服务器正在执行…';
-  report.textContent = '双方固定策略正在决策，战斗由原版规则引擎执行。';
+  report.textContent = '固定策略正在决策（第1轮基线：AI 战术尚未接入），战斗由原版规则引擎执行。';
   try {
     const job = await api('/api/battles', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: '{}'});
     history.replaceState(null, '', `#${job.id}`);
@@ -60,10 +60,17 @@ start.addEventListener('click', async () => {
       if (battle.status === 'queued' || battle.status === 'running') await new Promise(resolve => setTimeout(resolve, 400));
     } while (battle.status === 'queued' || battle.status === 'running');
     if (battle.status === 'error') throw new Error(battle.error);
-    status.textContent = '战斗完成 · 固定策略';
+    status.textContent = `战斗完成 · ${battle.agentKind === 'tactics' ? '战术理解' : '固定策略'}`;
     summary.hidden = false;
     summary.textContent = `${battle.winner || '双方平局'} · ${battle.turns} 回合 · ${battle.decisionCount} 次阵营选择`;
     showEvents(battle.events);
+    for (const decision of battle.decisions ?? []) {
+      const row = document.createElement('div');
+      row.className = 'event raw';
+      const ignored = decision.ignored?.length ? ` · 未接入 ${decision.ignored.length} 项意图信息` : '';
+      row.textContent = `第 ${decision.sequence + 1} 次行动：${decision.choice} · ${decision.reason}${ignored}`;
+      report.append(row);
+    }
   } catch (error) {
     status.textContent = '执行未完成';
     report.textContent = error.message;

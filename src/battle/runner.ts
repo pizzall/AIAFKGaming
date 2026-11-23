@@ -3,7 +3,9 @@ import {randomInt} from 'node:crypto';
 import {Engine, engineRevision} from './engine.ts';
 import {createBattleDex, deserializeEffects} from './effects.ts';
 import {contentFingerprint} from './publication.ts';
+import {createTacticsAgent, type DecisionTrace} from './agent.ts';
 import {playerTeam, npcTemplates, selectNpcTemplate, type TeamMember} from './fixtures.ts';
+import {dex as strategyDex} from '../game/catalog.ts';
 
 const config = JSON.parse(readFileSync(new URL('../../config/battle-effects.json', import.meta.url), 'utf8'));
 const catalog = JSON.parse(readFileSync(new URL('../../config/effect-catalog.json', import.meta.url), 'utf8'));
@@ -79,12 +81,16 @@ export function chooseFromRequest(request: any): string {
   }).join(', ');
 }
 
+export type AgentKind = 'scripted' | 'tactics';
+
 export interface BattleResult {
   status: 'completed';
   turns: number;
   winner: string;
   winnerSide: 'p1' | 'p2' | null;
-  agentKind: 'scripted';
+  agentKind: AgentKind;
+  /** 玩家一方（p1）的决策记录；对手一方不记录。 */
+  playerDecisions?: DecisionTrace[];
   engineRevision: string;
   configRevision: string;
   ruleFingerprint: string;
@@ -96,7 +102,20 @@ export interface BattleResult {
   privateSnapshot: {playerTeam: TeamMember[]; npcTeam: TeamMember[]; npcTactic: string};
 }
 
-export interface BattleInput {seed?: number[]; npcIndex?: number; left?: TeamMember[]; right?: TeamMember[]; npcTactic?: string}
+export interface BattleInput {
+  seed?: number[];
+  npcIndex?: number;
+  left?: TeamMember[];
+  right?: TeamMember[];
+  npcTactic?: string;
+  playerTactic?: string;
+  agent?: AgentKind;
+}
+
+/** 把玩家一方（p1）的决策记录交给前端，只保留格式与理由，不暴露索引之外的内部对象。 */
+export function publicDecisions(result: BattleResult): DecisionTrace[] {
+  return result.playerDecisions ?? [];
+}
 
 export function runBattle(input: BattleInput = {}): BattleResult {
   const seed = input.seed ?? [randomInt(65536), randomInt(65536), randomInt(65536), randomInt(65536)];
@@ -106,13 +125,17 @@ export function runBattle(input: BattleInput = {}): BattleResult {
   const npc = input.right ? {key: 'frozen-defense', team: input.right, tactic: input.npcTactic ?? ''}
     : selectNpcTemplate(input.npcIndex ?? randomInt(npcTemplates.length));
   const left = input.left ?? playerTeam;
+  const agentKind = input.agent ?? 'scripted';
+  const agent = agentKind === 'tactics' ? createTacticsAgent(strategyDex, input.playerTactic ?? '') : null;
   const battle = makeBattle(left, npc.team, seed);
   const decisions: BattleResult['decisions'] = [];
   for (let sequence = 0; !battle.ended && sequence < 2000; sequence++) {
     if (battle.turn > 250) throw new Error('Battle exceeded verification turn bound');
-    // Freeze both requests before submitting either side, even though this agent is deterministic.
+    // Freeze both requests before submitting either side, even though the agents are deterministic.
     const requests = battle.sides.map((side: any) => structuredClone(side.activeRequest));
-    const choices = requests.map((request: any) => request ? chooseFromRequest(request) : '');
+    const choices = requests.map((request: any, index: number) =>
+      request ? (index === 0 && agent ? agent.decide(request) : chooseFromRequest(request)) : ''
+    );
     if (!choices.some(Boolean)) throw new Error('No actionable battle request');
     for (let i = 0; i < 2; i++) {
       if (!choices[i]) continue;
@@ -129,7 +152,8 @@ export function runBattle(input: BattleInput = {}): BattleResult {
     .filter((line: string) => !line.startsWith('|t:|'));
   return {
     status: 'completed', turns: battle.turn, winner: battle.winner, opponentEvents,
-    winnerSide: battle.winner ? (battle.winner === battle.p1.name ? 'p1' : 'p2') : null, agentKind: 'scripted', engineRevision,
+    winnerSide: battle.winner ? (battle.winner === battle.p1.name ? 'p1' : 'p2') : null, agentKind, engineRevision,
+    ...(agent ? {playerDecisions: agent.decisions} : {}),
     configRevision: config.revision, ruleFingerprint, npcTemplateKey: npc.key, seed, events, decisions,
     privateSnapshot: {playerTeam: structuredClone(left), npcTeam: npc.team, npcTactic: npc.tactic}
   };

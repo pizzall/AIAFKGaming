@@ -112,6 +112,11 @@ export interface WorldState {
   season: number;
   gyms: Gym[];
 }
+/** 战术文本上限：按 Unicode 字符数计算，换行与全角标点各算一个字符。 */
+export const TACTIC_LIMIT = 500;
+export function tacticLength(tactic: string): number {
+  return Array.from(tactic).length;
+}
 export class GameError extends Error {
   status: number;
   constructor(message: string, status = 400) {

@@ -6,7 +6,7 @@ import {randomUUID} from 'node:crypto';
 import {Worker} from 'node:worker_threads';
 import {playerTeam, fixtureFingerprint} from './battle/fixtures.ts';
 import {publishRuleVersion} from './battle/publication.ts';
-import type {BattleResult} from './battle/runner.ts';
+import {publicDecisions, type BattleResult} from './battle/runner.ts';
 import {GameService} from './game/service.ts';
 import {gameRoutes} from './game/routes.ts';
 
@@ -109,10 +109,11 @@ export function createAppServer(options: {dataDirectory?: string; testMode?: boo
   function publicJob(job: BattleJob) {
     const result = job.result;
     return {
-      id: job.id, status: job.status, createdAt: job.createdAt, agentKind: 'scripted',
+      id: job.id, status: job.status, createdAt: job.createdAt, agentKind: result?.agentKind ?? 'scripted',
       ...(result ? {
         turns: result.turns, winner: result.winner, events: result.events,
-        configRevision: result.configRevision, decisionCount: result.decisions.length
+        configRevision: result.configRevision, decisionCount: result.decisions.length,
+        decisions: publicDecisions(result)
       } : {}),
       ...(job.error ? {error: '战斗执行异常，请查看本地执行记录。'} : {})
     };
@@ -124,7 +125,7 @@ export function createAppServer(options: {dataDirectory?: string; testMode?: boo
       const path = decodeURIComponent(url.pathname);
       if (await handleGame(request, response, path)) return;
       if (request.method === 'GET' && path === '/api/health') {
-        json(response, 200, {ok: true, mechanics: 'gen9 + Mega', levelPolicy: 'actual', aiEnabled: false});
+        json(response, 200, {ok: true, mechanics: 'gen9 + Mega', levelPolicy: 'actual', aiEnabled: true, agentKind: 'tactics'});
       } else if (request.method === 'GET' && path === '/api/lab') {
         json(response, 200, {party, effects, npcName: '研究员青叶', agentKind: 'scripted'});
       } else if (request.method === 'POST' && path === '/api/battles') {

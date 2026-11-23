@@ -1,6 +1,6 @@
 import {randomBytes, randomUUID} from 'node:crypto';
 import {GameStore} from './store.ts';
-import {GameError, type Gym, type Partner, type PlayerState, type WorldState} from './types.ts';
+import {GameError, TACTIC_LIMIT, tacticLength, type Gym, type Partner, type PlayerState, type WorldState} from './types.ts';
 import {battleMember, dex, experienceAt, gameConfig as cfg, heal, learnedAt, makePartner, speciesCatalog} from './catalog.ts';
 import {random, refreshPartner, statKeys} from './catalog.ts';
 import {advancePlayer, log, occupation, occupied, recoveryDuration} from './idle.ts';
@@ -281,7 +281,7 @@ export class GameService {
         if (player.readyPresetId) throw new GameError('请先取消备战，再修改当前队伍。');
         player.team = teamIds(player, input.team);
         const tactic = String(input.tactic ?? '').replace(/\r\n?/g, '\n');
-        if (Array.from(tactic).length > 500) throw new GameError('战术最多500字。');
+        if (tacticLength(tactic) > TACTIC_LIMIT) throw new GameError('战术最多500字。');
         player.tactic = tactic;
         Object.assign(player.presets![0], {team: [...player.team], tactic});
         break;
@@ -293,7 +293,7 @@ export class GameService {
         if (!preset && player.presets!.length >= (cfg.teamPresetLimit ?? 10)) throw new GameError('编队预设数量已达上限。');
         const name = String(input.name ?? '').trim();
         const tactic = String(input.tactic ?? '').replace(/\r\n?/g, '\n');
-        if (!name || Array.from(name).length > 20 || Array.from(tactic).length > 500)
+        if (!name || Array.from(name).length > 20 || tacticLength(tactic) > TACTIC_LIMIT)
           throw new GameError('预设名称需1–20字，战术最多500字。');
         const value = {id: preset?.id ?? randomUUID(), name, team: teamIds(player, input.team), tactic};
         if (preset) Object.assign(preset, value);
@@ -746,7 +746,7 @@ export class GameService {
       season: world.season,
       seatVersion: gym.version,
       snapshot: left,
-      input: {left: left.team, right: right.team, npcTactic: right.tactic},
+      input: {left: left.team, right: right.team, npcTactic: right.tactic, playerTactic: left.tactic, agent: 'tactics'},
       result: null
     };
     this.saveBattle(battle);

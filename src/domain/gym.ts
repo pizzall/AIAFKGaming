@@ -1,5 +1,6 @@
 import {randomUUID} from 'node:crypto';
 import type {TeamMember} from '../battle/fixtures.ts';
+import {TACTIC_LIMIT, tacticLength} from '../game/types.ts';
 
 export interface DefenseSnapshot {id: string; ownerKey: string; team: TeamMember[]; tactic: string}
 export interface GymSeat {gymKey: string; defense: DefenseSnapshot}
@@ -14,7 +15,7 @@ function freeze(value: any): any {
 
 export function createDefenseSnapshot(ownerKey: string, team: TeamMember[], tactic: string): DefenseSnapshot {
   if (!/^(player|npc):.+$/.test(ownerKey) || team.length !== 6) throw new Error('Invalid gym defense');
-  if (Array.from(tactic.replace(/\r\n?/g, '\n')).length > 500) throw new Error('Tactic exceeds 500 characters');
+  if (tacticLength(tactic.replace(/\r\n?/g, '\n')) > TACTIC_LIMIT) throw new Error('Tactic exceeds 500 characters');
   return freeze({id: randomUUID(), ownerKey, team: structuredClone(team), tactic});
 }
 
