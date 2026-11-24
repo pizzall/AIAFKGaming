@@ -35,15 +35,29 @@
 - `tsc --noEmit`：通过。
 - 每轮测试各自验证：上一轮问题已修好（`round N fixes`）与本轮问题现状（`round N goals`）。
 
-## 上传状态（重要）
+## 上传状态
 
-- 本地已有 11 个分支：`base` 与 `round-01` 到 `round-10`，共 11 个提交。
-- 目标远端 `https://github.com/pizzall/AFK-Pokemon` **目前不存在**：GitHub API 返回 404（`pizzall` 账号其它仓库可访问）。
-- 本机没有可用的 GitHub 凭据：`gh` 未安装、没有 `GITHUB_TOKEN`、本仓库没有 credential helper；
-  `git ls-remote` 能匿名读到 `pizzall` 的公开仓库，但仓库不存在、也没有可供推送的密码。
-- 因此十轮分支都已提交到本地，**尚未 push**。仓库建好、凭据可用后，执行：
-  `git remote add origin <仓库地址>`，然后对每个分支 `git push -u origin round-NN-…`
-  （`round-10-robustness` 之后还可以把 `SUMMARY.md` 所在提交一起推上去）。
+- 远端仓库：`https://github.com/pizzall/AIAFKGaming`（原计划的 `pizzall/AFK-Pokemon` 不存在，已改用这个仓库）。
+- 已推送的分支（每个都带 `-u`，本地分支跟踪远端同名分支）：
+
+| 分支 | 远端提交 |
+| --- | --- |
+| `base` | `75fec62` |
+| `round-01-baseline` | `3578bcd` |
+| `round-02-scope-and-names` | `0026d3d` |
+| `round-03-queue-and-targets` | `2655b85` |
+| `round-04-negation-and-layout` | `13e2f98` |
+| `round-05-conditions-and-opponents` | `0e690b4` |
+| `round-06-targets-and-budget` | `b13d3aa` |
+| `round-07-comparison` | `097d31a` |
+| `round-08-locator-and-fidelity` | `4d28f32` |
+| `round-09-limits-and-isolation` | `0be3a4b` |
+| `round-10-robustness` | `bfa3b3a` |
+| `analysis/tactics-loop` | `500007e` |
+
+- 远端 `main` 上曾多出一个 `23f2703 probe` 提交：那是推送前用临时仓库做的「凭据是否可用」测试，
+  不是业务提交；`analysis/push-cleanup` 分支补上了指向 `analysis/tactics-loop` 的说明，是否把 `main`
+  指向 `analysis/tactics-loop` 由你在 GitHub 上决定。
 
 ## 最关键的三个结论
 
